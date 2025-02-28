@@ -89,13 +89,22 @@ body {
 
 .container {
   width: 100%;
+  /* line-height: 0.8; */
+  /* font-weight: 200; */
   /* max-width: 1200px; */
 
   margin: 0 auto;
   /* padding: 0 10px; */
 }
 
-/* Typography */
+.giftcollection{
+  line-height: 1.5;
+  /* font-weight: 200; */
+  color: #79512f;
+  font-size: 30px;
+}
+
+/* Typography
 h1,
 h2,
 h3 {
@@ -120,7 +129,7 @@ h3 {
 
 p {
   margin-bottom: 1rem;
-}
+} */
 
 .Fianlogo{
   height: 140px;
@@ -339,7 +348,7 @@ nav {
 
 /* Product Gallery */
 .product-gallery {
-  padding: 4rem 0;
+  padding: 4rem 3rem;
   background-color: #f8f8f8;
 }
 
@@ -395,8 +404,12 @@ nav {
 
 /* Contact Form Section */
 .contact-form {
-  padding: 4rem 0;
+  padding: 4rem 3rem;
   background-color: #f8f8f8;
+}
+.imageform{
+  height:70vh;
+  width:90%;
 }
 
 .contact-form .container {
@@ -420,18 +433,17 @@ textarea {
 
 /* Gift Collection Section */
 .gift-collection {
-  padding: 4rem 0;
+  padding: 4rem 3rem;
   background-color: #ffffff;
 }
 
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
 }
 
 .collection-item {
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   padding: 1rem;
   border-radius: 4px;
   text-align: center;
@@ -445,7 +457,7 @@ textarea {
 
 /* FAQ Section */
 .faq {
-  padding: 4rem 0;
+  padding: 4rem 3rem;
   background-color: #f8f8f8;
 }
 
@@ -474,14 +486,20 @@ textarea {
 
 /* Gift Card Banner */
 .gift-card-banner {
-  padding: 2rem 0;
+  padding: 2rem 4rem;
   background-color: #e0ccb2;
+}
+.contentbanner{
+  color: #000;
+  font-weight:200 ;
+  margin-bottom: 40px;
 }
 
 .gift-card-banner .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 0;
 }
 
 /* Footer */
