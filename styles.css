@@ -83,7 +83,7 @@ body {
   color: black;
   text-align: center;
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 20px;
   font-family: "Playfair Display", serif;
 }
 
@@ -179,11 +179,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1.5rem 5rem 1.5rem 1rem ;
 }
 
 .logo {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   /* font-weight: bold; */
   color: #000;
   font-family: "Playfair Display", serif;
@@ -218,8 +218,28 @@ nav {
 .nav-icons a {
   margin-left: 1rem;
   border-radius: 40px;
-  width: 200px;
-  height:69px;
+  width: 220px;
+  height:65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+.navbutton{
+  display: inline-block;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 24px;
+  font-weight: 200;
+  background-color: #8b6b50;
+  color: #ffffff;
+  
+}
+.nabbutton:hover{
+  background-color: #79512f;
 }
 
 .mobile-menu-toggle {
@@ -242,7 +262,7 @@ nav {
 .hero {
   text-align: center;
   /* max-width: 500px; */
-  padding: 20px;
+  /* padding: 20px; */
   background-color: #f8f8f8;
   /* padding: 4rem 3rem; */
 }
@@ -252,13 +272,16 @@ nav {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 6rem 0;
+}
+.heroheading{
+  width: 50%;
 }
 
 .hero-content h1 {
   text-align: center;
-  width: 100%;
-  font-size: 32px;
+  width: 90%;
+  font-size: 40px;
   color: #79512f;
   margin-bottom: 12px;
   line-height: 1.2;
@@ -270,8 +293,7 @@ nav {
 .hero-image {
   display: flex;
   align-items: center;
-  height: 25rem;
-  justify-content: center; /* Centers the image horizontally */
+  height: 100%;
   width: 70%; /* Adjust width as needed */
   
 }
@@ -279,6 +301,7 @@ nav {
 .Womenimage{
   max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 /* Subtext */
@@ -553,7 +576,7 @@ footer {
 @media (min-width: 768px) {
   .nav-links {
     display: flex;
-    gap: 80px;
+    gap: 55px;
   }
 
   .nav-links li {
