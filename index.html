@@ -10,6 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 
@@ -30,29 +33,13 @@
             }
 
             100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        @keyframes marquee2 {
-            0% {
-                transform: translateX(100%);
-            }
-
-            100% {
-                transform: translateX(0%);
+                transform: translateX(-50%);
             }
         }
 
         .marquee {
             display: flex;
-            animation: marquee 15s linear infinite;
-            white-space: nowrap;
-        }
-
-        .marquee2 {
-            display: flex;
-            animation: marquee2 15s linear infinite;
+            animation: marquee 25s linear infinite;
             white-space: nowrap;
         }
 
@@ -90,7 +77,7 @@
 
             .marquee span,
             .marquee2 span {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
                 /* Even smaller font */
                 margin: 0 5px;
             }
@@ -235,14 +222,21 @@
                     </p>
 
                     <div class="md:mt-8 md:mt-12 flex md:flex-col items-center">
-                        <button class="px-6 md:px-[70px] py-3 md:py-4 bg-[#8B6B50] border-2 border-[#8B6B50] text-white 
-                    hover:bg-[#79512F] transition-all duration-300 ease-in-out flex  ms:block text-xs md:text-2xl ">
-                            Get a Quote
-                        </button>
-                        <button class="px-6 md:px-[65px] py-3 md:py-4 bg-white border-2 border-[#8B6B50] text-[#79512F] 
-                    hover:bg-[#79512F] hover:text-white md:mt-4 md:mt-6 transition-all duration-300 ease-in-out ml-[10px] text-xs md:text-2xl ">
-                            Chat with Us
-                        </button>
+                      <button class="relative px-6 md:px-[70px] py-3 md:py-4 bg-[#8B6B50] border-2 border-[#8B6B50] text-white 
+                      hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out flex ms:block text-xs md:text-2xl 
+                      overflow-hidden before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 
+                      before:bg-[#79512F] before:transition-all before:duration-[1000ms] hover:before:w-full hover:before:left-0">
+      <span class="relative z-10">Get a Quote</span>
+  </button>
+  
+                        <button class="relative px-6 md:px-[65px] py-3 md:py-4 bg-white border-2 border-[#8B6B50] text-[#79512F] 
+                    hover:bg-[#79512F] hover:text-white md:mt-4 md:mt-6 transition-all duration-[1000ms] ease-in-out ml-[10px] text-xs md:text-2xl
+                    overflow-hidden before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 
+                    before:bg-[#79512F] before:transition-all before:duration-[1000ms] hover:before:w-full hover:before:left-0">
+    <span class="relative z-10">Chat with Us</span>
+</button>
+
+
                     </div>
                 </div>
             </div>
@@ -254,21 +248,33 @@
         <div class="overflow-x-hidden flex relative bg-[#8B6B50] text-white mt-[4rem]">
             <!-- First Marquee -->
             <div class="marquee py-4">
-                <span class="text-4xl mx-4"><img src="./assests/gift-01.svg"></span>
+                <span class="text-4xl mx-2"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-2">925 Silver - Anti Tarnish-Premium Packing</span>
+                <span class="text-4xl mx-2">|</span>
+                <span class="text-4xl mx-2"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-2">Custom Design & Engraving - Personalized Charms</span>
+                <span class="text-4xl mx-2">|</span>
+                <span class="text-4xl mx-2"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-2">Something for Everyone : Religious Symbols</span>
+                <span class="text-4xl mx-2">|</span>
+                <span class="text-4xl mx-2"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-2">Horoscope Sign</span>
+
+                <span class="text-4xl mx-4">|</span>
+                <span class="text-4xl mx-4"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-4">925 Silver - Anti Tarnish-Premium Packing</span>
+                <span class="text-4xl mx-4">|</span>
+                <span class="text-4xl mx-4"><i class="ri-gift-line"></i></span>
                 <span class="text-4xl mx-4">Custom Design & Engraving - Personalized Charms</span>
                 <span class="text-4xl mx-4">|</span>
-                <span class="text-4xl mx-4"><img src="./assests/gift-01.svg"></span>
-                <span class="text-4xl mx-4">Custom Design & Engraving - Personalized Charms</span>
+                <span class="text-4xl mx-4"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-4">Something for Everyone : Religious Symbols</span>
+                <span class="text-4xl mx-4">|</span>
+                <span class="text-4xl mx-4"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-4">Horoscope Sign</span>
                
             </div>
-            <!-- Second Marquee -->
-            <!-- <div class="absolute top-0 marquee2 py-4">
-                <span class="text-4xl mx-4">|</span>
-                <span class="text-4xl mx-4"><img src="./assests/gift-01.svg"></span>
-                <span class="text-4xl mx-4">Custom Design & Engraving - Personalized Charms</span>
-                <span class="text-4xl mx-4"><img src="./assests/gift-01.svg"></span>
-                <span class="text-4xl mx-4">Custom Design & Engraving - Personalized Charms</span>
-            </div> -->
+            
         </div>
 
         <!-- Section 2 -->
@@ -333,7 +339,7 @@
 
                 <div class="mt-6 space-y-4">
                     <div class="flex items-start">
-                        <span class="text-3xl">➲</span>
+                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
                         <div class="ml-3">
                             <h3 class="font-semibold">Exquisite 925 Silver</h3>
                             <p class="text-sm">Enjoy jewelry that remains brilliant over time with anti-tarnish properties.</p>
@@ -341,7 +347,7 @@
                     </div>
 
                     <div class="flex items-start">
-                        <span class="text-3xl">➲</span>
+                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
                         <div class="ml-3">
                             <h3 class="font-semibold">Premium Packaging</h3>
                             <p class="text-sm">Each piece arrives in elegant, high-end packaging that elevates the gifting experience.</p>
@@ -349,7 +355,7 @@
                     </div>
 
                     <div class="flex items-start">
-                        <span class="text-3xl">➲</span>
+                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
                         <div class="ml-3">
                             <h3 class="font-semibold">Custom Engraving & Designs</h3>
                             <p class="text-sm">Add a personal touch with bespoke charms, religious symbols, horoscope signs, letter pendants, and even evil eye motifs.</p>
@@ -357,7 +363,7 @@
                     </div>
 
                     <div class="flex items-start">
-                        <span class="text-3xl">➲</span>
+                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
                         <div class="ml-3">
                             <h3 class="font-semibold">Bulk Order Benefits</h3>
                             <p class="text-sm">Take advantage of exclusive corporate discounts, tailor-made orders, and a seamless process from inquiry to delivery.</p>
@@ -365,7 +371,7 @@
                     </div>
 
                     <div class="flex items-start">
-                        <span class="text-3xl">➲</span>
+                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
                         <div class="ml-3">
                             <h3 class="font-semibold">Pan-India Shipping & Support</h3>
                             <p class="text-sm">Reliable, dedicated service that ensures your gifts arrive on time, every time.</p>
@@ -397,10 +403,10 @@
                     <p class="text-[#805333] mb-6">Get A Custom Quote</p>
                     
                     
-                    <form class="space-y-4">
+                    <form class="space-y-7">
                         <div class="relative z-0 w-full mb-5 group">
                             <input type="text" name="floating_first_name" id="floating_first_name"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
+                                class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
                                 placeholder=" " required />
                             <label for="floating_first_name"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
@@ -410,7 +416,7 @@
                     
                         <div class="relative z-0 w-full mb-5 group">
                             <input type="email" name="floating_email" id="floating_email"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
                                 placeholder=" " required />
                             <label for="floating_email"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
@@ -420,7 +426,7 @@
                     
                         <div class="relative z-0 w-full mb-5 group">
                             <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
                                 placeholder=" " required />
                             <label for="floating_phone"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
@@ -430,24 +436,44 @@
                     
                         <!-- Gender Dropdown -->
                         <div class="relative z-0 w-full mb-5 group">
-                            <select name="gender" id="gender"
-                                class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer">
-                                <option value="" disabled selected class="text-[#79512F]">Select Gender</option>
-                                <option value="male" class="text-black">Male</option>
-                                <option value="female" class="text-black">Female</option>
-                                <option value="other" class="text-black">Other</option>
-                            </select>
-                        </div>
+                          <div class="relative">
+                              <select name="gender" id="gender"
+                                  class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none 
+                                  dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] 
+                                  peer cursor-pointer hover:bg-[#F7F1EB] focus:bg-[#F7F1EB]"> 
+                                  <option value="" disabled selected class="text-[#79512F] focus:bg-[#F7F1EB] ">Select Gender</option>
+                                  <option value="male" class="text-black bg-[#F7F1EB]">Male</option>
+                                  <option value="female" class="text-black bg-[#F7F1EB]">Female</option>
+                                  <option value="other" class="text-black bg-[#F7F1EB]">Other</option>
+                              </select>
+                              <!-- Custom Dropdown Arrow -->
+                              <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                                  <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </div>
+                      
                     
                         <!-- Country Dropdown -->
                         <div class="relative z-0 w-full mb-5 group">
+                          <div class="relative">
                             <select name="country" id="country"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer">
-                                <option value="" disabled selected>Select Country</option>
-                                <option value="usa" class="text-black">USA</option>
-                                <option value="canada" class="text-black">Canada</option>
-                                <option value="uk" class="text-black">UK</option>
+                                <option value="" disabled selected class="text-[#79512F] focus:bg-[#F7F1EB]">Select Country</option>
+                                <option value="usa" class="text-black bg-[#F7F1EB] ">USA</option>
+                                <option value="canada" class="text-black bg-[#F7F1EB]">Canada</option>
+                                <option value="uk" class="text-black bg-[#F7F1EB]">UK</option>
                             </select>
+                            <!-- Custom Dropdown Arrow -->
+                            <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                              <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                              </svg>
+                              </div>
+                              </div>
+                            
                         </div>
                     
                         <div class="relative z-0 w-full mb-5 group">
@@ -497,14 +523,14 @@
             experience as memorable as the gift itself.
         </p>
             <!-- Features -->
-            <div class="flex justify-center space-x-4 mt-2 text-[#5A3A2E] text-sm font-medium">
+            <div class="flex justify-end  px-4 space-x-4 mt-2 text-[#5A3A2E] text-sm font-medium">
                 <span class="flex items-center space-x-1">
-                    <span class="w-2 h-2 bg-[#5A3A2E] rounded-full"></span>
-                    <span>PURE 925 SILVER</span>
+                    </span>
+                    <span> ◆ PURE 925 SILVER</span>
                 </span>
                 <span class="flex items-center space-x-1">
-                    <span class="w-2 h-2 bg-[#5A3A2E] rounded-full"></span>
-                    <span>ANTI-TARNISH</span>
+                    </span>
+                    <span> ◆ ANTI-TARNISH</span>
                 </span>
             </div>
             </div>
@@ -607,8 +633,8 @@
     <!-- Include Alpine.js -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
 
-<div x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-6xl">
-  <h2 class="text-3xl font-serif font-semibold text-[#8B6B50] mb-6 px-8">FAQs</h2>
+<div x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-6xl font-['Playfair_Display']">
+  <h2 class="text-3xl font-semibold text-[#8B6B50] mb-6 px-8">FAQs</h2>
 
   <!-- FAQ Container -->
   <div class=" grid grid-cols-2 md:gap-2 p-4">
@@ -758,6 +784,15 @@
 </section>
 
         <!-- Footer Section -->
+
+        <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/9870759560" target="_blank" rel="noreferrer noopener" 
+    class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25d366] shadow-lg">
+     <div class="absolute z-10 top-0 left-0 w-full h-full rounded-full bg-[#25d366] opacity-75 animate-ping"></div>
+     <div class="relative z-20">
+         <i class="fab fa-whatsapp text-white text-3xl"></i> 
+     </div>
+ </a>
         <footer class="bg-white py-12">
             <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-8 text-sm text-gray-700">
                 <!-- Help & Information -->
@@ -825,19 +860,13 @@
             </div>
         
             <!-- Footer Bottom -->
-            <div class="mt-8 text-center text-gray-500 text-sm">
-                <p>© Copyright 2023 <span class="font-semibold">World Of Fian</span></p>
-            </div>
+            <div class="mt-8 text-gray-500 text-sm px-4 sm:px-10 md:px-20 lg:px-40 xl:px-48 flex flex-col lg:flex-row lg:items-center lg:justify-between">
+              <img class="w-auto max-w-[200px] mx-auto lg:mx-0" src="assests/image 1.png" alt="">
+              <p class="mt-2 lg:mt-0 text-center lg:text-right">© Copyright 2025 <span class="font-semibold">World Of Fian</span></p>
+            </div>                       
         </footer>
 
-         <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/9870759560" target="_blank" rel="noreferrer noopener" 
-    class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25d366] shadow-lg">
-     <div class="absolute z-10 top-0 left-0 w-full h-full rounded-full bg-[#25d366] opacity-75 animate-ping"></div>
-     <div class="relative z-20">
-         <i class="fab fa-whatsapp text-white text-3xl"></i> 
-     </div>
- </a>
+         
         
     
         
