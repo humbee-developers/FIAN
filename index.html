@@ -57,7 +57,7 @@
 
             .marquee,
             .marquee2 {
-                animation-duration: 15s;
+                animation-duration: 25s;
                 /* Faster animation on smaller screens */
             }
 
@@ -74,7 +74,7 @@
 
             .marquee,
             .marquee2 {
-                animation-duration: 12s;
+                animation-duration: 25s;
                 /* Even faster for small screens */
             }
 
@@ -166,7 +166,7 @@
     background-color: #79512F;
     clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
     content: "";
-    height: 100%;
+    /* height: 100%; */
     left: 0;
     color: white;
     position: absolute;
@@ -175,7 +175,7 @@
     transform: translateZ(0);
     transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
       -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    width: 100%;
+    /* width: 100%; */
   }
   .button4:hover:before {
     animation: opacityFallbackIn 0s step-start forwards;
@@ -195,6 +195,21 @@
   .button4:hover {
     color: rgb(255, 255, 255);
   }
+
+  /* Responsive Design */
+@media (max-width: 768px) { /* Tablet & Mobile */
+    .button4 {
+        font-size: 16px; /* Smaller font size */
+        padding: 10px 20px; /* Reduced padding */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    .button4 {
+        font-size: 14px; /* Further reduce font */
+        padding: 8px 15px; /* Compact padding */
+    }
+}
   .button5 {
     appearance: none;
     background: #79512F;
@@ -260,6 +275,160 @@
     color: #79512F;
   }
   .button5:hover {
+    color: #79512F;
+  }
+
+  /* 🌍 Responsive Styles */
+@media (max-width: 768px) { /* Tablet & Mobile */
+    .button5 {
+        font-size: 16px; /* Reduce font size */
+        padding: 10px 20px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    .button5 {
+        font-size: 14px; /* Further reduce font */
+        padding: 8px 15px; /* Make it more compact */
+    }
+}
+
+  .button6 {
+    appearance: none;
+    background: #79512F;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Playfair Display", serif;
+    border: 2px solid #79512F;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0;
+    float: left;
+    line-height: 1em;
+    margin: 0;
+    opacity: 1;
+    outline: 0;
+    position: relative;
+    padding: 10px 45px;
+    text-align: center;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    text-rendering: geometricprecision;
+    transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
+      background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
+      color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    overflow: hidden; /* Prevent pseudo-element from affecting width */
+
+  }
+  .button6:before {
+    animation: opacityFallbackOut 0.5s step-end forwards;
+    backface-visibility: hidden;
+    background-color: white;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    color: #79512F;
+    position: absolute;
+    /* border-radius: 5px; */
+    top: 0;
+    transform: scaleX(0); /* Start with zero width */
+    transform: translateZ(0);
+    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+      -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 100%;
+  }
+  .button6:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+  }
+  .button6:after {
+    background-color: #FFFFFF;
+    color: white;
+  }
+  .button6 span {
+    /* z-index: 1; */
+    position: relative;
+  }
+  .button6 span:before {
+    color: #79512F;
+  }
+  .button6:hover {
+    color: #79512F;
+  }
+
+  .button7 {
+    appearance: none;
+    background: #79512F;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Playfair Display", serif;
+    border: 2px solid #79512F;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0;
+    float: left;
+    line-height: 1em;
+    margin: 0;
+    opacity: 1;
+    outline: 0;
+    position: relative;
+    padding: 8px 15px;
+    text-align: center;
+    /* margin-top: 1.5rem; */
+    text-decoration: none;
+    text-rendering: geometricprecision;
+    transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
+      background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
+      color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+  }
+  .button7:before {
+    animation: opacityFallbackOut 0.5s step-end forwards;
+    backface-visibility: hidden;
+    background-color: white;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    color: #79512F;
+    position: absolute;
+    /* border-radius: 5px; */
+    top: 0;
+    transform: translateZ(0);
+    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+      -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 100%;
+  }
+  .button7:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+  }
+  .button7:after {
+    background-color: #FFFFFF;
+    color: white;
+  }
+  .button7 span {
+    /* z-index: 1; */
+    position: relative;
+  }
+  .button7 span:before {
+    color: #79512F;
+  }
+  .button7:hover {
     color: #79512F;
   }
 
@@ -383,19 +552,24 @@
                     </p>
 
                     <div class="md:mt-2 md:mt-12 flex md:flex-col items-center">
-                      <button class="button5 px-6 md:px-[70px] py-3 md:py-4 bg-[#8B6B50] border-2 border-[#8B6B50] text-white 
-                      hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out flex ms:block text-xs md:text-2xl 
-                      overflow-hidden before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 
-                      before:bg-[#79512F] before:transition-all before:duration-[1000ms] hover:before:w-full hover:before:left-0">
-      <span class="relative z-10">Get a Quote</span>
-  </button>
-  
-                        <button class=" button4 relative px-6 md:px-[65px] py-3 md:py-4 bg-white border-2 border-[#8B6B50] text-[#79512F] 
-                    hover:bg-[#79512F] hover:text-white md:mt-4 md:mt-6 transition-all duration-[1000ms] ease-in-out ml-[10px] text-xs md:text-2xl
-                    overflow-hidden before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 
-                    before:bg-[#79512F] before:transition-all before:duration-[1000ms] hover:before:w-full hover:before:left-0">
-    <span class="relative z-10">Chat with Us</span>
-</button>
+                        <div class="flex flex-wrap justify-center items-center md:gap-6 gap-3">
+                            <button class="button5 px-6 md:px-[70px] py-3 md:py-4 bg-[#8B6B50] border-2 border-[#8B6B50] text-white 
+                                hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl 
+                                overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
+                                before:h-full before:w-0 before:bg-[#79512F] before:transition-all before:duration-[1000ms] 
+                                hover:before:w-full hover:before:left-0 w-auto md:w-auto text-center">
+                                <span class="relative z-10">Get a Quote</span>
+                            </button>
+                        
+                            <button class="button4 relative px-6 md:px-[65px] py-3 md:py-4 bg-white border-2 border-[#8B6B50] text-[#79512F] 
+                                hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl
+                                overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
+                                before:h-full before:w-0 before:bg-[#79512F] before:transition-all before:duration-[1000ms] 
+                                hover:before:w-full hover:before:left-0 w-auto md:w-auto text-center mt-3 md:mt-0 md:ml-3">
+                                <span class="relative z-10">Chat with Us</span>
+                            </button>
+                        </div>
+                        
 
 
                     </div>
@@ -418,8 +592,11 @@
                 <span class="text-2xl mx-2"><i class="ri-gift-line"></i></span>
                 <span class="text-2xl mx-2">Something for Everyone : Religious Symbols</span>
                 <span class="text-2xl mx-2">|</span>
-                <span class="text-2xl mx-2"><i class="ri-gift-line"></i></span>
                 <span class="text-2xl mx-2">Horoscope Sign</span>
+                <span class="text-2xl mx-4">|</span>
+                <span class="text-2xl mx-4">Letter Pendants</span>
+                <span class="text-2xl mx-4">|</span>
+                <span class="text-2xl mx-4">Evil Eye Pendants</span>
 
                 <span class="text-2xl mx-4">|</span>
                 <span class="text-2xl mx-4"><i class="ri-gift-line"></i></span>
@@ -431,8 +608,14 @@
                 <span class="text-2xl mx-4"><i class="ri-gift-line"></i></span>
                 <span class="text-2xl mx-4">Something for Everyone : Religious Symbols</span>
                 <span class="text-2xl mx-4">|</span>
-                <span class="text-2xl mx-4"><i class="ri-gift-line"></i></span>
                 <span class="text-2xl mx-4">Horoscope Sign</span>
+                <span class="text-2xl mx-4">|</span>
+                <span class="text-2xl mx-4">Letter Pendants</span>
+                <span class="text-2xl mx-4">|</span>
+                <span class="text-2xl mx-4">Evil Eye Pendants</span>
+
+
+
                
             </div>
             
@@ -441,7 +624,7 @@
         <!-- Section 2 -->
 
 
-        <div class="grid grid-cols-12 gap-4 mx-8">
+        <div class="grid grid-cols-12 gap-4 mx-8 mt-20 mb-20">
 
             <div class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
                 <img src="./assests/gift-02.svg" alt="img1">
@@ -478,7 +661,7 @@
         <!-- section 3 -->
 
         <div>
-        <div class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4">
+        <div class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4 mt-12">
             <div class="col-span-12 md:col-span-6 md:h-[33rem]  w-full"><img src="./assests/Group 44.png" class="w-full h-full object-fit"></div>
             <div class="col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 20.png" class="w-full h-full object-fit"></div>
             <div class="col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 21.png" class="w-full h-full object-fit"></div>
@@ -540,7 +723,7 @@
                     </div>
                 </div>
 
-                <button class="button5  px-[96px] py-3 bg-[#865F42] text-white text-lg font-semibold">
+                <button class="button6  px-[96px] py-3 bg-[#865F42] text-white text-lg font-semibold">
                     <span>Get A Quote</span>
                 </button>
             </div>
@@ -650,7 +833,7 @@
                         </div>
                     
                         <button type="submit"
-                            class="button5 playfair-display bg-[#8B6B50] hover:bg-[#7A5F45] focus:ring-4 focus:outline-none focus:ring-[#8B6B50] font-medium text-xl w-full mx-auto sm:w-auto px-5 py-2.5 text-center dark:bg-[#8B6B50] dark:hover:bg-[#7A5F45] dark:focus:ring-[#8B6B50]">
+                            class="button5 playfair-display bg-[#8B6B50] hover:bg-[#7A5F45] focus:ring-4 focus:outline-none focus:ring-[#8B6B50] font-medium text-md w-full mx-auto sm:w-auto px-5 py-2.5 text-center dark:bg-[#8B6B50] dark:hover:bg-[#7A5F45] dark:focus:ring-[#8B6B50]">
                             <span>GET A QUOTE NOW</span>
                         </button>
                     </form>
@@ -671,7 +854,7 @@
 
     <!-- section 4 -->
 
-    <section class="max-w-[90rem] mx-auto px-2 py-10">
+    <section class="max-w-[85rem] mx-auto px-2 py-10">
         <!-- Heading -->
          <div class="md:flex md:justify-between">
         <h2 class="text-2xl md:text-3xl font-semibold text-left text-[#805333] px-4">
@@ -796,7 +979,7 @@
     <!-- Include Alpine.js -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
 
-<div x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-[92rem] font-['Playfair_Display']">
+<div x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-[85rem] font-['Playfair_Display']">
   <h2 class="text-3xl font-semibold text-[#8B6B50] mb-6 px-8">FAQs</h2>
 
   <!-- FAQ Container -->
@@ -956,8 +1139,8 @@
          <i class="fab fa-whatsapp text-white text-3xl"></i> 
      </div>
  </a>
-        <footer class="bg-white py-12">
-            <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-8 text-sm text-gray-700">
+        <footer class="bg-white py-12 overflow-hidden">
+            <div class="contain mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 text-lg text-gray-700">
                 <!-- Help & Information -->
                 <div>
                     <h3 class="font-bold mb-2">Help & Information</h3>
@@ -1006,8 +1189,12 @@
                       <i class="fas fa-envelope text-accent"></i><span>worldoffian@gmail.com</span>
                     </p>
                     <div class="flex space-x-4 mt-2">
-                        <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-instagram text-xl"></i></a>
-                        <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i> <!-- Updated icon -->
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
                     </div>
                 </div>
         
@@ -1015,17 +1202,17 @@
                 <div class="col-span-2 sm:col-span-1">
                     <h3 class="font-bold mb-2">Newsletters</h3>
                     <p>Stay up to date with offers and our latest products.</p>
-                    <div class="mt-2 flex">
-                        <input type="email" placeholder="Enter your email..." class="border p-2 flex-1">
-                        <button class="bg-[#79512F] text-white px-4">SUBSCRIBE</button>
+                    <div class="mt-2 flex flex-wrap">
+                        <input type="email" placeholder="Enter your email..." class="border p-2 flex-1 mb-2">
+                        <button class=" button7 bg-[#79512F] text-white px-4"><span>Subscribe</span></button>
                     </div>
                 </div>
             </div>
         
             <!-- Footer Bottom -->
-            <div class="mt-8 text-gray-500 text-sm px-4 sm:px-10 md:px-20 lg:px-40 xl:px-48 flex flex-col lg:flex-row lg:items-center lg:justify-between">
+            <div class="mt-8 text-gray-500 text-sm px-4 flex flex-col lg:flex-row lg:items-center lg:justify-between">
               <img class="w-auto max-w-[200px] mx-auto lg:mx-0" src="assests/image 1.png" alt="">
-              <p class="mt-2 lg:mt-0 text-center lg:text-right">© Copyright 2025 <span class="font-semibold">World Of Fian</span></p>
+              <p class="mt-2 lg:mt-0 text-center lg:text-right lg:pr-[23rem]">© Copyright 2025 <span class="font-semibold">World Of Fian</span></p>
             </div>                       
         </footer>
 
