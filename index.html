@@ -430,24 +430,44 @@
                     
                         <!-- Gender Dropdown -->
                         <div class="relative z-0 w-full mb-5 group">
-                            <select name="gender" id="gender"
-                                class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer">
-                                <option value="" disabled selected class="text-[#79512F]">Select Gender</option>
-                                <option value="male" class="text-black">Male</option>
-                                <option value="female" class="text-black">Female</option>
-                                <option value="other" class="text-black">Other</option>
-                            </select>
-                        </div>
+                          <div class="relative">
+                              <select name="gender" id="gender"
+                                  class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none 
+                                  dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] 
+                                  peer cursor-pointer hover:bg-[#F7F1EB] focus:bg-[#F7F1EB]"> 
+                                  <option value="" disabled selected class="text-[#79512F] focus:bg-[#F7F1EB] ">Select Gender</option>
+                                  <option value="male" class="text-black bg-[#F7F1EB]">Male</option>
+                                  <option value="female" class="text-black bg-[#F7F1EB]">Female</option>
+                                  <option value="other" class="text-black bg-[#F7F1EB]">Other</option>
+                              </select>
+                              <!-- Custom Dropdown Arrow -->
+                              <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                                  <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                  </svg>
+                              </div>
+                          </div>
+                      </div>
+                      
                     
                         <!-- Country Dropdown -->
                         <div class="relative z-0 w-full mb-5 group">
+                          <div class="relative">
                             <select name="country" id="country"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer">
-                                <option value="" disabled selected>Select Country</option>
-                                <option value="usa" class="text-black">USA</option>
-                                <option value="canada" class="text-black">Canada</option>
-                                <option value="uk" class="text-black">UK</option>
+                                <option value="" disabled selected class="text-[#79512F] focus:bg-[#F7F1EB]">Select Country</option>
+                                <option value="usa" class="text-black bg-[#F7F1EB] ">USA</option>
+                                <option value="canada" class="text-black bg-[#F7F1EB]">Canada</option>
+                                <option value="uk" class="text-black bg-[#F7F1EB]">UK</option>
                             </select>
+                            <!-- Custom Dropdown Arrow -->
+                            <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                              <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                              </svg>
+                              </div>
+                              </div>
+                            
                         </div>
                     
                         <div class="relative z-0 w-full mb-5 group">
