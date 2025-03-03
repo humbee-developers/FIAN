@@ -10,6 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 
@@ -30,29 +33,13 @@
             }
 
             100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        @keyframes marquee2 {
-            0% {
-                transform: translateX(100%);
-            }
-
-            100% {
-                transform: translateX(0%);
+                transform: translateX(-50%);
             }
         }
 
         .marquee {
             display: flex;
-            animation: marquee 15s linear infinite;
-            white-space: nowrap;
-        }
-
-        .marquee2 {
-            display: flex;
-            animation: marquee2 15s linear infinite;
+            animation: marquee 25s linear infinite;
             white-space: nowrap;
         }
 
@@ -90,7 +77,7 @@
 
             .marquee span,
             .marquee2 span {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
                 /* Even smaller font */
                 margin: 0 5px;
             }
@@ -254,21 +241,33 @@
         <div class="overflow-x-hidden flex relative bg-[#8B6B50] text-white mt-[4rem]">
             <!-- First Marquee -->
             <div class="marquee py-4">
-                <span class="text-4xl mx-4"><img src="./assests/gift-01.svg"></span>
+                <span class="text-4xl mx-2"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-2">925 Silver - Anti Tarnish-Premium Packing</span>
+                <span class="text-4xl mx-2">|</span>
+                <span class="text-4xl mx-2"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-2">Custom Design & Engraving - Personalized Charms</span>
+                <span class="text-4xl mx-2">|</span>
+                <span class="text-4xl mx-2"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-2">Something for Everyone : Religious Symbols</span>
+                <span class="text-4xl mx-2">|</span>
+                <span class="text-4xl mx-2"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-2">Horoscope Sign</span>
+
+                <span class="text-4xl mx-4">|</span>
+                <span class="text-4xl mx-4"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-4">925 Silver - Anti Tarnish-Premium Packing</span>
+                <span class="text-4xl mx-4">|</span>
+                <span class="text-4xl mx-4"><i class="ri-gift-line"></i></span>
                 <span class="text-4xl mx-4">Custom Design & Engraving - Personalized Charms</span>
                 <span class="text-4xl mx-4">|</span>
-                <span class="text-4xl mx-4"><img src="./assests/gift-01.svg"></span>
-                <span class="text-4xl mx-4">Custom Design & Engraving - Personalized Charms</span>
+                <span class="text-4xl mx-4"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-4">Something for Everyone : Religious Symbols</span>
+                <span class="text-4xl mx-4">|</span>
+                <span class="text-4xl mx-4"><i class="ri-gift-line"></i></span>
+                <span class="text-4xl mx-4">Horoscope Sign</span>
                
             </div>
-            <!-- Second Marquee -->
-            <!-- <div class="absolute top-0 marquee2 py-4">
-                <span class="text-4xl mx-4">|</span>
-                <span class="text-4xl mx-4"><img src="./assests/gift-01.svg"></span>
-                <span class="text-4xl mx-4">Custom Design & Engraving - Personalized Charms</span>
-                <span class="text-4xl mx-4"><img src="./assests/gift-01.svg"></span>
-                <span class="text-4xl mx-4">Custom Design & Engraving - Personalized Charms</span>
-            </div> -->
+            
         </div>
 
         <!-- Section 2 -->
@@ -333,7 +332,7 @@
 
                 <div class="mt-6 space-y-4">
                     <div class="flex items-start">
-                        <span class="text-3xl">➲</span>
+                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
                         <div class="ml-3">
                             <h3 class="font-semibold">Exquisite 925 Silver</h3>
                             <p class="text-sm">Enjoy jewelry that remains brilliant over time with anti-tarnish properties.</p>
@@ -341,7 +340,7 @@
                     </div>
 
                     <div class="flex items-start">
-                        <span class="text-3xl">➲</span>
+                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
                         <div class="ml-3">
                             <h3 class="font-semibold">Premium Packaging</h3>
                             <p class="text-sm">Each piece arrives in elegant, high-end packaging that elevates the gifting experience.</p>
@@ -349,7 +348,7 @@
                     </div>
 
                     <div class="flex items-start">
-                        <span class="text-3xl">➲</span>
+                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
                         <div class="ml-3">
                             <h3 class="font-semibold">Custom Engraving & Designs</h3>
                             <p class="text-sm">Add a personal touch with bespoke charms, religious symbols, horoscope signs, letter pendants, and even evil eye motifs.</p>
@@ -357,7 +356,7 @@
                     </div>
 
                     <div class="flex items-start">
-                        <span class="text-3xl">➲</span>
+                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
                         <div class="ml-3">
                             <h3 class="font-semibold">Bulk Order Benefits</h3>
                             <p class="text-sm">Take advantage of exclusive corporate discounts, tailor-made orders, and a seamless process from inquiry to delivery.</p>
@@ -365,7 +364,7 @@
                     </div>
 
                     <div class="flex items-start">
-                        <span class="text-3xl">➲</span>
+                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
                         <div class="ml-3">
                             <h3 class="font-semibold">Pan-India Shipping & Support</h3>
                             <p class="text-sm">Reliable, dedicated service that ensures your gifts arrive on time, every time.</p>
