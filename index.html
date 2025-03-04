@@ -9,6 +9,7 @@
  <meta property="og:description" content="If your style is minimalistic and chic, then our premium 925 silver jewellery collection with AAA graded zircons is made for you. Discover these beautifully handcrafted pieces to elevate your style today.">
     <title>World of FIAN: Buy Premium 925 Silver Jewellery Handcrafted Just For Y &ndash; Worldoffian</title>
     <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assests/fian-favicon.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,11 +19,19 @@
     rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 </head>
 
 <body class="font-['Playfair_Display']">
     <style>
+        body{
+            overflow-x: hidden;
+        }
 
            .playfair-display {
             font-family: "Playfair Display", serif;
@@ -133,11 +142,11 @@
     background: white;
     box-sizing: border-box;
     color: #79512F;
-    font-family: "Playfair Display", serif;
+    font-family: "Playfair Display";
     border: 2px solid #79512F;
     cursor: pointer;
     display: inline-block;
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 500;
     letter-spacing: 0;
     float: left;
@@ -149,6 +158,7 @@
     /* padding: 20px 65px; */
     text-align: center;
     /*margin-top: 0.8rem;*/
+    /* margin-top: 0.8rem; */
     text-decoration: none;
     text-rendering: geometricprecision;
     transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
@@ -215,11 +225,11 @@
     background: #79512F;
     box-sizing: border-box;
     color: white;
-    font-family: "Playfair Display", serif;
+    font-family: "Playfair Display";
     border: 2px solid #79512F;
     cursor: pointer;
     display: inline-block;
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 500;
     letter-spacing: 0;
     float: left;
@@ -264,7 +274,7 @@
     clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
   }
   .button5:after {
-    background-color: #FFFFFF;
+    background-color: transparent;
     color: white;
   }
   .button5 span {
@@ -373,7 +383,7 @@
     border: 2px solid #79512F;
     cursor: pointer;
     display: inline-block;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: 0;
     float: left;
@@ -382,7 +392,7 @@
     opacity: 1;
     outline: 0;
     position: relative;
-    padding: 8px 15px;
+    padding: 10px 15px;
     text-align: center;
     /* margin-top: 1.5rem; */
     text-decoration: none;
@@ -562,13 +572,49 @@
 </script>
 
 
-    <div class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2">
-        <p
+
+    <div  class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2">
+        <p id="shipping-text"
             class="text-[10px] md:text-xs lg:text-sm text-center px-2 py-2 whitespace-nowrap overflow-hidden text-ellipsis">
             Shipping Pan India | Free delivery on prepaid orders!
         </p>
     </div>
 
+   <script>
+    // Array of messages to cycle through
+    const messages = [
+        'Shipping Pan India | Free delivery on prepaid orders!',
+        'Order now and get exclusive discounts!',
+        'Hurry! Limited time offer on select items!'
+    ];
+
+    let currentMessageIndex = 0;
+
+    // Function to change text with animation
+    function changeText() {
+        const textElement = document.getElementById('shipping-text');
+        
+        // Reset the animation by removing and adding the class
+        textElement.classList.remove('animate-text');
+        
+        // Temporarily remove the text content and force reflow to reset animation
+        textElement.textContent = '';
+        void textElement.offsetWidth; // Trigger reflow
+
+        // Set the new text content
+        textElement.textContent = messages[currentMessageIndex];
+
+        // Add animation class again
+        textElement.classList.add('animate-text');
+        
+        // Update the index to show the next message
+        currentMessageIndex = (currentMessageIndex + 1) % messages.length; // Loop through messages
+    }
+
+    // Change text immediately and then every 5 seconds
+    changeText(); // Change text right away on page load
+    setInterval(changeText, 5000); // Change text every 5 seconds
+</script>
 
         <!-- navbar -->
 
@@ -630,7 +676,7 @@
         <div class="grid grid-cols-12 gap-4">
             <!-- Left Section (Image) -->
             <div class="md:col-span-8 h-auto md:h-[730px] col-span-12">
-                <img src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
+                <img data-aos="fade-up" data-aos-duration="1000"  src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
                     alt="img1" />
             </div>
 
@@ -728,9 +774,9 @@
         <!-- Section 2 -->
 
 
-        <div class="grid grid-cols-12 gap-4 mx-8 mt-20 mb-20">
+        <div  class="grid grid-cols-12 gap-4 mx-8 mt-20 mb-20">
 
-            <div class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
+            <div data-aos="fade-right" data-aos-duration="1000"   class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
                 <img src="./assests/gift-02.svg" alt="img1">
                 <p class="text-2xl">
                     <b>Premium Packaging</b>
@@ -740,7 +786,7 @@
                     a Luxe Experience
                 </p>
             </div>
-            <div class="justify-center items-center w-full flex flex-col md:col-span-4 p-4 col-span-12  md:border-l-2 md:border-r-2 border-t-2 border-b-2 md:border-t-0 md:border-b-0 py-8 border-[#E0CCB2]  py-8 md:my-8">
+            <div data-aos="fade-left" data-aos-duration="1000"  class="justify-center items-center w-full flex flex-col md:col-span-4 p-4 col-span-12  md:border-l-2 md:border-r-2 border-t-2 border-b-2 md:border-t-0 md:border-b-0 py-8 border-[#E0CCB2]  py-8 md:my-8">
                 <img src="./assests/snowflake.svg" alt="img1">
                 <p class="text-2xl">
                     <b>Custom Requests</b>
@@ -750,7 +796,7 @@
                     Special Requests Accommodated
                 </p>
             </div>
-            <div class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 py-8 md:my-8">
+            <div data-aos="fade-left" data-aos-duration="1000"  class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 py-8 md:my-8">
                 <img src="./assests/truck.svg" alt="img1">
                 <p class="text-2xl">
                     <b>PAN India Delivery</b>
@@ -761,17 +807,18 @@
                 </p>
             </div>
         </div>
+        
 
         <!-- section 3 -->
 
         <div>
         <div class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4 mt-12">
-            <div class="col-span-12 md:col-span-6 md:h-[33rem]  w-full"><img src="./assests/Group 44.png" class="w-full h-full object-fit"></div>
-            <div class="col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 20.png" class="w-full h-full object-fit"></div>
-            <div class="col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 21.png" class="w-full h-full object-fit"></div>
-            <div class="col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 23.png" class="w-full h-full object-fit"></div>
-            <div class="col-span-6 md:col-span-4 md:h-[33rem]  w-full"><img src="./assests/Group 46.png" class="w-full h-full object-fit"></div>
-            <div class="col-span-12 md:col-span-5 md:h-[33rem]  w-full"><img src="./assests/Rectangle 22.png" class="w-full h-full object-fit"></div>
+            <div data-aos="fade-up" data-aos-duration="1000"  class="col-span-12 md:col-span-6 md:h-[33rem]  w-full"><img src="./assests/Group 44.png" class="w-full h-full object-fit"></div>
+            <div data-aos="fade-right" data-aos-duration="1000"  class="col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 20.png" class="w-full h-full object-fit"></div>
+            <div data-aos="fade-up" data-aos-duration="1000"  class="col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 21.png" class="w-full h-full object-fit"></div>
+            <div data-aos="fade-right" data-aos-duration="1000"  class="col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 23.png" class="w-full h-full object-fit"></div>
+            <div data-aos="fade-up" class="col-span-6 md:col-span-4 md:h-[33rem]  w-full"><img src="./assests/Group 46.png" class="w-full h-full object-fit"></div>
+            <div  data-aos="fade-left" class="col-span-12 md:col-span-5 md:h-[33rem]  w-full"><img src="./assests/Rectangle 22.png" class="w-full h-full object-fit"></div>
         </div>
     </div>
     
@@ -779,7 +826,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             
             <!-- Left Section - Why Choose FIAN? -->
-            <div class="text-[#865F42]">
+            <div data-aos="zoom-in" data-aos-duration="1000"  class="text-[#865F42]">
                 <h2 class="text-3xl font-semibold">Why Choose FIAN?</h2>
                 <p class="mt-4">
                     Experience the luxury and personalization that set us apart. Whether you’re planning corporate gifting, return gifts, or personal tokens like bridesmaid gifts, our collection is designed to impress and leave a lasting impression.
@@ -833,7 +880,7 @@
             </div>
 
             <!-- Right Section - Gift Collection -->
-            <div class="relative flex justify-center items-center">
+            <div data-aos="fade-left" data-aos-duration="1000" class="relative flex justify-center items-center">
                 <img src="./assests/Rectangle 55.jpg" alt="Gift Collection" class="max-w-full h-auto">
             </div>
 
@@ -846,7 +893,7 @@
         <div class="bg-[#F7F1EB] md:min-h-screen flex items-center justify-center px-4">
             <div class="max-w-[90rem] w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <!-- Left: Form Section -->
-                <div class="p-6">
+                <div data-aos="fade-right" data-aos-duration="1000" class="p-6">
                     <h2 class="text-3xl font-bold text-[#805333]">TELL US WHAT YOU NEED</h2>
                     <p class="text-[#805333] mb-6">Get A Custom Quote</p>
                     
@@ -948,7 +995,7 @@
                 </div>
         
                 <!-- Right: Image Section -->
-                <div class="flex justify-center hidden md:block pl-[85px]">
+                <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center hidden md:block pl-[85px]">
                     <img src="./assests/Rectangle 45.jpg" alt="Jewelry" class="w-full max-w-[36rem] shadow-lg">
                 </div>
             </div>
@@ -992,7 +1039,7 @@
       <!-- SwiperJS CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-<div class="max-w-[92rem] mx-auto px-4 mt-10">
+<div data-aos="fade-up" data-aos-duration="1000" class="max-w-[92rem] mx-auto px-4 mt-10">
     <!-- Swiper (Mobile View) -->
     <div class="block md:hidden">
         <div class="swiper mySwiper">
@@ -1221,7 +1268,7 @@
 
   <!-- Hero Section -->
   <section class="bg-[#DDC3A3] md:py-12 py-6 md:px-[100px] text-center md:flex md:justify-between">
-    <div class="px-4 text-left md:py-8 py-6">
+    <div data-aos="fade-right" data-aos-duration="1000" class="px-4 text-left md:py-8 py-6">
         <h2 class="text-3xl font-bold">Make Every Gift Unforgettable</h2>
         <p class="text-gray-800 md:mt-2 mt-4">
             At FIAN, we transform ordinary gifting into a luxurious experience. Let our<br> expertise in fine jewelry help you make every gifting moment truly special.
@@ -1229,6 +1276,8 @@
     </div>
     <div class="flex justify-center items-center">
         <button class=" button8 [#7A5630] playfair-display text-white px-12 py-3 font-semibold shadow-md px-6 py-2 text-sm md:px-12 md:py-3 md:text-base hover:bg-[#805333]">
+    <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center items-center">
+        <button class="button5 [#7A5630] playfair-display text-white px-10 py-3 font-semibold shadow-md hover:bg-[#805333]">
             <span>CHAT WITH US</span>
         </button>
     </div>
@@ -1300,6 +1349,74 @@
                 <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
                     <i class="fab fa-instagram text-lg"></i>
                 </a>
+        <footer data-aos="fade-in" data-aos-duration="1000" class="bg-white py-12 overflow-hidden">
+            <div class="contain mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 text-lg text-gray-700">
+                <!-- Help & Information -->
+                <div>
+                    <h3 class="font-bold mb-2">Help & Information</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="navbar-animation">Terms of Services</a></li>
+                        <li><a href="#" class="navbar-animation">Privacy Policy</a></li>
+                        <li><a href="#" class="navbar-animation">Return Policy</a></li>
+                        <li><a href="#" class="navbar-animation">FAQs</a></li>
+                        <li><a href="#" class="navbar-animation">Track Order</a></li>
+                    </ul>
+                </div>
+        
+                <!-- About Us -->
+                <div>
+                    <h3 class="font-bold mb-2">About Us</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="navbar-animation">About Us</a></li>
+                        <li><a href="#" class="navbar-animation">Benefits of Silver</a></li>
+                        <li><a href="#" class="navbar-animation">Jewellery Care</a></li>
+                        <li><a href="#" class="navbar-animation">Contact Us</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Categories -->
+                <div>
+                    <h3 class="font-bold mb-2">Categories</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="navbar-animation">Rings</a></li>
+                        <li><a href="#" class="navbar-animation">Earrings</a></li>
+                        <li><a href="#" class="navbar-animation">Pendants</a></li>
+                        <li><a href="#" class="navbar-animation">Sets</a></li>
+                        <li><a href="#" class="navbar-animation">Build Your Own Charm Jewellery</a></li>
+                        <li><a href="#" class="navbar-animation">Charms</a></li>
+                        <li><a href="#" class="navbar-animation">Charm Bracelets</a></li>
+                        <li><a href="#" class="navbar-animation">Charm Necklace</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Contact Us -->
+                <div>
+                    <h3 class="font-bold mb-2">Contact Us</h3>
+                    <p class="flex items-center space-x-2">
+                      <i class="fas fa-phone text-accent"></i><a href="tel:9870759560">9870759560</a>
+                    </p>
+                    <p class="flex items-center space-x-2">
+                      <i class="fas fa-envelope text-accent"></i><a href="mailto:worldoffian@gmail.com">worldoffian@gmail.com</a>
+                    </p>
+                    <div class="flex space-x-4 mt-2">
+                        <a href="https://www.facebook.com/worldoffian?mibextid=ZbWKwL" target="_blank" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i> <!-- Updated icon -->
+                        </a>    
+                        <a href="https://www.instagram.com/worldoffian/" target="_blank" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+        
+                <!-- Newsletter -->
+                <div class="col-span-2 sm:col-span-1">
+                    <h3 class="font-bold mb-2">Newsletters</h3>
+                    <p>Stay up to date with offers and our latest products.</p>
+                    <div class="mt-2 flex flex-wrap">
+                        <input type="email" placeholder="Enter your email..." class="border p-2 flex-1 outline-none	">
+                        <button class=" button7 bg-[#79512F] text-white px-4"><span>Subscribe</span></button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1322,16 +1439,12 @@
 </footer>
 
          
-        
-    
-        
+        <script>
+            AOS.init();
+          </script>
+    <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 
     </body>
-
-    </html>
-
-
-</body>
-
 </html>
