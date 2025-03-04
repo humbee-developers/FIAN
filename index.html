@@ -590,6 +590,9 @@
          .button8:hover {
          color: #79512F;
          }
+         .socialicons{
+            display: none;
+         }
          select option:hover{background-color:#A86B42 !important; }
          @media (max-width: 640px) {
          .contain {
@@ -643,6 +646,10 @@
             .giftb{
                 width: 100%;
             }
+            .socialicons{
+            display: flex;
+            margin-top: auto;
+         }
          }
          @media (max-width:575px){
             .gift{
@@ -788,7 +795,20 @@
                      <a href="#FAQs"
                         class="navbar-animation inline-block md:block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">FAQs</a>
                   </li>
+                  
                </ul>
+               <div class="flex space-x-4 mt-2 socialicons">
+                  <a href="#" class="flex items-center space-x-3" style="margin-right: 100px; padding-left: 20px;">
+                     <img src="./assests/image 1.png" class="h-8" alt="Flowbite Logo">
+                     </a>
+                  <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                     <i class="fab fa-facebook-f text-lg"></i> <!-- Updated icon -->
+                  </a>
+                  <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                  <i class="fab fa-instagram text-lg"></i>
+                  </a>
+               </div>
+              
             </div>
             <!-- Get Started Button -->
             <div class="hidden md:flex md:order-2 mr-8">
