@@ -85,6 +85,48 @@
          margin: 0 5px;
          }
          }
+         .helpinfo{
+        display:inline-block;
+        position:relative;
+      }
+      .helpinfo::after{
+        content:'';
+        height:1px;
+        width:30%;
+        background:#000;
+        position:absolute;
+        left:calc(50% - 50%);
+        bottom:-5px;
+      }
+      .helpinfo1{
+        display:inline-block;
+        position:relative;
+      }
+      .helpinfo1::after{
+        content:'';
+        height:1px;
+        width:70%;
+        background:#000;
+        position:absolute;
+        left:calc(50% - 50%);
+        bottom:-5px;
+      }
+
+      .helpinfo2{
+        display:inline-block;
+        position:relative;
+      }
+      .helpinfo2::after{
+        content:'';
+        height:1px;
+        width:50%;
+        background:#000;
+        position:absolute;
+        left:calc(50% - 50%);
+        bottom:-5px;
+      }
+
+
          .swiper-pagination {
          position: static !important; /* Removes absolute positioning */
          display: flex !important;
@@ -1192,7 +1234,7 @@
          <div class="contain mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 text-lg text-gray-700">
             <!-- Help & Information -->
             <div class="footer-item">
-               <h3 class="font-bold mb-2">Help & Information</h3>
+               <h3 class=" helpinfo mb-2">Help & Information</h3>
                <ul class="space-y-1">
                   <li><a href="#" class="navbar-animation">Terms of Services</a></li>
                   <li><a href="#" class="navbar-animation">Privacy Policy</a></li>
@@ -1203,7 +1245,7 @@
             </div>
             <!-- About Us -->
             <div class="footer-item">
-               <h3 class="font-bold mb-2">About Us</h3>
+               <h3 class="helpinfo1 font-bold mb-2">About Us</h3>
                <ul class="space-y-1">
                   <li><a href="#" class="navbar-animation">About Us</a></li>
                   <li><a href="#" class="navbar-animation">Benefits of Silver</a></li>
@@ -1213,7 +1255,7 @@
             </div>
             <!-- Categories -->
             <div class="footer-item">
-               <h3 class="font-bold mb-2">Categories</h3>
+               <h3 class=" helpinfo2 font-bold mb-2">Categories</h3>
                <ul class="space-y-1">
                   <li><a href="#" class="navbar-animation">Rings</a></li>
                   <li><a href="#" class="navbar-animation">Earrings</a></li>
@@ -1227,7 +1269,7 @@
             </div>
             <!-- Contact Us -->
             <div class="footer-item">
-               <h3 class="font-bold mb-2">Contact Us</h3>
+               <h3 class=" helpinfo2 font-bold mb-2">Contact Us</h3>
                <p class="flex items-center space-x-2">
                   <i class="fas fa-phone text-accent"></i><span>9870759560</span>
                </p>
@@ -1245,7 +1287,7 @@
             </div>
             <!-- Newsletter -->
             <div class="footer-item col-span-2 sm:col-span-1">
-               <h3 class="font-bold mb-2">Newsletters</h3>
+               <h3 class=" helpinfo2 font-bold mb-2">Newsletters</h3>
                <p>Stay up to date with offers and our latest products.</p>
                <div class="mt-2 flex flex-wrap">
                   <input type="email" placeholder="Enter your email..." class="border p-2 flex-1 mb-2 text-center sm:w-auto">
