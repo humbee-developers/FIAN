@@ -66,7 +66,7 @@
 
             .marquee,
             .marquee2 {
-                animation-duration: 25s;
+                animation-duration: 20s;
                 /* Faster animation on smaller screens */
             }
 
@@ -83,7 +83,7 @@
 
             .marquee,
             .marquee2 {
-                animation-duration: 25s;
+                animation-duration: 20s;
                 /* Even faster for small screens */
             }
 
@@ -157,6 +157,7 @@
     position: relative;
     /* padding: 20px 65px; */
     text-align: center;
+    /*margin-top: 0.8rem;*/
     /* margin-top: 0.8rem; */
     text-decoration: none;
     text-rendering: geometricprecision;
@@ -441,8 +442,112 @@
     color: #79512F;
   }
 
+  .button8 {
+    appearance: none;
+    background: #79512F;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Playfair Display", serif;
+    border: 2px solid #79512F;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0;
+    float: left;
+    line-height: 1em;
+    margin: 0;
+    opacity: 1;
+    outline: 0;
+    position: relative;
+    padding: 10px 45px;
+    text-align: center;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    text-rendering: geometricprecision;
+    transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
+      background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
+      color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    overflow: hidden; /* Prevent pseudo-element from affecting width */
+
+  }
+  .button8:before {
+    animation: opacityFallbackOut 0.5s step-end forwards;
+    backface-visibility: hidden;
+    background-color: white;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    color: #79512F;
+    position: absolute;
+    /* border-radius: 5px; */
+    top: 0;
+    transform: scaleX(0); /* Start with zero width */
+    transform: translateZ(0);
+    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+      -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 100%;
+  }
+  .button8:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+  }
+  .button8:after {
+    background-color: #FFFFFF;
+    color: white;
+  }
+  .button8 span {
+    /* z-index: 1; */
+    position: relative;
+  }
+  .button8 span:before {
+    color: #79512F;
+  }
+  .button8:hover {
+    color: #79512F;
+  }
+
   select option:hover{background-color:#A86B42 !important; }
 
+
+  @media (max-width: 640px) {
+        .contain {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .footer-item {
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+        .footer-item ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+        }
+        .footer-item ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-item .flex {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .button6 {
+            width: 100%; /* Make the button take up full width on mobile */
+            padding-left: 1rem; /* Optional: Adjust padding for mobile */
+            padding-right: 1rem; /* Optional: Adjust padding for mobile */
+        }
+    }
     </style>
 <script>
     function toggleMenu() {
@@ -597,7 +702,7 @@
                     </p>
 
                     <div class="md:mt-2 md:mt-12 flex md:flex-col items-center">
-                        <div class="flex flex-wrap justify-center items-center md:gap-6 gap-3">
+                        <div class="flex  flex-col flex-wrap justify-center items-center md:gap-6 gap-3">
                             <button class="button5 px-6 md:px-[70px] py-3 md:py-4 bg-[#8B6B50] border-2 border-[#8B6B50] text-white 
                                 hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl 
                                 overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
@@ -910,19 +1015,19 @@
     
         <!-- Description -->
          <div>
-        <p class="text-lg text-[#79512F] md:text-right text-left px-4 mt-4">
+            <p class="flex justify-start md:justify-end text-sm md:text-lg text-[#79512F] md:text-right text-left px-4 mt-4">
             Every piece is thoughtfully designed to make your bulk gifting<br class="hidden md:block">
             experience as memorable as the gift itself.
         </p>
             <!-- Features -->
-            <div class="flex justify-end  px-4 space-x-4 mt-2 text-[#5A3A2E] text-lg font-medium">
-                <span class="flex items-center space-x-1">
+            <div class="flex justify-start md:justify-end space-x-4 mt-4 md:mt-2 text-[#5A3A2E] text-sm md:text-lg font-medium px-4">
+            <span class="flex items-center space-x-1">
                     </span>
-                    <span> ◆ PURE 925 SILVER</span>
+                    ◆ PURE 925 SILVER
                 </span>
                 <span class="flex items-center space-x-1">
                     </span>
-                    <span> ◆ ANTI-TARNISH</span>
+                 ◆ ANTI-TARNISH
                 </span>
             </div>
             </div>
@@ -952,9 +1057,10 @@
                 <div class="swiper-slide flex flex-col items-center">
                     <img src="./assests/Rectangle 50.png" alt="Adjustable Rings" 
                          class="w-full h-100 object-cover rounded-md shadow-lg">
-                    <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium w-full text-center">
-                        Adjustable Rings - One Size Fits All
-                    </p>
+                         <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-lg font-medium w-full text-center">
+                            Adjustable Rings - One Size Fits All
+                        </p>
+                        
                 </div>
 
                 <!-- Card 3 -->
@@ -1025,8 +1131,8 @@
     <!-- Include Alpine.js -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
 
-<div x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-[85rem] font-['Playfair_Display']">
-  <h2 class="text-3xl font-semibold text-[#8B6B50] mb-6 px-8">FAQs</h2>
+<div x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-[85rem] font-['Playfair_Display'] p-5">
+  <h2 class="text-3xl font-semibold text-[#8B6B50] mb-6 px-0 sm:px-8">FAQs</h2>
 
   <!-- FAQ Container -->
   <div class=" grid grid-cols-2 md:gap-2">
@@ -1168,12 +1274,19 @@
             At FIAN, we transform ordinary gifting into a luxurious experience. Let our<br> expertise in fine jewelry help you make every gifting moment truly special.
         </p>
     </div>
+    <div class="flex justify-center items-center">
+        <!-- <button class=" button8 [#7A5630] playfair-display text-white px-12 py-3 font-semibold shadow-md px-6 py-2 text-sm md:px-12 md:py-3 md:text-base hover:bg-[#805333]"> -->
     <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center items-center">
         <button class="button5 [#7A5630] playfair-display text-white px-10 py-3 font-semibold shadow-md hover:bg-[#805333]">
             <span>CHAT WITH US</span>
         </button>
     </div>
 </section>
+
+
+
+
+
 
         <!-- Footer Section -->
 
@@ -1185,82 +1298,78 @@
          <i class="fab fa-whatsapp text-white text-3xl"></i> 
      </div>
  </a>
-        <footer data-aos="fade-in" data-aos-duration="1000" class="bg-white py-12 overflow-hidden">
-            <div class="contain mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 text-lg text-gray-700">
-                <!-- Help & Information -->
-                <div>
-                    <h3 class="font-bold mb-2">Help & Information</h3>
-                    <ul class="space-y-1">
-                        <li><a href="#" class="navbar-animation">Terms of Services</a></li>
-                        <li><a href="#" class="navbar-animation">Privacy Policy</a></li>
-                        <li><a href="#" class="navbar-animation">Return Policy</a></li>
-                        <li><a href="#" class="navbar-animation">FAQs</a></li>
-                        <li><a href="#" class="navbar-animation">Track Order</a></li>
-                    </ul>
-                </div>
-        
-                <!-- About Us -->
-                <div>
-                    <h3 class="font-bold mb-2">About Us</h3>
-                    <ul class="space-y-1">
-                        <li><a href="#" class="navbar-animation">About Us</a></li>
-                        <li><a href="#" class="navbar-animation">Benefits of Silver</a></li>
-                        <li><a href="#" class="navbar-animation">Jewellery Care</a></li>
-                        <li><a href="#" class="navbar-animation">Contact Us</a></li>
-                    </ul>
-                </div>
-        
-                <!-- Categories -->
-                <div>
-                    <h3 class="font-bold mb-2">Categories</h3>
-                    <ul class="space-y-1">
-                        <li><a href="#" class="navbar-animation">Rings</a></li>
-                        <li><a href="#" class="navbar-animation">Earrings</a></li>
-                        <li><a href="#" class="navbar-animation">Pendants</a></li>
-                        <li><a href="#" class="navbar-animation">Sets</a></li>
-                        <li><a href="#" class="navbar-animation">Build Your Own Charm Jewellery</a></li>
-                        <li><a href="#" class="navbar-animation">Charms</a></li>
-                        <li><a href="#" class="navbar-animation">Charm Bracelets</a></li>
-                        <li><a href="#" class="navbar-animation">Charm Necklace</a></li>
-                    </ul>
-                </div>
-        
-                <!-- Contact Us -->
-                <div>
-                    <h3 class="font-bold mb-2">Contact Us</h3>
-                    <p class="flex items-center space-x-2">
-                      <i class="fas fa-phone text-accent"></i><a href="tel:9870759560">9870759560</a>
-                    </p>
-                    <p class="flex items-center space-x-2">
-                      <i class="fas fa-envelope text-accent"></i><a href="mailto:worldoffian@gmail.com">worldoffian@gmail.com</a>
-                    </p>
-                    <div class="flex space-x-4 mt-2">
-                        <a href="https://www.facebook.com/worldoffian?mibextid=ZbWKwL" target="_blank" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
-                            <i class="fab fa-facebook-f text-lg"></i> <!-- Updated icon -->
-                        </a>    
-                        <a href="https://www.instagram.com/worldoffian/" target="_blank" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
-                            <i class="fab fa-instagram text-lg"></i>
-                        </a>
+ 
+                <footer data-aos="fade-in" data-aos-duration="1000" class="bg-white py-12 overflow-hidden">
+                    <div class="contain mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 text-lg text-gray-700">
+                       <!-- Help & Information -->
+                       <div class="footer-item">
+                          <h3 class="font-bold mb-2">Help & Information</h3>
+                          <ul class="space-y-1">
+                             <li><a href="#" class="navbar-animation">Terms of Services</a></li>
+                             <li><a href="#" class="navbar-animation">Privacy Policy</a></li>
+                             <li><a href="#" class="navbar-animation">Return Policy</a></li>
+                             <li><a href="#" class="navbar-animation">FAQs</a></li>
+                             <li><a href="#" class="navbar-animation">Track Order</a></li>
+                          </ul>
+                       </div>
+                       <!-- About Us -->
+                       <div class="footer-item">
+                          <h3 class="font-bold mb-2">About Us</h3>
+                          <ul class="space-y-1">
+                             <li><a href="#" class="navbar-animation">About Us</a></li>
+                             <li><a href="#" class="navbar-animation">Benefits of Silver</a></li>
+                             <li><a href="#" class="navbar-animation">Jewellery Care</a></li>
+                             <li><a href="#" class="navbar-animation">Contact Us</a></li>
+                          </ul>
+                       </div>
+                       <!-- Categories -->
+                       <div class="footer-item">
+                          <h3 class="font-bold mb-2">Categories</h3>
+                          <ul class="space-y-1">
+                             <li><a href="#" class="navbar-animation">Rings</a></li>
+                             <li><a href="#" class="navbar-animation">Earrings</a></li>
+                             <li><a href="#" class="navbar-animation">Pendants</a></li>
+                             <li><a href="#" class="navbar-animation">Sets</a></li>
+                             <li><a href="#" class="navbar-animation">Build Your Own Charm Jewellery</a></li>
+                             <li><a href="#" class="navbar-animation">Charms</a></li>
+                             <li><a href="#" class="navbar-animation">Charm Bracelets</a></li>
+                             <li><a href="#" class="navbar-animation">Charm Necklace</a></li>
+                          </ul>
+                       </div>
+                       <!-- Contact Us -->
+                       <div class="footer-item">
+                          <h3 class="font-bold mb-2">Contact Us</h3>
+                          <p class="flex items-center space-x-2">
+                             <i class="fas fa-phone text-accent"></i><span>9870759560</span>
+                          </p>
+                          <p class="flex items-center space-x-2">
+                             <i class="fas fa-envelope text-accent"></i><span>worldoffian@gmail.com</span>
+                          </p>
+                          <div class="flex space-x-4 mt-2">
+                             <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                                <i class="fab fa-facebook-f text-lg"></i> <!-- Updated icon -->
+                             </a>
+                             <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                             <i class="fab fa-instagram text-lg"></i>
+                             </a>
+                          </div>
+                       </div>
+                       <!-- Newsletter -->
+                       <div class="footer-item col-span-2 sm:col-span-1">
+                          <h3 class="font-bold mb-2">Newsletters</h3>
+                          <p>Stay up to date with offers and our latest products.</p>
+                          <div class="mt-2 flex flex-wrap justify-center">
+                             <input type="email" placeholder="Enter your email..." class="border p-2 flex-1 mb-2 text-center sm:w-auto">
+                             <button class="button7 bg-[#79512F] text-white px-4"><span>Subscribe</span></button>
+                          </div>
+                       </div>
                     </div>
-                </div>
-        
-                <!-- Newsletter -->
-                <div class="col-span-2 sm:col-span-1">
-                    <h3 class="font-bold mb-2">Newsletters</h3>
-                    <p>Stay up to date with offers and our latest products.</p>
-                    <div class="mt-2 flex flex-wrap">
-                        <input type="email" placeholder="Enter your email..." class="border p-2 flex-1 outline-none	">
-                        <button class=" button7 bg-[#79512F] text-white px-4"><span>Subscribe</span></button>
+                    <!-- Footer Bottom -->
+                    <div class="mt-8 text-gray-500 text-sm px-4 flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                       <img class="w-auto max-w-[200px] mx-auto lg:mx-0" src="assests/image 1.png" alt="">
+                       <p class="mt-2 lg:mt-0 text-center lg:text-right lg:pr-[23rem]">© Copyright 2025 <span class="font-semibold">World Of Fian</span></p>
                     </div>
-                </div>
-            </div>
-        
-            <!-- Footer Bottom -->
-            <div class="mt-8 text-gray-500 text-sm px-4 flex flex-col lg:flex-row lg:items-center lg:justify-between">
-              <img class="w-auto max-w-[200px] mx-auto lg:mx-0" src="assests/image 1.png" alt="">
-              <p class="mt-2 lg:mt-0 text-center lg:text-right lg:pr-[23rem]">© Copyright 2025 <span class="font-semibold">World Of Fian</span></p>
-            </div>                       
-        </footer>
+                 </footer>
 
          
         <script>
