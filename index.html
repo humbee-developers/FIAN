@@ -459,13 +459,49 @@
 </script>
 
 
+
     <div class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2">
-        <p
+        <p id="shipping-text"
             class="text-[10px] md:text-xs lg:text-sm text-center px-2 py-2 whitespace-nowrap overflow-hidden text-ellipsis">
             Shipping Pan India | Free delivery on prepaid orders!
         </p>
     </div>
 
+   <script>
+    // Array of messages to cycle through
+    const messages = [
+        'Shipping Pan India | Free delivery on prepaid orders!',
+        'Order now and get exclusive discounts!',
+        'Hurry! Limited time offer on select items!'
+    ];
+
+    let currentMessageIndex = 0;
+
+    // Function to change text with animation
+    function changeText() {
+        const textElement = document.getElementById('shipping-text');
+        
+        // Reset the animation by removing and adding the class
+        textElement.classList.remove('animate-text');
+        
+        // Temporarily remove the text content and force reflow to reset animation
+        textElement.textContent = '';
+        void textElement.offsetWidth; // Trigger reflow
+
+        // Set the new text content
+        textElement.textContent = messages[currentMessageIndex];
+
+        // Add animation class again
+        textElement.classList.add('animate-text');
+        
+        // Update the index to show the next message
+        currentMessageIndex = (currentMessageIndex + 1) % messages.length; // Loop through messages
+    }
+
+    // Change text immediately and then every 5 seconds
+    changeText(); // Change text right away on page load
+    setInterval(changeText, 5000); // Change text every 5 seconds
+</script>
 
         <!-- navbar -->
 
@@ -658,6 +694,7 @@
                 </p>
             </div>
         </div>
+        
 
         <!-- section 3 -->
 
@@ -1220,7 +1257,6 @@
          
         
     
-        
 
 
     </body>
