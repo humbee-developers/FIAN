@@ -1,1383 +1,1265 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="If your style is minimalistic and chic, then our premium 925 silver jewellery collection with AAA graded zircons is made for you. Discover these beautifully handcrafted pieces to elevate your style today.">
-<meta property="og:type" content="website"> <meta property="og:title" content="World of FIAN: Buy Premium 925 Silver Jewellery Handcrafted Just For Y">  <meta property="og:image" content="https://worldoffian.com/cdn/shop/t/10/assets/favicon.png?v=92269631401712420491712748893"> <meta property="og:image:secure_url" content="https://worldoffian.com/cdn/shop/t/10/assets/favicon.png?v=92269631401712420491712748893">
- <meta property="og:description" content="If your style is minimalistic and chic, then our premium 925 silver jewellery collection with AAA graded zircons is made for you. Discover these beautifully handcrafted pieces to elevate your style today.">
-    <title>World of FIAN: Buy Premium 925 Silver Jewellery Handcrafted Just For Y &ndash; Worldoffian</title>
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/assests/fian-favicon.webp">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-<!-- AOS CSS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-<!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-</head>
-
-<body class="font-['Playfair_Display']">
-    <style>
-        body{
-            overflow-x: hidden;
-        }
-
-           .playfair-display {
-            font-family: "Playfair Display", serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(0%);
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="If your style is minimalistic and chic, then our premium 925 silver jewellery collection with AAA graded zircons is made for you. Discover these beautifully handcrafted pieces to elevate your style today.">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="World of FIAN: Buy Premium 925 Silver Jewellery Handcrafted Just For Y">
+      <meta property="og:image" content="https://worldoffian.com/cdn/shop/t/10/assets/favicon.png?v=92269631401712420491712748893">
+      <meta property="og:image:secure_url" content="https://worldoffian.com/cdn/shop/t/10/assets/favicon.png?v=92269631401712420491712748893">
+      <meta property="og:description" content="If your style is minimalistic and chic, then our premium 925 silver jewellery collection with AAA graded zircons is made for you. Discover these beautifully handcrafted pieces to elevate your style today.">
+      <title>World of FIAN: Buy Premium 925 Silver Jewellery Handcrafted Just For Y &ndash; Worldoffian</title>
+      <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+      <link rel="icon" type="image/x-icon" href="/assests/fian-favicon.webp">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+         href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+         rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+         rel="stylesheet">
+      <!-- AOS CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+      <!-- AOS JS -->
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+   </head>
+   <body class="font-['Playfair_Display']">
+      <style>
+         body{
+         overflow-x: hidden;
+         }
+         .playfair-display {
+         font-family: "Playfair Display", serif;
+         font-optical-sizing: auto;
+         font-style: normal;
+         }
+         @keyframes marquee {
+         0% {
+         transform: translateX(0%);
+         }
+         100% {
+         transform: translateX(-50%);
+         }
+         }
+         .marquee {
+         display: flex;
+         animation: marquee 25s linear infinite;
+         white-space: nowrap;
+         }
+         .overflow-x-hidden {
+         overflow-x: hidden;
+         position: relative;
+         width: 100%;
+         }
+         /* ✅ Responsive Adjustments */
+         @media (max-width: 768px) {
+         .marquee,
+         .marquee2 {
+         animation-duration: 20s;
+         /* Faster animation on smaller screens */
+         }
+         .marquee span,
+         .marquee2 span {
+         font-size: 1.5rem;
+         /* Smaller font for better readability */
+         margin: 0 8px;
+         /* Reduce spacing */
+         }
+         }
+         @media (max-width: 480px) {
+         .marquee,
+         .marquee2 {
+         animation-duration: 20s;
+         /* Even faster for small screens */
+         }
+         .marquee span,
+         .marquee2 span {
+         font-size: 1.5rem;
+         /* Even smaller font */
+         margin: 0 5px;
+         }
+         }
+         .swiper-pagination {
+         position: static !important; /* Removes absolute positioning */
+         display: flex !important;
+         justify-content: center !important;
+         margin-top: 20px !important;
+         }
+         .swiper-pagination-bullet {
+         width: 12px !important; /* Custom dot size */
+         height: 2px !important;
+         background-color: #A86B42 !important; /* Custom color */
+         opacity: 0.6 !important; /* Inactive dots */
+         border-radius: 0 !important; /* Flat shape */
+         transition: all 0.3s ease-in-out !important;
+         }
+         .swiper-pagination-bullet-active {
+         background-color: #79512F !important; /* Active dot color */
+         opacity: 1 !important;
+         }
+         .navbar-animation{
+         position: relative;
+         text-decoration: none;
+         }
+         .navbar-animation::after{
+         content: '';
+         position: absolute;
+         width: 100%;
+         transform: scaleX(0);
+         border-radius: 5px;
+         height: 0.05em;
+         bottom: 0;
+         left: 0;
+         background: currentcolor;
+         transform-origin: bottom right;
+         transition: transform 0.25s ease-out;
+         }
+         .navbar-animation:hover::after {
+         transform: scaleX(1);
+         transform-origin: bottom left;
+         }
+         .button4 {
+         appearance: none;
+         background: white;
+         box-sizing: border-box;
+         color: #79512F;
+         font-family: "Playfair Display";
+         border: 2px solid #79512F;
+         cursor: pointer;
+         display: inline-block;
+         font-size: 23px;
+         font-weight: 500;
+         letter-spacing: 0;
+         float: left;
+         line-height: 1em;
+         margin: 0;
+         opacity: 1;
+         outline: 0;
+         position: relative;
+         /* padding: 20px 65px; */
+         text-align: center;
+         /*margin-top: 0.8rem;*/
+         /* margin-top: 0.8rem; */
+         text-decoration: none;
+         text-rendering: geometricprecision;
+         transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
+         background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
+         color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+         user-select: none;
+         -webkit-user-select: none;
+         touch-action: manipulation;
+         vertical-align: baseline;
+         white-space: nowrap;
+         }
+         .button4:before {
+         animation: opacityFallbackOut 0.5s step-end forwards;
+         backface-visibility: hidden;
+         background-color: #79512F;
+         clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+         content: "";
+         /* height: 100%; */
+         left: 0;
+         color: white;
+         position: absolute;
+         /* border-radius: 5px; */
+         top: 0;
+         transform: translateZ(0);
+         transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+         -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+         /* width: 100%; */
+         }
+         .button4:hover:before {
+         animation: opacityFallbackIn 0s step-start forwards;
+         clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+         }
+         .button4:after {
+         background-color: #FFFFFF;
+         color: white;
+         }
+         .button4 span {
+         /* z-index: 1; */
+         position: relative;
+         }
+         .button4 span:before {
+         color: white;
+         }
+         .button4:hover {
+         color: rgb(255, 255, 255);
+         }
+         /* Responsive Design */
+         @media (max-width: 768px) { /* Tablet & Mobile */
+         .button4 {
+         font-size: 16px; /* Smaller font size */
+         padding: 10px 20px; /* Reduced padding */
+         }
+         }
+         @media (max-width: 480px) { /* Mobile */
+         .button4 {
+         font-size: 14px; /* Further reduce font */
+         padding: 8px 15px; /* Compact padding */
+         }
+         }
+         .button5 {
+         appearance: none;
+         background: #79512F;
+         box-sizing: border-box;
+         color: white;
+         font-family: "Playfair Display";
+         border: 2px solid #79512F;
+         cursor: pointer;
+         display: inline-block;
+         font-size: 23px;
+         font-weight: 500;
+         letter-spacing: 0;
+         float: left;
+         line-height: 1em;
+         margin: 0;
+         opacity: 1;
+         outline: 0;
+         position: relative;
+         /* padding: 20px 65px; */
+         text-align: center;
+         /* margin-top: 1.5rem; */
+         text-decoration: none;
+         text-rendering: geometricprecision;
+         transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
+         background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
+         color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+         user-select: none;
+         -webkit-user-select: none;
+         touch-action: manipulation;
+         vertical-align: baseline;
+         white-space: nowrap;
+         }
+         .button5:before {
+         animation: opacityFallbackOut 0.5s step-end forwards;
+         backface-visibility: hidden;
+         background-color: white;
+         clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+         content: "";
+         height: 100%;
+         left: 0;
+         color: #79512F;
+         position: absolute;
+         /* border-radius: 5px; */
+         top: 0;
+         transform: translateZ(0);
+         transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+         -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+         width: 100%;
+         }
+         .button5:hover:before {
+         animation: opacityFallbackIn 0s step-start forwards;
+         clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+         }
+         .button5:after {
+         background-color: transparent;
+         color: white;
+         }
+         .button5 span {
+         /* z-index: 1; */
+         position: relative;
+         }
+         .button5 span:before {
+         color: #79512F;
+         }
+         .button5:hover {
+         color: #79512F;
+         }
+         /* 🌍 Responsive Styles */
+         @media (max-width: 768px) { /* Tablet & Mobile */
+         .button5 {
+         font-size: 16px; /* Reduce font size */
+         padding: 10px 20px; /* Reduce padding */
+         }
+         }
+         @media (max-width: 480px) { /* Mobile */
+         .button5 {
+         font-size: 14px; /* Further reduce font */
+         padding: 8px 15px; /* Make it more compact */
+         }
+         }
+         .button6 {
+         appearance: none;
+         background: #79512F;
+         box-sizing: border-box;
+         color: white;
+         font-family: "Playfair Display", serif;
+         border: 2px solid #79512F;
+         cursor: pointer;
+         display: inline-block;
+         font-size: 25px;
+         font-weight: 500;
+         letter-spacing: 0;
+         float: left;
+         line-height: 1em;
+         margin: 0;
+         opacity: 1;
+         outline: 0;
+         position: relative;
+         padding: 10px 45px;
+         text-align: center;
+         margin-top: 1.5rem;
+         text-decoration: none;
+         text-rendering: geometricprecision;
+         transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
+         background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
+         color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+         user-select: none;
+         -webkit-user-select: none;
+         touch-action: manipulation;
+         vertical-align: baseline;
+         white-space: nowrap;
+         overflow: hidden; /* Prevent pseudo-element from affecting width */
+         }
+         .button6:before {
+         animation: opacityFallbackOut 0.5s step-end forwards;
+         backface-visibility: hidden;
+         background-color: white;
+         clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+         content: "";
+         height: 100%;
+         left: 0;
+         color: #79512F;
+         position: absolute;
+         /* border-radius: 5px; */
+         top: 0;
+         transform: scaleX(0); /* Start with zero width */
+         transform: translateZ(0);
+         transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+         -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+         width: 100%;
+         }
+         .button6:hover:before {
+         animation: opacityFallbackIn 0s step-start forwards;
+         clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+         }
+         .button6:after {
+         background-color: #FFFFFF;
+         color: white;
+         }
+         .button6 span {
+         /* z-index: 1; */
+         position: relative;
+         }
+         .button6 span:before {
+         color: #79512F;
+         }
+         .button6:hover {
+         color: #79512F;
+         }
+         .button7 {
+         appearance: none;
+         background: #79512F;
+         box-sizing: border-box;
+         color: white;
+         font-family: "Playfair Display", serif;
+         border: 2px solid #79512F;
+         cursor: pointer;
+         display: inline-block;
+         font-size: 20px;
+         font-weight: 500;
+         letter-spacing: 0;
+         float: left;
+         line-height: 1em;
+         margin: 0;
+         opacity: 1;
+         outline: 0;
+         position: relative;
+         padding: 8px 15px;
+         text-align: center;
+         /* margin-top: 1.5rem; */
+         text-decoration: none;
+         text-rendering: geometricprecision;
+         transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
+         background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
+         color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+         user-select: none;
+         -webkit-user-select: none;
+         touch-action: manipulation;
+         vertical-align: baseline;
+         white-space: nowrap;
+         }
+         .button7:before {
+         animation: opacityFallbackOut 0.5s step-end forwards;
+         backface-visibility: hidden;
+         background-color: white;
+         clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+         content: "";
+         height: 100%;
+         left: 0;
+         color: #79512F;
+         position: absolute;
+         /* border-radius: 5px; */
+         top: 0;
+         transform: translateZ(0);
+         transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+         -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+         width: 100%;
+         }
+         .button7:hover:before {
+         animation: opacityFallbackIn 0s step-start forwards;
+         clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+         }
+         .button7:after {
+         background-color: #FFFFFF;
+         color: white;
+         }
+         .button7 span {
+         /* z-index: 1; */
+         position: relative;
+         }
+         .button7 span:before {
+         color: #79512F;
+         }
+         .button7:hover {
+         color: #79512F;
+         }
+         .button8 {
+         appearance: none;
+         background: #79512F;
+         box-sizing: border-box;
+         color: white;
+         font-family: "Playfair Display", serif;
+         border: 2px solid #79512F;
+         cursor: pointer;
+         display: inline-block;
+         font-size: 25px;
+         font-weight: 500;
+         letter-spacing: 0;
+         float: left;
+         line-height: 1em;
+         margin: 0;
+         opacity: 1;
+         outline: 0;
+         position: relative;
+         padding: 10px 45px;
+         text-align: center;
+         margin-top: 1.5rem;
+         text-decoration: none;
+         text-rendering: geometricprecision;
+         transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
+         background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
+         color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+         user-select: none;
+         -webkit-user-select: none;
+         touch-action: manipulation;
+         vertical-align: baseline;
+         white-space: nowrap;
+         overflow: hidden; /* Prevent pseudo-element from affecting width */
+         }
+         .button8:before {
+         animation: opacityFallbackOut 0.5s step-end forwards;
+         backface-visibility: hidden;
+         background-color: white;
+         clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+         content: "";
+         height: 100%;
+         left: 0;
+         color: #79512F;
+         position: absolute;
+         /* border-radius: 5px; */
+         top: 0;
+         transform: scaleX(0); /* Start with zero width */
+         transform: translateZ(0);
+         transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+         -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+         width: 100%;
+         }
+         .button8:hover:before {
+         animation: opacityFallbackIn 0s step-start forwards;
+         clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+         }
+         .button8:after {
+         background-color: #FFFFFF;
+         color: white;
+         }
+         .button8 span {
+         /* z-index: 1; */
+         position: relative;
+         }
+         .button8 span:before {
+         color: #79512F;
+         }
+         .button8:hover {
+         color: #79512F;
+         }
+         select option:hover{background-color:#A86B42 !important; }
+         @media (max-width: 640px) {
+         .contain {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         }
+         .footer-item {
+         margin-bottom: 1rem;
+         width: 100%;
+         }
+         .footer-item ul {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding-left: 0;
+         }
+         .footer-item ul li {
+         margin-bottom: 0.5rem;
+         }
+         .footer-item .flex {
+         justify-content: center;
+         }
+         }
+         @media (max-width: 640px) {
+         .button6 {
+         width: 100%; /* Make the button take up full width on mobile */
+         padding-left: 1rem; /* Optional: Adjust padding for mobile */
+         padding-right: 1rem; /* Optional: Adjust padding for mobile */
+         }
+         }
+         .navbarRes{
+            padding-left: 4rem;
+         }
+         .gift {
+            font-size: 42px;
+         }
+         
+         .giftb{
+            font-size: 20px;
+         }
+         @media (max-width:575px){
+            .gift{
+                font-size: 30px;
             }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .marquee {
-            display: flex;
-            animation: marquee 25s linear infinite;
-            white-space: nowrap;
-        }
-
-        .overflow-x-hidden {
-            overflow-x: hidden;
-            position: relative;
-            width: 100%;
-        }
-
-        /* ✅ Responsive Adjustments */
-        @media (max-width: 768px) {
-
-            .marquee,
-            .marquee2 {
-                animation-duration: 20s;
-                /* Faster animation on smaller screens */
-            }
-
-            .marquee span,
-            .marquee2 span {
-                font-size: 1.5rem;
-                /* Smaller font for better readability */
-                margin: 0 8px;
-                /* Reduce spacing */
-            }
-        }
-
-        @media (max-width: 480px) {
-
-            .marquee,
-            .marquee2 {
-                animation-duration: 20s;
-                /* Even faster for small screens */
-            }
-
-            .marquee span,
-            .marquee2 span {
-                font-size: 1.5rem;
-                /* Even smaller font */
-                margin: 0 5px;
-            }
-        }
-
-        .swiper-pagination {
-    position: static !important; /* Removes absolute positioning */
-    display: flex !important;
-    justify-content: center !important;
-    margin-top: 20px !important;
-}
-
-.swiper-pagination-bullet {
-    width: 12px !important; /* Custom dot size */
-    height: 2px !important;
-    background-color: #A86B42 !important; /* Custom color */
-    opacity: 0.6 !important; /* Inactive dots */
-    border-radius: 0 !important; /* Flat shape */
-    transition: all 0.3s ease-in-out !important;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #79512F !important; /* Active dot color */
-    opacity: 1 !important;
-}
-
-.navbar-animation{
-    position: relative;
-    text-decoration: none;
-}
-.navbar-animation::after{
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  border-radius: 5px;
-  height: 0.05em;
-  bottom: 0;
-  left: 0;
-  background: currentcolor;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-.navbar-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  .button4 {
-    appearance: none;
-    background: white;
-    box-sizing: border-box;
-    color: #79512F;
-    font-family: "Playfair Display";
-    border: 2px solid #79512F;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 23px;
-    font-weight: 500;
-    letter-spacing: 0;
-    float: left;
-    line-height: 1em;
-    margin: 0;
-    opacity: 1;
-    outline: 0;
-    position: relative;
-    /* padding: 20px 65px; */
-    text-align: center;
-    /*margin-top: 0.8rem;*/
-    /* margin-top: 0.8rem; */
-    text-decoration: none;
-    text-rendering: geometricprecision;
-    transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
-      background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
-      color 100ms cubic-bezier(0.694, 0, 0.335, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    white-space: nowrap;
-  }
-  .button4:before {
-    animation: opacityFallbackOut 0.5s step-end forwards;
-    backface-visibility: hidden;
-    background-color: #79512F;
-    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
-    content: "";
-    /* height: 100%; */
-    left: 0;
-    color: white;
-    position: absolute;
-    /* border-radius: 5px; */
-    top: 0;
-    transform: translateZ(0);
-    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
-      -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    /* width: 100%; */
-  }
-  .button4:hover:before {
-    animation: opacityFallbackIn 0s step-start forwards;
-    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-  }
-  .button4:after {
-    background-color: #FFFFFF;
-    color: white;
-  }
-  .button4 span {
-    /* z-index: 1; */
-    position: relative;
-  }
-  .button4 span:before {
-    color: white;
-  }
-  .button4:hover {
-    color: rgb(255, 255, 255);
-  }
-
-  /* Responsive Design */
-@media (max-width: 768px) { /* Tablet & Mobile */
-    .button4 {
-        font-size: 16px; /* Smaller font size */
-        padding: 10px 20px; /* Reduced padding */
-    }
-}
-
-@media (max-width: 480px) { /* Mobile */
-    .button4 {
-        font-size: 14px; /* Further reduce font */
-        padding: 8px 15px; /* Compact padding */
-    }
-}
-  .button5 {
-    appearance: none;
-    background: #79512F;
-    box-sizing: border-box;
-    color: white;
-    font-family: "Playfair Display";
-    border: 2px solid #79512F;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 23px;
-    font-weight: 500;
-    letter-spacing: 0;
-    float: left;
-    line-height: 1em;
-    margin: 0;
-    opacity: 1;
-    outline: 0;
-    position: relative;
-    /* padding: 20px 65px; */
-    text-align: center;
-    /* margin-top: 1.5rem; */
-    text-decoration: none;
-    text-rendering: geometricprecision;
-    transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
-      background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
-      color 100ms cubic-bezier(0.694, 0, 0.335, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    white-space: nowrap;
-  }
-  .button5:before {
-    animation: opacityFallbackOut 0.5s step-end forwards;
-    backface-visibility: hidden;
-    background-color: white;
-    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
-    content: "";
-    height: 100%;
-    left: 0;
-    color: #79512F;
-    position: absolute;
-    /* border-radius: 5px; */
-    top: 0;
-    transform: translateZ(0);
-    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
-      -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    width: 100%;
-  }
-  .button5:hover:before {
-    animation: opacityFallbackIn 0s step-start forwards;
-    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-  }
-  .button5:after {
-    background-color: transparent;
-    color: white;
-  }
-  .button5 span {
-    /* z-index: 1; */
-    position: relative;
-  }
-  .button5 span:before {
-    color: #79512F;
-  }
-  .button5:hover {
-    color: #79512F;
-  }
-
-  /* 🌍 Responsive Styles */
-@media (max-width: 768px) { /* Tablet & Mobile */
-    .button5 {
-        font-size: 16px; /* Reduce font size */
-        padding: 10px 20px; /* Reduce padding */
-    }
-}
-
-@media (max-width: 480px) { /* Mobile */
-    .button5 {
-        font-size: 14px; /* Further reduce font */
-        padding: 8px 15px; /* Make it more compact */
-    }
-}
-
-  .button6 {
-    appearance: none;
-    background: #79512F;
-    box-sizing: border-box;
-    color: white;
-    font-family: "Playfair Display", serif;
-    border: 2px solid #79512F;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 25px;
-    font-weight: 500;
-    letter-spacing: 0;
-    float: left;
-    line-height: 1em;
-    margin: 0;
-    opacity: 1;
-    outline: 0;
-    position: relative;
-    padding: 10px 45px;
-    text-align: center;
-    margin-top: 1.5rem;
-    text-decoration: none;
-    text-rendering: geometricprecision;
-    transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
-      background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
-      color 100ms cubic-bezier(0.694, 0, 0.335, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    white-space: nowrap;
-    overflow: hidden; /* Prevent pseudo-element from affecting width */
-
-  }
-  .button6:before {
-    animation: opacityFallbackOut 0.5s step-end forwards;
-    backface-visibility: hidden;
-    background-color: white;
-    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
-    content: "";
-    height: 100%;
-    left: 0;
-    color: #79512F;
-    position: absolute;
-    /* border-radius: 5px; */
-    top: 0;
-    transform: scaleX(0); /* Start with zero width */
-    transform: translateZ(0);
-    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
-      -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    width: 100%;
-  }
-  .button6:hover:before {
-    animation: opacityFallbackIn 0s step-start forwards;
-    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-  }
-  .button6:after {
-    background-color: #FFFFFF;
-    color: white;
-  }
-  .button6 span {
-    /* z-index: 1; */
-    position: relative;
-  }
-  .button6 span:before {
-    color: #79512F;
-  }
-  .button6:hover {
-    color: #79512F;
-  }
-
-  .button7 {
-    appearance: none;
-    background: #79512F;
-    box-sizing: border-box;
-    color: white;
-    font-family: "Playfair Display", serif;
-    border: 2px solid #79512F;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0;
-    float: left;
-    line-height: 1em;
-    margin: 0;
-    opacity: 1;
-    outline: 0;
-    position: relative;
-    padding: 10px 15px;
-    text-align: center;
-    /* margin-top: 1.5rem; */
-    text-decoration: none;
-    text-rendering: geometricprecision;
-    transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
-      background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
-      color 100ms cubic-bezier(0.694, 0, 0.335, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    white-space: nowrap;
-  }
-  .button7:before {
-    animation: opacityFallbackOut 0.5s step-end forwards;
-    backface-visibility: hidden;
-    background-color: white;
-    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
-    content: "";
-    height: 100%;
-    left: 0;
-    color: #79512F;
-    position: absolute;
-    /* border-radius: 5px; */
-    top: 0;
-    transform: translateZ(0);
-    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
-      -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    width: 100%;
-  }
-  .button7:hover:before {
-    animation: opacityFallbackIn 0s step-start forwards;
-    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-  }
-  .button7:after {
-    background-color: #FFFFFF;
-    color: white;
-  }
-  .button7 span {
-    /* z-index: 1; */
-    position: relative;
-  }
-  .button7 span:before {
-    color: #79512F;
-  }
-  .button7:hover {
-    color: #79512F;
-  }
-
-  .button8 {
-    appearance: none;
-    background: #79512F;
-    box-sizing: border-box;
-    color: white;
-    font-family: "Playfair Display", serif;
-    border: 2px solid #79512F;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 25px;
-    font-weight: 500;
-    letter-spacing: 0;
-    float: left;
-    line-height: 1em;
-    margin: 0;
-    opacity: 1;
-    outline: 0;
-    position: relative;
-    padding: 10px 45px;
-    text-align: center;
-    margin-top: 1.5rem;
-    text-decoration: none;
-    text-rendering: geometricprecision;
-    transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1),
-      background-color 100ms cubic-bezier(0.694, 0, 0.335, 1),
-      color 100ms cubic-bezier(0.694, 0, 0.335, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    white-space: nowrap;
-    overflow: hidden; /* Prevent pseudo-element from affecting width */
-
-  }
-  .button8:before {
-    animation: opacityFallbackOut 0.5s step-end forwards;
-    backface-visibility: hidden;
-    background-color: white;
-    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
-    content: "";
-    height: 100%;
-    left: 0;
-    color: #79512F;
-    position: absolute;
-    /* border-radius: 5px; */
-    top: 0;
-    transform: scaleX(0); /* Start with zero width */
-    transform: translateZ(0);
-    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
-      -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    width: 100%;
-  }
-  .button8:hover:before {
-    animation: opacityFallbackIn 0s step-start forwards;
-    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-  }
-  .button8:after {
-    background-color: #FFFFFF;
-    color: white;
-  }
-  .button8 span {
-    /* z-index: 1; */
-    position: relative;
-  }
-  .button8 span:before {
-    color: #79512F;
-  }
-  .button8:hover {
-    color: #79512F;
-  }
-
-  select option:hover{background-color:#A86B42 !important; }
-
-
-  @media (max-width: 640px) {
-        .contain {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .footer-item {
-            margin-bottom: 1rem;
-            width: 100%;
-        }
-        .footer-item ul {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-left: 0;
-        }
-        .footer-item ul li {
-            margin-bottom: 0.5rem;
-        }
-        .footer-item .flex {
-            justify-content: center;
-        }
-    }
-
-    @media (max-width: 640px) {
-        .button6 {
-            width: 100%; /* Make the button take up full width on mobile */
-            padding-left: 1rem; /* Optional: Adjust padding for mobile */
-            padding-right: 1rem; /* Optional: Adjust padding for mobile */
-        }
-    }
-    </style>
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById("navbar-sticky");
-
-        if (menu.classList.contains("hidden")) {
-            menu.classList.remove("hidden");
-            menu.classList.add("flex");
-            setTimeout(() => {
-                menu.classList.add("opacity-100", "max-h-screen");
-                menu.classList.remove("opacity-0", "max-h-0");
-            }, 10);
-        } else {
-            menu.classList.add("opacity-0", "max-h-0");
-            menu.classList.remove("opacity-100", "max-h-screen");
-            setTimeout(() => {
-                menu.classList.remove("flex");
-                menu.classList.add("hidden");
-            }, 300); // Time matches transition duration
-        }
-    }
-</script>
-
-
-
-    <div  class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2">
-        <p id="shipping-text"
+            .giftb{
+            font-size: 14px;
+         }
+         }
+      </style>
+      <script>
+         function toggleMenu() {
+             const menu = document.getElementById("navbar-sticky");
+         
+             if (menu.classList.contains("hidden")) {
+                 menu.classList.remove("hidden");
+                 menu.classList.add("flex");
+                 setTimeout(() => {
+                     menu.classList.add("opacity-100", "max-h-screen");
+                     menu.classList.remove("opacity-0", "max-h-0");
+                 }, 10);
+             } else {
+                 menu.classList.add("opacity-0", "max-h-0");
+                 menu.classList.remove("opacity-100", "max-h-screen");
+                 setTimeout(() => {
+                     menu.classList.remove("flex");
+                     menu.classList.add("hidden");
+                 }, 300); // Time matches transition duration
+             }
+         }
+      </script>
+      <div  class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2">
+         <p id="shipping-text"
             class="text-[10px] md:text-xs lg:text-sm text-center px-2 py-2 whitespace-nowrap overflow-hidden text-ellipsis">
             Shipping Pan India | Free delivery on prepaid orders!
-        </p>
-    </div>
-
-   <script>
-    // Array of messages to cycle through
-    const messages = [
-        'Shipping Pan India | Free delivery on prepaid orders!',
-        'Order now and get exclusive discounts!',
-        'Hurry! Limited time offer on select items!'
-    ];
-
-    let currentMessageIndex = 0;
-
-    // Function to change text with animation
-    function changeText() {
-        const textElement = document.getElementById('shipping-text');
-        
-        // Reset the animation by removing and adding the class
-        textElement.classList.remove('animate-text');
-        
-        // Temporarily remove the text content and force reflow to reset animation
-        textElement.textContent = '';
-        void textElement.offsetWidth; // Trigger reflow
-
-        // Set the new text content
-        textElement.textContent = messages[currentMessageIndex];
-
-        // Add animation class again
-        textElement.classList.add('animate-text');
-        
-        // Update the index to show the next message
-        currentMessageIndex = (currentMessageIndex + 1) % messages.length; // Loop through messages
-    }
-
-    // Change text immediately and then every 5 seconds
-    changeText(); // Change text right away on page load
-    setInterval(changeText, 5000); // Change text every 5 seconds
-</script>
-
-        <!-- navbar -->
-
-        <nav class="bg-white playfair-display w-full z-20 border-b border-gray-200 dark:border-gray-600 ">
-            <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="#" class="flex items-center space-x-3">
-                    <img src="./assests/image 1.png" class="h-8" alt="Flowbite Logo">
-                </a>
-                <!-- Mobile Menu Button -->
-                <div class="flex md:hidden">
-                    <button onclick="toggleMenu()"
-                        class="p-2 w-10 h-10 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Navigation Links -->
-                <div id="navbar-sticky" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto transition-all duration-300 ease-in-out">
-                    <ul class="flex flex-col md:flex-row md:space-x-12 mt-4 md:mt-0 font-medium text-black">
-                        <li>
-                            <a href="#"
-                                class=" navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Explore
-                                Collection</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class=" navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Custom
-                                Gifting</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">About
-                                FIAN</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">FAQs</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Get Started Button -->
-                <div class="hidden md:flex md:order-2 mr-8">
-                    <button class="text-white bg-[#8B6B50] text-2xl rounded-3xl px-10 py-3 text-center">
-                        Get a Quote
-                    </button>
-                </div>
+         </p>
+      </div>
+      <script>
+         // Array of messages to cycle through
+         const messages = [
+             'Shipping Pan India | Free delivery on prepaid orders!',
+             'Order now and get exclusive discounts!',
+             'Hurry! Limited time offer on select items!'
+         ];
+         
+         let currentMessageIndex = 0;
+         
+         // Function to change text with animation
+         function changeText() {
+             const textElement = document.getElementById('shipping-text');
+             
+             // Reset the animation by removing and adding the class
+             textElement.classList.remove('animate-text');
+             
+             // Temporarily remove the text content and force reflow to reset animation
+             textElement.textContent = '';
+             void textElement.offsetWidth; // Trigger reflow
+         
+             // Set the new text content
+             textElement.textContent = messages[currentMessageIndex];
+         
+             // Add animation class again
+             textElement.classList.add('animate-text');
+             
+             // Update the index to show the next message
+             currentMessageIndex = (currentMessageIndex + 1) % messages.length; // Loop through messages
+         }
+         
+         // Change text immediately and then every 5 seconds
+         changeText(); // Change text right away on page load
+         setInterval(changeText, 5000); // Change text every 5 seconds
+      </script>
+      <!-- navbar -->
+      <nav class="bg-white playfair-display w-full z-20 border-b border-gray-200 dark:border-gray-600 ">
+         <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4 navbarRes">
+            <a href="#" class="flex items-center space-x-3">
+            <img src="./assests/image 1.png" class="h-8" alt="Flowbite Logo">
+            </a>
+            <!-- Mobile Menu Button -->
+            <div class="flex md:hidden">
+               <button onclick="toggleMenu()"
+                  class="p-2 w-10 h-10 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7" />
+                  </svg>
+               </button>
             </div>
-        </nav>
-
-
-        <!-- section 1 -->
-
-        <div class="grid grid-cols-12 gap-4">
-            <!-- Left Section (Image) -->
-            <div class="md:col-span-8 h-auto md:h-[730px] col-span-12">
-                <img data-aos="fade-up" data-aos-duration="1000"  src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
-                    alt="img1" />
+            <!-- Navigation Links -->
+            <div id="navbar-sticky" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto transition-all duration-300 ease-in-out">
+               <ul class="flex flex-col md:flex-row md:space-x-12 mt-4 md:mt-0 font-medium text-black">
+                  <li>
+                     <a href="#"
+                        class=" navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Explore
+                     Collection</a>
+                  </li>
+                  <li>
+                     <a href="#"
+                        class=" navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Custom
+                     Gifting</a>
+                  </li>
+                  <li>
+                     <a href="#"
+                        class="navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">About
+                     FIAN</a>
+                  </li>
+                  <li>
+                     <a href="#"
+                        class="navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">FAQs</a>
+                  </li>
+               </ul>
             </div>
-
-            <!-- Right Section (Text) -->
-            <div class="md:flex md:justify-center md:items-center col-span-12 md:col-span-4">
-                <div class="p-4 text-lg font-bold flex flex-col items-center md:block">
-                    <h2 class="text-[#79512F] md:text-3xl text-base text-center md:w-full">
-                        Make Your Gifting<br>
-                        Moments Special with
-                    </h2>
-
-                    <p class="md:w-full flex justify-center py-6">
-                        <img src="./assests/image 1.png" class="md:h-[90px] h-[60px] px-2" alt="logo" />
-                    </p>
-
-                    <p class="md:w-full text-center text-sm md:text-base">
-                        Corporate Gifts | Return Gifts | Bridesmaid Gifts |<br class="hidden md:block">
-                        Charm Jewelry | Custom Jewelry
-                    </p>
-
-                    <p class="md:w-full text-center text-[#79512F] text-xl md:text-3xl py-4">
-                        In 925 Silver
-                    </p>
-
-                    <div class="md:mt-2 md:mt-12 flex md:flex-col items-center">
-                        <div class="flex  flex-col flex-wrap justify-center items-center md:gap-6 gap-3">
-                            <button class="button5 px-6 md:px-[70px] py-3 md:py-4 bg-[#8B6B50] border-2 border-[#8B6B50] text-white 
-                                hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl 
-                                overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
-                                before:h-full before:w-0 before:bg-[#79512F] before:transition-all before:duration-[1000ms] 
-                                hover:before:w-full hover:before:left-0 w-auto md:w-auto text-center">
-                                <span class="relative z-10">Get a Quote</span>
-                            </button>
-                        
-                            <button class="button4 relative px-6 md:px-[65px] py-3 md:py-4 bg-white border-2 border-[#8B6B50] text-[#79512F] 
-                                hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl
-                                overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
-                                before:h-full before:w-0 before:bg-[#79512F] before:transition-all before:duration-[1000ms] 
-                                hover:before:w-full hover:before:left-0 w-auto md:w-auto text-center mt-3 md:mt-0 md:ml-3">
-                                <span class="relative z-10">Chat with Us</span>
-                            </button>
-                        </div>
-                        
-
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Marquee -->
-
-        <div class="overflow-x-hidden flex relative bg-[#8B6B50] text-white mt-[4rem]">
-            <!-- First Marquee -->
-            <div class="marquee py-4">
-                <span class="text-2xl mx-2"><i class="ri-gift-line"></i></span>
-                <span class="text-2xl mx-2">925 Silver - Anti Tarnish-Premium Packing</span>
-                <span class="text-2xl mx-2">|</span>
-                <span class="text-2xl mx-2"><i class="ri-gift-line"></i></span>
-                <span class="text-2xl mx-2">Custom Design & Engraving - Personalized Charms</span>
-                <span class="text-2xl mx-2">|</span>
-                <span class="text-2xl mx-2"><i class="ri-gift-line"></i></span>
-                <span class="text-2xl mx-2">Something for Everyone : Religious Symbols</span>
-                <span class="text-2xl mx-2">|</span>
-                <span class="text-2xl mx-2">Horoscope Sign</span>
-                <span class="text-2xl mx-4">|</span>
-                <span class="text-2xl mx-4">Letter Pendants</span>
-                <span class="text-2xl mx-4">|</span>
-                <span class="text-2xl mx-4">Evil Eye Pendants</span>
-
-                <span class="text-2xl mx-4">|</span>
-                <span class="text-2xl mx-4"><i class="ri-gift-line"></i></span>
-                <span class="text-2xl mx-4">925 Silver - Anti Tarnish-Premium Packing</span>
-                <span class="text-2xl mx-4">|</span>
-                <span class="text-2xl mx-4"><i class="ri-gift-line"></i></span>
-                <span class="text-2xl mx-4">Custom Design & Engraving - Personalized Charms</span>
-                <span class="text-2xl mx-4">|</span>
-                <span class="text-2xl mx-4"><i class="ri-gift-line"></i></span>
-                <span class="text-2xl mx-4">Something for Everyone : Religious Symbols</span>
-                <span class="text-2xl mx-4">|</span>
-                <span class="text-2xl mx-4">Horoscope Sign</span>
-                <span class="text-2xl mx-4">|</span>
-                <span class="text-2xl mx-4">Letter Pendants</span>
-                <span class="text-2xl mx-4">|</span>
-                <span class="text-2xl mx-4">Evil Eye Pendants</span>
-
-
-
-               
-            </div>
-            
-        </div>
-
-        <!-- Section 2 -->
-
-
-        <div  class="grid grid-cols-12 gap-4 mx-8 mt-20 mb-20">
-
-            <div data-aos="fade-right" data-aos-duration="1000"   class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
-                <img src="./assests/gift-02.svg" alt="img1">
-                <p class="text-2xl">
-                    <b>Premium Packaging</b>
-                </p>
-                <p class="text-center">
-                    Premium Packaging for <br>
-                    a Luxe Experience
-                </p>
-            </div>
-            <div data-aos="fade-left" data-aos-duration="1000"  class="justify-center items-center w-full flex flex-col md:col-span-4 p-4 col-span-12  md:border-l-2 md:border-r-2 border-t-2 border-b-2 md:border-t-0 md:border-b-0 py-8 border-[#E0CCB2]  py-8 md:my-8">
-                <img src="./assests/snowflake.svg" alt="img1">
-                <p class="text-2xl">
-                    <b>Custom Requests</b>
-                </p>
-                <p class="text-center">
-                    Corporate Gifting, Bulk Discounts, &<br>
-                    Special Requests Accommodated
-                </p>
-            </div>
-            <div data-aos="fade-left" data-aos-duration="1000"  class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 py-8 md:my-8">
-                <img src="./assests/truck.svg" alt="img1">
-                <p class="text-2xl">
-                    <b>PAN India Delivery</b>
-                </p>
-                <p class="text-center">
-                    Pan-India Shipping & <br>
-                    a Luxe Experience
-                </p>
-            </div>
-        </div>
-        
-
-        <!-- section 3 -->
-
-        <div>
-        <div class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4 mt-12">
-            <div data-aos="fade-up" data-aos-duration="1000"  class="col-span-12 md:col-span-6 md:h-[33rem]  w-full"><img src="./assests/Group 44.png" class="w-full h-full object-fit"></div>
-            <div data-aos="fade-right" data-aos-duration="1000"  class="col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 20.png" class="w-full h-full object-fit"></div>
-            <div data-aos="fade-up" data-aos-duration="1000"  class="col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 21.png" class="w-full h-full object-fit"></div>
-            <div data-aos="fade-right" data-aos-duration="1000"  class="col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 23.png" class="w-full h-full object-fit"></div>
-            <div data-aos="fade-up" class="col-span-6 md:col-span-4 md:h-[33rem]  w-full"><img src="./assests/Group 46.png" class="w-full h-full object-fit"></div>
-            <div  data-aos="fade-left" class="col-span-12 md:col-span-5 md:h-[33rem]  w-full"><img src="./assests/Rectangle 22.png" class="w-full h-full object-fit"></div>
-        </div>
-    </div>
-    
-    <section class="max-w-[90rem] mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            
-            <!-- Left Section - Why Choose FIAN? -->
-            <div data-aos="zoom-in" data-aos-duration="1000"  class="text-[#865F42]">
-                <h2 class="text-3xl font-semibold">Why Choose FIAN?</h2>
-                <p class="mt-4">
-                    Experience the luxury and personalization that set us apart. Whether you’re planning corporate gifting, return gifts, or personal tokens like bridesmaid gifts, our collection is designed to impress and leave a lasting impression.
-                </p>
-
-                <div class="mt-6 space-y-4">
-                    <div class="flex items-start">
-                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
-                        <div class="ml-3">
-                            <h3 class="font-semibold">Exquisite 925 Silver</h3>
-                            <p class="text-sm">Enjoy jewelry that remains brilliant over time with anti-tarnish properties.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start">
-                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
-                        <div class="ml-3">
-                            <h3 class="font-semibold">Premium Packaging</h3>
-                            <p class="text-sm">Each piece arrives in elegant, high-end packaging that elevates the gifting experience.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start">
-                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
-                        <div class="ml-3">
-                            <h3 class="font-semibold">Custom Engraving & Designs</h3>
-                            <p class="text-sm">Add a personal touch with bespoke charms, religious symbols, horoscope signs, letter pendants, and even evil eye motifs.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start">
-                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
-                        <div class="ml-3">
-                            <h3 class="font-semibold">Bulk Order Benefits</h3>
-                            <p class="text-sm">Take advantage of exclusive corporate discounts, tailor-made orders, and a seamless process from inquiry to delivery.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start">
-                        <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
-                        <div class="ml-3">
-                            <h3 class="font-semibold">Pan-India Shipping & Support</h3>
-                            <p class="text-sm">Reliable, dedicated service that ensures your gifts arrive on time, every time.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="button6  px-[96px] py-3 bg-[#865F42] text-white text-lg font-semibold">
-                    <span>Get A Quote</span>
-                </button>
-            </div>
-
-            <!-- Right Section - Gift Collection -->
-            <div data-aos="fade-left" data-aos-duration="1000" class="relative flex justify-center items-center">
-                <img src="./assests/Rectangle 55.jpg" alt="Gift Collection" class="max-w-full h-auto">
-            </div>
-
-        </div>
-    </section>
-
-    <!-- form -->
-        
-        
-        <div class="bg-[#F7F1EB] md:min-h-screen flex items-center justify-center px-4">
-            <div class="max-w-[90rem] w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <!-- Left: Form Section -->
-                <div data-aos="fade-right" data-aos-duration="1000" class="p-6">
-                    <h2 class="text-3xl font-bold text-[#805333]">TELL US WHAT YOU NEED</h2>
-                    <p class="text-[#805333] mb-6">Get A Custom Quote</p>
-                    
-                    
-                    <form class="space-y-7">
-                        <div class="relative z-0 w-full mb-5 group">
-                            <input type="text" name="floating_first_name" id="floating_first_name"
-                                class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
-                                placeholder=" " required />
-                            <label for="floating_first_name"
-                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                                First name
-                            </label>
-                        </div>
-                    
-                        <div class="relative z-0 w-full mb-5 group">
-                            <input type="email" name="floating_email" id="floating_email"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
-                                placeholder=" " required />
-                            <label for="floating_email"
-                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                                Email address
-                            </label>
-                        </div>
-                    
-                        <div class="relative z-0 w-full mb-5 group">
-                            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
-                                placeholder=" " required />
-                            <label for="floating_phone"
-                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                                Phone number (123-456-7890)
-                            </label>
-                        </div>
-                    
-                        <!-- Gender Dropdown -->
-                        <div class="relative z-0 w-full mb-5 group">
-                          <div class="relative">
-                              <select onfocus='this.size=6;' onblur='this.size=0;'
-                              onchange='this.size=1; this.blur();' name="gender" id="gender"
-                                  class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none 
-                                  dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] 
-                                  peer cursor-pointer hover:bg-[#F7F1EB] focus:bg-[#F7F1EB]"> 
-                                  <option value="" disabled selected class="text-[#79512F]">Select Gender</option>
-                                  <option value="male" class="text-black hover:bg-[#8B6B50] hover:text-white">Male</option>
-                                  <option value="female" class="text-black hover:bg-[#8B6B50] hover:text-white">Female</option>
-                                  <option value="other" class="text-black hover:bg-[#8B6B50] hover:text-white">Other</option>
-                              </select>
-                              <!-- Custom Dropdown Arrow -->
-                              <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-                                  <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                                  </svg>
-                              </div>
-                          </div>
-                      </div>
-                      
-                    
-                        <!-- Country Dropdown -->
-                        <div class="relative z-0 w-full mb-5 group">
-                          <div class="relative">
-                            <select onfocus='this.size=4;' onblur='this.size=0;'
-                            onchange='this.size=1; this.blur();' name="country" id="country"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer">
-                                <option value="" disabled selected class="text-[#79512F] focus:bg-[#F7F1EB]">Select Country</option>
-                                <option value="usa" class="text-black bg-[#F7F1EB] ">USA</option>
-                                <option value="canada" class="text-black bg-[#F7F1EB]">Canada</option>
-                                <option value="uk" class="text-black bg-[#F7F1EB]">UK</option>
-                            </select>
-                            <!-- Custom Dropdown Arrow -->
-                            <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-                              <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                              </svg>
-                              </div>
-                              </div>
-                            
-                        </div>
-                    
-                        <div class="relative z-0 w-full mb-5 group">
-                            <textarea name="floating_message" id="floating_message"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer transition-all duration-300 ease-in-out resize-none h-12 focus:h-32"
-                                placeholder=" " required></textarea>
-                            <label for="floating_message"
-                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                                Your Message
-                            </label>
-                        </div>
-                    
-                        <button type="submit"
-                            class="button5 playfair-display bg-[#8B6B50] hover:bg-[#7A5F45] focus:ring-4 focus:outline-none focus:ring-[#8B6B50] font-medium text-md w-full mx-auto sm:w-auto px-5 py-2.5 text-center dark:bg-[#8B6B50] dark:hover:bg-[#7A5F45] dark:focus:ring-[#8B6B50]">
-                            <span>GET A QUOTE NOW</span>
-                        </button>
-                    </form>
-                    
-                    
-                    
-                    
-                </div>
-        
-                <!-- Right: Image Section -->
-                <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center hidden md:block pl-[85px]">
-                    <img src="./assests/Rectangle 45.jpg" alt="Jewelry" class="w-full max-w-[36rem] shadow-lg">
-                </div>
-            </div>
-        </div>
-        
-
-
-    <!-- section 4 -->
-
-    <section class="max-w-[85rem] mx-auto px-2 py-10">
-        <!-- Heading -->
-         <div class="md:flex md:justify-between">
-        <h2 class="text-2xl md:text-3xl font-semibold text-left text-[#805333] px-4">
-            Explore Our Gift Collection<br>
-            Perfect for Gifting
-        </h2>
-    
-        <!-- Description -->
-         <div>
-            <p class="flex justify-start md:justify-end text-sm md:text-lg text-[#79512F] md:text-right text-left px-4 mt-4">
-            Every piece is thoughtfully designed to make your bulk gifting<br class="hidden md:block">
-            experience as memorable as the gift itself.
-        </p>
-            <!-- Features -->
-            <div class="flex justify-start md:justify-end space-x-4 mt-4 md:mt-2 text-[#5A3A2E] text-sm md:text-lg font-medium px-4">
-            <span class="flex items-center space-x-1">
-                    </span>
-                    ◆ PURE 925 SILVER
-                </span>
-                <span class="flex items-center space-x-1">
-                    </span>
-                 ◆ ANTI-TARNISH
-                </span>
-            </div>
+            <!-- Get Started Button -->
+            <div class="hidden md:flex md:order-2 mr-8">
+               <button class="text-white bg-[#8B6B50] text-xl rounded-3xl px-9 py-2 text-center">
+               Get a Quote
+               </button>
             </div>
          </div>
-    
-    
-    
-        <!-- Product Grid -->
-      <!-- SwiperJS CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
-<div data-aos="fade-up" data-aos-duration="1000" class="max-w-[92rem] mx-auto px-4 mt-10">
-    <!-- Swiper (Mobile View) -->
-    <div class="block md:hidden">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <!-- Card 1 -->
-                <div class="swiper-slide flex flex-col items-center">
-                    <img src="./assests/Rectangle 26.png" alt="Charm Jewelry" 
-                         class="w-full h-100 object-cover rounded-md shadow-lg">
-                    <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium w-full text-center">
-                        Personalized Charm Jewelry
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="swiper-slide flex flex-col items-center">
-                    <img src="./assests/Rectangle 50.png" alt="Adjustable Rings" 
-                         class="w-full h-100 object-cover rounded-md shadow-lg">
-                         <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-lg font-medium w-full text-center">
-                            Adjustable Rings - One Size Fits All
-                        </p>
-                        
-                </div>
-
-                <!-- Card 3 -->
-                <div class="swiper-slide flex flex-col items-center">
-                    <img src="./assests/Rectangle 51.png" alt="Earrings & Pendants" 
-                         class="w-full h-100 object-cover rounded-md shadow-lg">
-                    <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium w-full text-center">
-                        Timeless Earrings & Pendants
-                    </p>
-                </div>
+      </nav>
+      <!-- section 1 -->
+      <div class="grid grid-cols-12 gap-4">
+         <!-- Left Section (Image) -->
+         <div class=" md:col-span-8 h-auto md:h-[730px] col-span-12">
+            <img data-aos="fade-up" data-aos-duration="1000"  src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
+               alt="img1" />
+         </div>
+         <!-- Right Section (Text) -->
+         <div class="md:flex md:justify-center md:items-center col-span-12 md:col-span-4">
+            <div class="p-4 text-lg font-bold flex flex-col items-center md:block">
+               <h2 class="text-[#79512F] md:text-3xl text-base text-center md:w-full">
+                  Make Your Gifting<br>
+                  Moments Special with
+               </h2>
+               <p class="md:w-full flex justify-center py-6">
+                  <img src="./assests/image 1.png" class="md:h-[90px] h-[60px] px-2" alt="logo" />
+               </p>
+               <p class="md:w-full text-center text-sm md:text-base">
+                  Corporate Gifts | Return Gifts | Bridesmaid Gifts |<br class="hidden md:block">
+                  Charm Jewelry | Custom Jewelry
+               </p>
+               <p class="md:w-full text-center text-[#79512F] text-xl md:text-3xl py-8 md:py-4">
+                  In 925 Silver
+               </p>
+               <div class="md:mt-2 md:mt-12 flex md:flex-col items-center">
+                  <div class="flex flex-wrap justify-center items-center md:flex-col md:gap-6 gap-3">
+                     <button class="button5 px-6 md:px-[70px] py-3 md:py-4 bg-[#8B6B50] border-2 border-[#8B6B50] text-white 
+                        hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl 
+                        overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
+                        before:h-full before:w-0 before:bg-[#79512F] before:transition-all before:duration-[1000ms] 
+                        hover:before:w-full hover:before:left-0 w-auto md:w-auto text-center">
+                     <span class="relative z-10">Get a Quote</span>
+                     </button>
+                     <button class="button4 relative px-6 md:px-[65px] py-3 md:py-4 bg-white border-2 border-[#8B6B50] text-[#79512F] 
+                        hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl
+                        overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
+                        before:h-full before:w-0 before:bg-[#79512F] before:transition-all before:duration-[1000ms] 
+                        hover:before:w-full hover:before:left-0 w-auto md:w-auto text-center mt-3 md:mt-0 md:ml-3">
+                     <span class="relative z-10">Chat with Us</span>
+                     </button>
+                  </div>
+               </div>
             </div>
-            <!-- Pagination Dots -->
-            <div class="swiper-pagination !static flex justify-center mt-4"></div>
-
-        </div>
-    </div>
-
-    <!-- Grid Layout for Tablet & Desktop -->
-    <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- Card 1 -->
-        <div class="text-center">
-            <img src="./assests/Rectangle 26.png" alt="Charm Jewelry" 
-                 class="w-full h-100 object-cover shadow-lg">
-            <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium">
-                Personalized Charm Jewelry
-            </p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="text-center">
-            <img src="./assests/Rectangle 50.png" alt="Adjustable Rings" 
-                 class="w-full h-100 object-cover shadow-lg">
-            <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium">
-                Adjustable Rings - One Size Fits All
-            </p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="text-center">
-            <img src="./assests/Rectangle 51.png" alt="Earrings & Pendants" 
-                 class="w-full h-100 object-cover shadow-lg">
-            <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium">
-                Timeless Earrings & Pendants
-            </p>
-        </div>
-    </div>
-</div>
-
-<!-- SwiperJS Script -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper('.mySwiper', {
-        slidesPerView: 1, // Shows only one card at a time
-        spaceBetween: 20, // Keeps spacing between slides
-        loop: true, // Enables infinite sliding
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
-</script>
-
-    </section>
-    
-
-    <!-- section 5 -->
-
-    <!-- Include Alpine.js -->
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
-
-<div x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-[85rem] font-['Playfair_Display'] p-5">
-  <h2 class="text-3xl font-semibold text-[#8B6B50] mb-6 px-0 sm:px-8">FAQs</h2>
-
-  <!-- FAQ Container -->
-  <div class=" grid grid-cols-2 md:gap-2">
-    <div class="md:p-8 col-span-12 md:col-span-1">
-           <!-- Accordion Item 1 -->
-    <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
-        <button @click="openIndex = openIndex === 1 ? null : 1"
-          class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
-          :class="openIndex === 1 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
-          <span>What Is The Estimated Time Of Delivery For My Order?</span>
-          <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 1 ? '−' : '+'"></span>
-        </button>
-        <div x-show="openIndex === 1"
-          x-transition:enter="transition ease-out duration-300 transform"
-          x-transition:enter-start="opacity-0 scale-y-75"
-          x-transition:enter-end="opacity-100 scale-y-100"
-          x-transition:leave="transition ease-in duration-200 transform"
-          x-transition:leave-start="opacity-100 scale-y-100"
-          x-transition:leave-end="opacity-0 scale-y-75"
-          class="p-4 text-gray-700 bg-white">
-          We work with leading logistics partners in India to ensure that your order is delivered on time. 
-          Once your order is confirmed, it takes 1-5 days to dispatch depending on stock availability.
-        </div>
+         </div>
       </div>
-  
-      <!-- Accordion Item 2 -->
-      <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
-        <button @click="openIndex = openIndex === 2 ? null : 2"
-          class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
-          :class="openIndex === 2 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
-          <span>How Can I Check My Order Confirmation?</span>
-          <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 2 ? '−' : '+'"></span>
-        </button>
-        <div x-show="openIndex === 2"
-          x-transition:enter="transition ease-out duration-300 transform"
-          x-transition:enter-start="opacity-0 scale-y-75"
-          x-transition:enter-end="opacity-100 scale-y-100"
-          x-transition:leave="transition ease-in duration-200 transform"
-          x-transition:leave-start="opacity-100 scale-y-100"
-          x-transition:leave-end="opacity-0 scale-y-75"
-          class="p-4 text-gray-700 bg-white">
-          You will receive an email confirmation with your order details.
-        </div>
+      <!-- Marquee -->
+      <div class="overflow-x-hidden flex relative bg-[#8B6B50] text-white mt-[4rem]">
+         <!-- First Marquee -->
+         <div class="marquee py-4">
+            <span class="text-2xl mx-2"><i class="ri-gift-line"></i></span>
+            <span class="text-2xl mx-2">925 Silver - Anti Tarnish-Premium Packing</span>
+            <span class="text-2xl mx-2">|</span>
+            <span class="text-2xl mx-2"><i class="ri-gift-line"></i></span>
+            <span class="text-2xl mx-2">Custom Design & Engraving - Personalized Charms</span>
+            <span class="text-2xl mx-2">|</span>
+            <span class="text-2xl mx-2"><i class="ri-gift-line"></i></span>
+            <span class="text-2xl mx-2">Something for Everyone : Religious Symbols</span>
+            <span class="text-2xl mx-2">|</span>
+            <span class="text-2xl mx-2">Horoscope Sign</span>
+            <span class="text-2xl mx-4">|</span>
+            <span class="text-2xl mx-4">Letter Pendants</span>
+            <span class="text-2xl mx-4">|</span>
+            <span class="text-2xl mx-4">Evil Eye Pendants</span>
+            <span class="text-2xl mx-4">|</span>
+            <span class="text-2xl mx-4"><i class="ri-gift-line"></i></span>
+            <span class="text-2xl mx-4">925 Silver - Anti Tarnish-Premium Packing</span>
+            <span class="text-2xl mx-4">|</span>
+            <span class="text-2xl mx-4"><i class="ri-gift-line"></i></span>
+            <span class="text-2xl mx-4">Custom Design & Engraving - Personalized Charms</span>
+            <span class="text-2xl mx-4">|</span>
+            <span class="text-2xl mx-4"><i class="ri-gift-line"></i></span>
+            <span class="text-2xl mx-4">Something for Everyone : Religious Symbols</span>
+            <span class="text-2xl mx-4">|</span>
+            <span class="text-2xl mx-4">Horoscope Sign</span>
+            <span class="text-2xl mx-4">|</span>
+            <span class="text-2xl mx-4">Letter Pendants</span>
+            <span class="text-2xl mx-4">|</span>
+            <span class="text-2xl mx-4">Evil Eye Pendants</span>
+         </div>
       </div>
-  
-      <!-- Accordion Item 3 -->
-      <div class="border border-[#9C7A5E] md:my-4 mt-2 overflow-hidden">
-        <button @click="openIndex = openIndex === 3 ? null : 3"
-          class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
-          :class="openIndex === 3 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
-          <span>How Can I Track My Order?</span>
-          <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 3 ? '−' : '+'"></span>
-        </button>
-        <div x-show="openIndex === 3"
-          x-transition:enter="transition ease-out duration-300 transform"
-          x-transition:enter-start="opacity-0 scale-y-75"
-          x-transition:enter-end="opacity-100 scale-y-100"
-          x-transition:leave="transition ease-in duration-200 transform"
-          x-transition:leave-start="opacity-100 scale-y-100"
-          x-transition:leave-end="opacity-0 scale-y-75"
-          class="p-4 text-gray-700 bg-white">
-          Once your order is shipped, you will receive a tracking link via email.
-        </div>
+      <!-- Section 2 -->
+      <div  class="overflow-x-hidden grid grid-cols-12 gap-4 mx-8 mt-20 mb-20">
+         <div data-aos="fade-right" data-aos-duration="1000"   class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
+            <img src="./assests/gift-02.svg" alt="img1">
+            <p class="text-2xl">
+               <b>Premium Packaging</b>
+            </p>
+            <p class="text-center">
+               Premium Packaging for <br>
+               a Luxe Experience
+            </p>
+         </div>
+         <div data-aos="fade-left" data-aos-duration="1000"  class="overflow-x-hidden justify-center items-center w-full flex flex-col md:col-span-4 p-4 col-span-12  md:border-l-2 md:border-r-2 border-t-2 border-b-2 md:border-t-0 md:border-b-0 py-8 border-[#E0CCB2]  py-8 md:my-8">
+            <img src="./assests/snowflake.svg" alt="img1">
+            <p class="text-2xl">
+               <b>Custom Requests</b>
+            </p>
+            <p class="text-center">
+               Corporate Gifting, Bulk Discounts, &<br>
+               Special Requests Accommodated
+            </p>
+         </div>
+         <div data-aos="fade-left" data-aos-duration="1000"  class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 py-8 md:my-8">
+            <img src="./assests/truck.svg" alt="img1">
+            <p class="text-2xl">
+               <b>PAN India Delivery</b>
+            </p>
+            <p class="text-center">
+               Pan-India Shipping & <br>
+               a Luxe Experience
+            </p>
+         </div>
       </div>
-  
-    </div>
-    <div class="md:p-8 col-span-12 md:col-span-1">
-        <!-- Accordion Item 1 -->
- <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
-     <button @click="openIndex = openIndex === 4 ? null : 4"
-       class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
-       :class="openIndex === 4 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
-       <span>What Is The Estimated Time Of Delivery For My Order?</span>
-       <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 4 ? '−' : '+'"></span>
-     </button>
-     <div x-show="openIndex === 4"
-       x-transition:enter="transition ease-out duration-300 transform"
-       x-transition:enter-start="opacity-0 scale-y-75"
-       x-transition:enter-end="opacity-100 scale-y-100"
-       x-transition:leave="transition ease-in duration-200 transform"
-       x-transition:leave-start="opacity-100 scale-y-100"
-       x-transition:leave-end="opacity-0 scale-y-75"
-       class="p-4 text-gray-700 bg-white">
-       We work with leading logistics partners in India to ensure that your order is delivered on time. 
-       Once your order is confirmed, it takes 1-5 days to dispatch depending on stock availability.
-     </div>
-   </div>
-
-   <!-- Accordion Item 2 -->
-   <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
-     <button @click="openIndex = openIndex === 5 ? null : 5"
-       class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
-       :class="openIndex === 5 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
-       <span>How Can I Check My Order Confirmation?</span>
-       <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 5 ? '−' : '+'"></span>
-     </button>
-     <div x-show="openIndex === 5"
-       x-transition:enter="transition ease-out duration-300 transform"
-       x-transition:enter-start="opacity-0 scale-y-75"
-       x-transition:enter-end="opacity-100 scale-y-100"
-       x-transition:leave="transition ease-in duration-200 transform"
-       x-transition:leave-start="opacity-100 scale-y-100"
-       x-transition:leave-end="opacity-0 scale-y-75"
-       class="p-4 text-gray-700 bg-white">
-       You will receive an email confirmation with your order details.
-     </div>
-   </div>
-
-   <!-- Accordion Item 3 -->
-   <div class="border border-[#9C7A5E] md:my-4 my-2  overflow-hidden">
-     <button @click="openIndex = openIndex === 6 ? null : 6"
-       class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
-       :class="openIndex === 6 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
-       <span>How Can I Track My Order?</span>
-       <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 6 ? '−' : '+'"></span>
-     </button>
-     <div x-show="openIndex === 6"
-       x-transition:enter="transition ease-out duration-300 transform"
-       x-transition:enter-start="opacity-0 scale-y-75"
-       x-transition:enter-end="opacity-100 scale-y-100"
-       x-transition:leave="transition ease-in duration-200 transform"
-       x-transition:leave-start="opacity-100 scale-y-100"
-       x-transition:leave-end="opacity-0 scale-y-75"
-       class="p-4 text-gray-700 bg-white">
-       Once your order is shipped, you will receive a tracking link via email.
-     </div>
-   </div>
-
- </div>
-  </div>
-</div>
-
-
-  <!-- Hero Section -->
-  <section class="bg-[#DDC3A3] md:py-12 py-6 md:px-[100px] text-center md:flex md:justify-between">
-    <div data-aos="fade-right" data-aos-duration="1000" class="px-4 text-left md:py-8 py-6">
-        <h2 class="text-3xl font-bold">Make Every Gift Unforgettable</h2>
-        <p class="text-gray-800 md:mt-2 mt-4">
-            At FIAN, we transform ordinary gifting into a luxurious experience. Let our<br> expertise in fine jewelry help you make every gifting moment truly special.
-        </p>
-    </div>
-    <div class="flex justify-center items-center">
-        <!-- <button class=" button8 [#7A5630] playfair-display text-white px-12 py-3 font-semibold shadow-md px-6 py-2 text-sm md:px-12 md:py-3 md:text-base hover:bg-[#805333]"> -->
-    <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center items-center">
-        <button class="button5 [#7A5630] playfair-display text-white px-10 py-3 font-semibold shadow-md hover:bg-[#805333]">
+      <!-- section 3 -->
+      <div>
+         <div class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4 mt-12">
+            <div data-aos="fade-up" data-aos-duration="1000"  class="overflow-x-hidden col-span-12 md:col-span-6 md:h-[33rem]  w-full"><img src="./assests/Group 44.png" class="w-full h-full object-fit"></div>
+            <div data-aos="fade-right" data-aos-duration="1000"  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 20.png" class="w-full h-full object-fit"></div>
+            <div data-aos="fade-up" data-aos-duration="1000"  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 21.png" class="w-full h-full object-fit"></div>
+            <div data-aos="fade-right" data-aos-duration="1000"  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 23.png" class="w-full h-full object-fit"></div>
+            <div data-aos="fade-up" class="overflow-x-hidden col-span-6 md:col-span-4 md:h-[33rem]  w-full"><img src="./assests/Group 46.png" class="w-full h-full object-fit"></div>
+            <div  data-aos="fade-left" class="overflow-x-hidden col-span-12 md:col-span-5 md:h-[33rem]  w-full"><img src="./assests/Rectangle 22.png" class="w-full h-full object-fit"></div>
+         </div>
+      </div>
+      <section class="max-w-[90rem] mx-auto px-4 py-12">
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Left Section - Why Choose FIAN? -->
+            <div data-aos="fade-right" data-aos-duration="1000"  class="overflow-x-hidden text-[#865F42]">
+               <h2 class="text-3xl font-semibold">Why Choose FIAN?</h2>
+               <p class="mt-4">
+                  Experience the luxury and personalization that set us apart. Whether you’re planning corporate gifting, return gifts, or personal tokens like bridesmaid gifts, our collection is designed to impress and leave a lasting impression.
+               </p>
+               <div class="mt-6 space-y-4">
+                  <div class="flex items-start">
+                     <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
+                     <div class="ml-3">
+                        <h3 class="font-semibold">Exquisite 925 Silver</h3>
+                        <p class="text-sm">Enjoy jewelry that remains brilliant over time with anti-tarnish properties.</p>
+                     </div>
+                  </div>
+                  <div class="flex items-start">
+                     <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
+                     <div class="ml-3">
+                        <h3 class="font-semibold">Premium Packaging</h3>
+                        <p class="text-sm">Each piece arrives in elegant, high-end packaging that elevates the gifting experience.</p>
+                     </div>
+                  </div>
+                  <div class="flex items-start">
+                     <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
+                     <div class="ml-3">
+                        <h3 class="font-semibold">Custom Engraving & Designs</h3>
+                        <p class="text-sm">Add a personal touch with bespoke charms, religious symbols, horoscope signs, letter pendants, and even evil eye motifs.</p>
+                     </div>
+                  </div>
+                  <div class="flex items-start">
+                     <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
+                     <div class="ml-3">
+                        <h3 class="font-semibold">Bulk Order Benefits</h3>
+                        <p class="text-sm">Take advantage of exclusive corporate discounts, tailor-made orders, and a seamless process from inquiry to delivery.</p>
+                     </div>
+                  </div>
+                  <div class="flex items-start">
+                     <span class="text-3xl"><i class="ri-arrow-right-circle-line"></i></span>
+                     <div class="ml-3">
+                        <h3 class="font-semibold">Pan-India Shipping & Support</h3>
+                        <p class="text-sm">Reliable, dedicated service that ensures your gifts arrive on time, every time.</p>
+                     </div>
+                  </div>
+               </div>
+               <button class="button6  px-[96px] py-3 bg-[#865F42] text-white text-lg font-semibold">
+               <span>Get A Quote</span>
+               </button>
+            </div>
+            <!-- Right Section - Gift Collection -->
+            <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden relative flex justify-center items-center">
+               <img src="./assests/Rectangle 55.jpg" alt="Gift Collection" class="max-w-full h-auto">
+            </div>
+         </div>
+      </section>
+      <!-- form -->
+      <div class="bg-[#F7F1EB] md:min-h-screen flex items-center justify-center px-4">
+         <div class="max-w-[90rem] w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <!-- Left: Form Section -->
+            <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden p-6">
+               <h2 class="text-3xl font-bold text-[#805333]">TELL US WHAT YOU NEED</h2>
+               <p class="text-[#805333] mb-6 text-2xl mt-2">Get A Custom Quote</p>
+               <form class="space-y-7">
+                  <div class="relative z-0 w-full mb-5 group">
+                     <input type="text" name="floating_first_name" id="floating_first_name"
+                        class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
+                        placeholder=" " required />
+                     <label for="floating_first_name"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                     First name
+                     </label>
+                  </div>
+                  <div class="relative z-0 w-full mb-5 group">
+                     <input type="email" name="floating_email" id="floating_email"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
+                        placeholder=" " required />
+                     <label for="floating_email"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                     Email address
+                     </label>
+                  </div>
+                  <div class="relative z-0 w-full mb-5 group">
+                     <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
+                        placeholder=" " required />
+                     <label for="floating_phone"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                     Phone number (123-456-7890)
+                     </label>
+                  </div>
+                  <!-- Gender Dropdown -->
+                  <div class="relative z-0 w-full mb-5 group">
+                     <div class="relative">
+                        <select onfocus='this.size=6;' onblur='this.size=0;'
+                           onchange='this.size=1; this.blur();' name="gender" id="gender"
+                           class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none 
+                           dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] 
+                           peer cursor-pointer hover:bg-[#F7F1EB] focus:bg-[#F7F1EB]">
+                           <option value="" disabled selected class="text-[#79512F]">Select Gender</option>
+                           <option value="male" class="text-black hover:bg-[#8B6B50] hover:text-white">Male</option>
+                           <option value="female" class="text-black hover:bg-[#8B6B50] hover:text-white">Female</option>
+                           <option value="other" class="text-black hover:bg-[#8B6B50] hover:text-white">Other</option>
+                        </select>
+                        <!-- Custom Dropdown Arrow -->
+                        <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                           <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Country Dropdown -->
+                  <div class="relative z-0 w-full mb-5 group">
+                     <div class="relative">
+                        <select onfocus='this.size=4;' onblur='this.size=0;'
+                           onchange='this.size=1; this.blur();' name="country" id="country"
+                           class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer">
+                           <option value="" disabled selected class="text-[#79512F] focus:bg-[#F7F1EB]">Select Country</option>
+                           <option value="usa" class="text-black bg-[#F7F1EB] ">USA</option>
+                           <option value="canada" class="text-black bg-[#F7F1EB]">Canada</option>
+                           <option value="uk" class="text-black bg-[#F7F1EB]">UK</option>
+                        </select>
+                        <!-- Custom Dropdown Arrow -->
+                        <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                           <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="relative z-0 w-full mb-5 group">
+                     <textarea name="floating_message" id="floating_message"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer transition-all duration-300 ease-in-out resize-none h-12 focus:h-32"
+                        placeholder=" " required></textarea>
+                     <label for="floating_message"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                     Your Message
+                     </label>
+                  </div>
+                  <button type="submit"
+                     class="button5 playfair-display bg-[#8B6B50] hover:bg-[#7A5F45] focus:ring-4 focus:outline-none focus:ring-[#8B6B50] font-medium text-md w-full mx-auto sm:w-auto px-5 py-2.5 text-center dark:bg-[#8B6B50] dark:hover:bg-[#7A5F45] dark:focus:ring-[#8B6B50]">
+                  <span>GET A QUOTE NOW</span>
+                  </button>
+               </form>
+            </div>
+            <!-- Right: Image Section -->
+            <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden flex justify-center hidden md:block pl-[85px]">
+               <img src="./assests/Rectangle 45.jpg" alt="Jewelry" class="w-full max-w-[36rem] shadow-lg">
+            </div>
+         </div>
+      </div>
+      <!-- section 4 -->
+      <section class="max-w-[85rem] mx-auto px-2 py-10">
+         <!-- Heading -->
+         <div class="md:flex md:justify-between">
+            <h2 data-aos="fade-right" data-aos-duration="1000"  class="text-2xl md:text-3xl font-semibold text-left text-[#805333] px-4">
+               Explore Our Gift Collection<br>
+               Perfect for Gifting
+            </h2>
+            <!-- Description -->
+            <div>
+               <p data-aos="fade-left" data-aos-duration="1000"  class="flex justify-start md:justify-end text-sm md:text-lg text-[#79512F] md:text-right text-left px-4 mt-4">
+                  Every piece is thoughtfully designed to make your bulk gifting<br class="hidden md:block">
+                  experience as memorable as the gift itself.
+               </p>
+               <!-- Features -->
+               <div data-aos="fade-left" data-aos-duration="1000"  class="flex justify-start md:justify-end space-x-4 mt-4 md:mt-2 text-[#5A3A2E] text-sm md:text-lg font-medium px-4">
+                  <span class="flex items-center space-x-1">
+                  </span>
+                  ◆ PURE 925 SILVER
+                  </span>
+                  <span class="flex items-center space-x-1">
+                  </span>
+                  ◆ ANTI-TARNISH
+                  </span>
+               </div>
+            </div>
+         </div>
+         <!-- Product Grid -->
+         <!-- SwiperJS CSS -->
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+         <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden max-w-[92rem] mx-auto px-4 mt-10">
+            <!-- Swiper (Mobile View) -->
+            <div class="block md:hidden">
+               <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                     <!-- Card 1 -->
+                     <div class="swiper-slide flex flex-col items-center">
+                        <img src="./assests/Rectangle 26.png" alt="Charm Jewelry" 
+                           class="w-full h-100 object-cover rounded-md shadow-lg">
+                        <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium w-full text-center">
+                           Personalized Charm Jewelry
+                        </p>
+                     </div>
+                     <!-- Card 2 -->
+                     <div class="swiper-slide flex flex-col items-center">
+                        <img src="./assests/Rectangle 50.png" alt="Adjustable Rings" 
+                           class="w-full h-100 object-cover rounded-md shadow-lg">
+                        <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-lg font-medium w-full text-center">
+                           Adjustable Rings - One Size Fits All
+                        </p>
+                     </div>
+                     <!-- Card 3 -->
+                     <div class="swiper-slide flex flex-col items-center">
+                        <img src="./assests/Rectangle 51.png" alt="Earrings & Pendants" 
+                           class="w-full h-100 object-cover rounded-md shadow-lg">
+                        <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium w-full text-center">
+                           Timeless Earrings & Pendants
+                        </p>
+                     </div>
+                  </div>
+                  <!-- Pagination Dots -->
+                  <div class="swiper-pagination !static flex justify-center mt-4"></div>
+               </div>
+            </div>
+            <!-- Grid Layout for Tablet & Desktop -->
+            <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-10">
+               <!-- Card 1 -->
+               <div class="text-center">
+                  <img src="./assests/Rectangle 26.png" alt="Charm Jewelry" 
+                     class="w-full h-100 object-cover shadow-lg">
+                  <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+                     Personalized Charm Jewelry
+                  </p>
+               </div>
+               <!-- Card 2 -->
+               <div class="text-center">
+                  <img src="./assests/Rectangle 50.png" alt="Adjustable Rings" 
+                     class="w-full h-100 object-cover shadow-lg">
+                  <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+                     Adjustable Rings - One Size Fits All
+                  </p>
+               </div>
+               <!-- Card 3 -->
+               <div class="text-center">
+                  <img src="./assests/Rectangle 51.png" alt="Earrings & Pendants" 
+                     class="w-full h-100 object-cover shadow-lg">
+                  <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+                     Timeless Earrings & Pendants
+                  </p>
+               </div>
+            </div>
+         </div>
+         <!-- SwiperJS Script -->
+         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+         <script>
+            var swiper = new Swiper('.mySwiper', {
+                slidesPerView: 1, // Shows only one card at a time
+                spaceBetween: 20, // Keeps spacing between slides
+                loop: true, // Enables infinite sliding
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+         </script>
+      </section>
+      <!-- section 5 -->
+      <!-- Include Alpine.js -->
+      <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+      <div x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-[85rem] font-['Playfair_Display'] p-5">
+         <h2 class="text-3xl font-semibold text-[#8B6B50] mb-6 px-0 sm:px-8">FAQs</h2>
+         <!-- FAQ Container -->
+         <div class=" grid grid-cols-2 md:gap-2">
+            <div class="md:p-8 col-span-12 md:col-span-1">
+               <!-- Accordion Item 1 -->
+               <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
+                  <button @click="openIndex = openIndex === 1 ? null : 1"
+                     class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
+                     :class="openIndex === 1 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
+                  <span>What Is The Estimated Time Of Delivery For My Order?</span>
+                  <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 1 ? '−' : '+'"></span>
+                  </button>
+                  <div x-show="openIndex === 1"
+                     x-transition:enter="transition ease-out duration-300 transform"
+                     x-transition:enter-start="opacity-0 scale-y-75"
+                     x-transition:enter-end="opacity-100 scale-y-100"
+                     x-transition:leave="transition ease-in duration-200 transform"
+                     x-transition:leave-start="opacity-100 scale-y-100"
+                     x-transition:leave-end="opacity-0 scale-y-75"
+                     class="p-4 text-gray-700 bg-white">
+                     We work with leading logistics partners in India to ensure that your order is delivered on time. 
+                     Once your order is confirmed, it takes 1-5 days to dispatch depending on stock availability.
+                  </div>
+               </div>
+               <!-- Accordion Item 2 -->
+               <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
+                  <button @click="openIndex = openIndex === 2 ? null : 2"
+                     class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
+                     :class="openIndex === 2 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
+                  <span>How Can I Check My Order Confirmation?</span>
+                  <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 2 ? '−' : '+'"></span>
+                  </button>
+                  <div x-show="openIndex === 2"
+                     x-transition:enter="transition ease-out duration-300 transform"
+                     x-transition:enter-start="opacity-0 scale-y-75"
+                     x-transition:enter-end="opacity-100 scale-y-100"
+                     x-transition:leave="transition ease-in duration-200 transform"
+                     x-transition:leave-start="opacity-100 scale-y-100"
+                     x-transition:leave-end="opacity-0 scale-y-75"
+                     class="p-4 text-gray-700 bg-white">
+                     You will receive an email confirmation with your order details.
+                  </div>
+               </div>
+               <!-- Accordion Item 3 -->
+               <div class="border border-[#9C7A5E] md:my-4 mt-2 overflow-hidden">
+                  <button @click="openIndex = openIndex === 3 ? null : 3"
+                     class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
+                     :class="openIndex === 3 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
+                  <span>How Can I Track My Order?</span>
+                  <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 3 ? '−' : '+'"></span>
+                  </button>
+                  <div x-show="openIndex === 3"
+                     x-transition:enter="transition ease-out duration-300 transform"
+                     x-transition:enter-start="opacity-0 scale-y-75"
+                     x-transition:enter-end="opacity-100 scale-y-100"
+                     x-transition:leave="transition ease-in duration-200 transform"
+                     x-transition:leave-start="opacity-100 scale-y-100"
+                     x-transition:leave-end="opacity-0 scale-y-75"
+                     class="p-4 text-gray-700 bg-white">
+                     Once your order is shipped, you will receive a tracking link via email.
+                  </div>
+               </div>
+            </div>
+            <div class="md:p-8 col-span-12 md:col-span-1">
+               <!-- Accordion Item 1 -->
+               <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
+                  <button @click="openIndex = openIndex === 4 ? null : 4"
+                     class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
+                     :class="openIndex === 4 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
+                  <span>What Is The Estimated Time Of Delivery For My Order?</span>
+                  <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 4 ? '−' : '+'"></span>
+                  </button>
+                  <div x-show="openIndex === 4"
+                     x-transition:enter="transition ease-out duration-300 transform"
+                     x-transition:enter-start="opacity-0 scale-y-75"
+                     x-transition:enter-end="opacity-100 scale-y-100"
+                     x-transition:leave="transition ease-in duration-200 transform"
+                     x-transition:leave-start="opacity-100 scale-y-100"
+                     x-transition:leave-end="opacity-0 scale-y-75"
+                     class="p-4 text-gray-700 bg-white">
+                     We work with leading logistics partners in India to ensure that your order is delivered on time. 
+                     Once your order is confirmed, it takes 1-5 days to dispatch depending on stock availability.
+                  </div>
+               </div>
+               <!-- Accordion Item 2 -->
+               <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
+                  <button @click="openIndex = openIndex === 5 ? null : 5"
+                     class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
+                     :class="openIndex === 5 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
+                  <span>How Can I Check My Order Confirmation?</span>
+                  <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 5 ? '−' : '+'"></span>
+                  </button>
+                  <div x-show="openIndex === 5"
+                     x-transition:enter="transition ease-out duration-300 transform"
+                     x-transition:enter-start="opacity-0 scale-y-75"
+                     x-transition:enter-end="opacity-100 scale-y-100"
+                     x-transition:leave="transition ease-in duration-200 transform"
+                     x-transition:leave-start="opacity-100 scale-y-100"
+                     x-transition:leave-end="opacity-0 scale-y-75"
+                     class="p-4 text-gray-700 bg-white">
+                     You will receive an email confirmation with your order details.
+                  </div>
+               </div>
+               <!-- Accordion Item 3 -->
+               <div class="border border-[#9C7A5E] md:my-4 my-2  overflow-hidden">
+                  <button @click="openIndex = openIndex === 6 ? null : 6"
+                     class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
+                     :class="openIndex === 6 ? 'bg-[#D8C2A3] text-[#4C3A29]' : 'bg-white text-[#9C7A5E]'">
+                  <span>How Can I Track My Order?</span>
+                  <span class="text-xl font-bold transition-transform duration-300" x-text="openIndex === 6 ? '−' : '+'"></span>
+                  </button>
+                  <div x-show="openIndex === 6"
+                     x-transition:enter="transition ease-out duration-300 transform"
+                     x-transition:enter-start="opacity-0 scale-y-75"
+                     x-transition:enter-end="opacity-100 scale-y-100"
+                     x-transition:leave="transition ease-in duration-200 transform"
+                     x-transition:leave-start="opacity-100 scale-y-100"
+                     x-transition:leave-end="opacity-0 scale-y-75"
+                     class="p-4 text-gray-700 bg-white">
+                     Once your order is shipped, you will receive a tracking link via email.
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Hero Section -->
+      <section class="bg-[#DDC3A3] md:py-6 md:px-[100px] text-center md:flex md:justify-between">
+         <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden px-4 text-left md:py-8 py-6">
+            <h2 class="text-3xl font-bold gift ">Make Every Gift Unforgettable</h2>
+            <p class="text-gray-800 md:mt-4 mt-4 giftb">
+               At FIAN, we transform ordinary gifting into a luxurious experience. Let our expertise in fine jewelry help you make every gifting moment truly special.
+            </p>
+         </div>
+         <div class="flex md:justify-center pl-4 pb-4 items-center">
+         <!-- <button class=" button8 [#7A5630] playfair-display text-white px-12 py-3 font-semibold shadow-md px-6 py-2 text-sm md:px-12 md:py-3 md:text-base hover:bg-[#805333]"> -->
+         <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center items-center">
+            <button class="button5 [#7A5630] playfair-display text-white px-16 py-5 font-semibold shadow-md hover:bg-[#805333]">
             <span>CHAT WITH US</span>
-        </button>
-    </div>
-</section>
-
-
-
-
-
-
-        <!-- Footer Section -->
-
-        <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/9870759560" target="_blank" rel="noreferrer noopener" 
-    class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25d366] shadow-lg">
-     <div class="absolute z-10 top-0 left-0 w-full h-full rounded-full bg-[#25d366] opacity-75 animate-ping"></div>
-     <div class="relative z-20">
-         <i class="fab fa-whatsapp text-white text-3xl"></i> 
-     </div>
- </a>
- 
-                <footer data-aos="fade-in" data-aos-duration="1000" class="bg-white py-12 overflow-hidden">
-                    <div class="contain mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 text-lg text-gray-700">
-                       <!-- Help & Information -->
-                       <div class="footer-item">
-                          <h3 class="font-bold mb-2">Help & Information</h3>
-                          <ul class="space-y-1">
-                             <li><a href="#" class="navbar-animation">Terms of Services</a></li>
-                             <li><a href="#" class="navbar-animation">Privacy Policy</a></li>
-                             <li><a href="#" class="navbar-animation">Return Policy</a></li>
-                             <li><a href="#" class="navbar-animation">FAQs</a></li>
-                             <li><a href="#" class="navbar-animation">Track Order</a></li>
-                          </ul>
-                       </div>
-                       <!-- About Us -->
-                       <div class="footer-item">
-                          <h3 class="font-bold mb-2">About Us</h3>
-                          <ul class="space-y-1">
-                             <li><a href="#" class="navbar-animation">About Us</a></li>
-                             <li><a href="#" class="navbar-animation">Benefits of Silver</a></li>
-                             <li><a href="#" class="navbar-animation">Jewellery Care</a></li>
-                             <li><a href="#" class="navbar-animation">Contact Us</a></li>
-                          </ul>
-                       </div>
-                       <!-- Categories -->
-                       <div class="footer-item">
-                          <h3 class="font-bold mb-2">Categories</h3>
-                          <ul class="space-y-1">
-                             <li><a href="#" class="navbar-animation">Rings</a></li>
-                             <li><a href="#" class="navbar-animation">Earrings</a></li>
-                             <li><a href="#" class="navbar-animation">Pendants</a></li>
-                             <li><a href="#" class="navbar-animation">Sets</a></li>
-                             <li><a href="#" class="navbar-animation">Build Your Own Charm Jewellery</a></li>
-                             <li><a href="#" class="navbar-animation">Charms</a></li>
-                             <li><a href="#" class="navbar-animation">Charm Bracelets</a></li>
-                             <li><a href="#" class="navbar-animation">Charm Necklace</a></li>
-                          </ul>
-                       </div>
-                       <!-- Contact Us -->
-                       <div class="footer-item">
-                          <h3 class="font-bold mb-2">Contact Us</h3>
-                          <p class="flex items-center space-x-2">
-                             <i class="fas fa-phone text-accent"></i><span>9870759560</span>
-                          </p>
-                          <p class="flex items-center space-x-2">
-                             <i class="fas fa-envelope text-accent"></i><span>worldoffian@gmail.com</span>
-                          </p>
-                          <div class="flex space-x-4 mt-2">
-                             <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
-                                <i class="fab fa-facebook-f text-lg"></i> <!-- Updated icon -->
-                             </a>
-                             <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
-                             <i class="fab fa-instagram text-lg"></i>
-                             </a>
-                          </div>
-                       </div>
-                       <!-- Newsletter -->
-                       <div class="footer-item col-span-2 sm:col-span-1">
-                          <h3 class="font-bold mb-2">Newsletters</h3>
-                          <p>Stay up to date with offers and our latest products.</p>
-                          <div class="mt-2 flex flex-wrap justify-center">
-                             <input type="email" placeholder="Enter your email..." class="border p-2 flex-1 mb-2 text-center sm:w-auto">
-                             <button class="button7 bg-[#79512F] text-white px-4"><span>Subscribe</span></button>
-                          </div>
-                       </div>
-                    </div>
-                    <!-- Footer Bottom -->
-                    <div class="mt-8 text-gray-500 text-sm px-4 flex flex-col lg:flex-row lg:items-center lg:justify-between">
-                       <img class="w-auto max-w-[200px] mx-auto lg:mx-0" src="assests/image 1.png" alt="">
-                       <p class="mt-2 lg:mt-0 text-center lg:text-right lg:pr-[23rem]">© Copyright 2025 <span class="font-semibold">World Of Fian</span></p>
-                    </div>
-                 </footer>
-
-         
-        <script>
-            AOS.init();
-          </script>
-    <!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-
-    </body>
+            </button>
+         </div>
+      </section>
+      <!-- Footer Section -->
+      <!-- WhatsApp Floating Button -->
+      <!-- <a href="https://wa.me/9870759560" target="_blank" rel="noreferrer noopener" 
+         class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25d366] shadow-lg">
+         <div class="absolute z-10 top-0 left-0 w-full h-full rounded-full bg-[#25d366] opacity-75 animate-ping"></div>
+         <div class="relative z-20">
+            <i class="fab fa-whatsapp text-white text-3xl"></i> 
+         </div>
+      </a> -->
+      <footer data-aos="fade-in" data-aos-duration="1000" class="bg-white py-12 overflow-hidden">
+         <div class="contain mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 text-lg text-gray-700">
+            <!-- Help & Information -->
+            <div class="footer-item">
+               <h3 class="font-bold mb-2">Help & Information</h3>
+               <ul class="space-y-1">
+                  <li><a href="#" class="navbar-animation">Terms of Services</a></li>
+                  <li><a href="#" class="navbar-animation">Privacy Policy</a></li>
+                  <li><a href="#" class="navbar-animation">Return Policy</a></li>
+                  <li><a href="#" class="navbar-animation">FAQs</a></li>
+                  <li><a href="#" class="navbar-animation">Track Order</a></li>
+               </ul>
+            </div>
+            <!-- About Us -->
+            <div class="footer-item">
+               <h3 class="font-bold mb-2">About Us</h3>
+               <ul class="space-y-1">
+                  <li><a href="#" class="navbar-animation">About Us</a></li>
+                  <li><a href="#" class="navbar-animation">Benefits of Silver</a></li>
+                  <li><a href="#" class="navbar-animation">Jewellery Care</a></li>
+                  <li><a href="#" class="navbar-animation">Contact Us</a></li>
+               </ul>
+            </div>
+            <!-- Categories -->
+            <div class="footer-item">
+               <h3 class="font-bold mb-2">Categories</h3>
+               <ul class="space-y-1">
+                  <li><a href="#" class="navbar-animation">Rings</a></li>
+                  <li><a href="#" class="navbar-animation">Earrings</a></li>
+                  <li><a href="#" class="navbar-animation">Pendants</a></li>
+                  <li><a href="#" class="navbar-animation">Sets</a></li>
+                  <li><a href="#" class="navbar-animation">Build Your Own Charm Jewellery</a></li>
+                  <li><a href="#" class="navbar-animation">Charms</a></li>
+                  <li><a href="#" class="navbar-animation">Charm Bracelets</a></li>
+                  <li><a href="#" class="navbar-animation">Charm Necklace</a></li>
+               </ul>
+            </div>
+            <!-- Contact Us -->
+            <div class="footer-item">
+               <h3 class="font-bold mb-2">Contact Us</h3>
+               <p class="flex items-center space-x-2">
+                  <i class="fas fa-phone text-accent"></i><span>9870759560</span>
+               </p>
+               <p class="flex items-center space-x-2">
+                  <i class="fas fa-envelope text-accent"></i><span>worldoffian@gmail.com</span>
+               </p>
+               <div class="flex space-x-4 mt-2">
+                  <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                     <i class="fab fa-facebook-f text-lg"></i> <!-- Updated icon -->
+                  </a>
+                  <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                  <i class="fab fa-instagram text-lg"></i>
+                  </a>
+               </div>
+            </div>
+            <!-- Newsletter -->
+            <div class="footer-item col-span-2 sm:col-span-1">
+               <h3 class="font-bold mb-2">Newsletters</h3>
+               <p>Stay up to date with offers and our latest products.</p>
+               <div class="mt-2 flex flex-wrap justify-center">
+                  <input type="email" placeholder="Enter your email..." class="border p-2 flex-1 mb-2 text-center sm:w-auto">
+                  <button class="button7 bg-[#79512F] text-white px-4"><span>Subscribe</span></button>
+               </div>
+            </div>
+         </div>
+         <!-- Footer Bottom -->
+         <div class="mt-8 text-gray-500 text-sm px-4 flex flex-col lg:flex-row lg:items-center lg:justify-between">
+            <img class="w-auto max-w-[200px] mx-auto lg:mx-0" src="assests/image 1.png" alt="">
+            <p class="mt-2 lg:mt-0 text-center lg:text-right lg:pr-[23rem]">© Copyright 2025 <span class="font-semibold">World Of Fian</span></p>
+         </div>
+      </footer>
+      <script>
+         AOS.init();
+      </script>
+      <!-- AOS JS -->
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+   </body>
 </html>
