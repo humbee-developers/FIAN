@@ -124,7 +124,65 @@
         position:absolute;
         left:calc(50% - 50%);
         bottom:-5px;
-      }
+      }  
+
+      .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    z-index: 10;
+    color: black;
+}
+.nav-list.active {
+    transform: translateX(0);
+}
+
+.close{
+    padding: 10px;
+    background-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* <div class="nav-list">
+                
+                <ul id="menu">
+                    <div class="none"><h1>Fian</h1> <span class="close" onclick="toggleMenu()">X</span></div>
+                    
+                    <li>Explore Collection</li>
+                    <li>Custom Gifting</li>
+                    <li>About FIAN</li>
+                    <li>FAQs</li>
+                </ul>
+            </div> */
+
+
+@media (min-width: 768px) {
+    .nav-list {
+        position: static;
+        transform: translateX(0);
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        box-shadow: none;
+    }
+}
+
+.nav-bar-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+}
 
 
          .swiper-pagination {
@@ -225,7 +283,7 @@
          color: white;
          }
          .button4 span {
-         /* z-index: 1; */
+         z-index: 1;
          position: relative;
          }
          .button4 span:before {
@@ -243,8 +301,8 @@
          }
          @media (max-width: 480px) { /* Mobile */
          .button4 {
-         font-size: 14px; /* Further reduce font */
-         padding: 8px 15px; /* Compact padding */
+         font-size: 15px; /* Further reduce font */
+         padding: 15px 20px; /* Compact padding */
          }
          }
          .button5 {
@@ -323,8 +381,8 @@
          }
          @media (max-width: 480px) { /* Mobile */
          .button5 {
-         font-size: 14px; /* Further reduce font */
-         padding: 8px 15px; /* Make it more compact */
+         font-size: 16px; /* Further reduce font */
+         padding: 15px 20px; /* Make it more compact */
          }
          }
          .button6 {
@@ -567,12 +625,24 @@
          .navbarRes{
             padding-left: 4rem;
          }
+         @media (max-width:575px) {
+            .navbarRes{
+                padding-left: 10px;
+            }
+            
+         }
          .gift {
             font-size: 42px;
          }
          
          .giftb{
             font-size: 20px;
+            width: 62%;
+         }
+         @media (max-width:768px){
+            .giftb{
+                width: 100%;
+            }
          }
          @media (max-width:575px){
             .gift{
@@ -582,27 +652,50 @@
             font-size: 14px;
          }
          }
+         .closenone{
+            display: none;
+         }
+
+         @media (max-width:768px) {
+            .closenone{
+            display: flex;
+            justify-content: end;
+            width: 100%;
+            padding-right: 10px;
+         }
+            .closeb{
+            padding: 8px;
+            border-radius: 5px;
+            }   
+            .closeb .fa-xmark{
+                font-size: 20px;
+            }
+         }
+        .heading{
+            font-size: 0.9rem;
+        }
+
       </style>
       <script>
-         function toggleMenu() {
-             const menu = document.getElementById("navbar-sticky");
+        //  function toggleMenu() {
+        //      const menu = document.getElementById("navbar-sticky");
          
-             if (menu.classList.contains("hidden")) {
-                 menu.classList.remove("hidden");
-                 menu.classList.add("flex");
-                 setTimeout(() => {
-                     menu.classList.add("opacity-100", "max-h-screen");
-                     menu.classList.remove("opacity-0", "max-h-0");
-                 }, 10);
-             } else {
-                 menu.classList.add("opacity-0", "max-h-0");
-                 menu.classList.remove("opacity-100", "max-h-screen");
-                 setTimeout(() => {
-                     menu.classList.remove("flex");
-                     menu.classList.add("hidden");
-                 }, 300); // Time matches transition duration
-             }
-         }
+        //      if (menu.classList.contains("hidden")) {
+        //          menu.classList.remove("hidden");
+        //          menu.classList.add("flex");
+        //          setTimeout(() => {
+        //              menu.classList.add("opacity-100", "max-h-screen");
+        //              menu.classList.remove("opacity-0", "max-h-0");
+        //          }, 10);
+        //      } else {
+        //          menu.classList.add("opacity-0", "max-h-0");
+        //          menu.classList.remove("opacity-100", "max-h-screen");
+        //          setTimeout(() => {
+        //              menu.classList.remove("flex");
+        //              menu.classList.add("hidden");
+        //          }, 300); // Time matches transition duration
+        //      }
+        //  }
       </script>
       <div  class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2">
          <p id="shipping-text"
@@ -663,34 +756,42 @@
                   </svg>
                </button>
             </div>
+            <script>
+                function toggleMenu(){
+                    const menu = document.querySelector(".nav-list")
+                    menu.classList.toggle("active")
+                }
+            </script>
+
             <!-- Navigation Links -->
-            <div id="navbar-sticky" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto transition-all duration-300 ease-in-out">
-               <ul class="flex flex-col md:flex-row md:space-x-12 mt-4 md:mt-0 font-medium text-black">
-                  <li>
+            <div id="navbar-sticky" class="nav-list hidden md:flex flex-col md:flex-row items-center md:items-start sm:items-start w-full md:w-auto transition-all duration-300 ease-in-out">
+            <ul class=" menu flex flex-col w-full md:flex-row md:space-x-12 mt-4 md:mt-0 font-medium text-black">
+                 <div class="closenone " onclick="toggleMenu()"><span class="closeb"><i class="fa-solid fa-xmark"></i></span></div> 
+                <li>
                      <a href="#"
-                        class=" navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Explore
+                        class=" navbar-animation inline-block md:block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Explore
                      Collection</a>
                   </li>
                   <li>
                      <a href="#"
-                        class=" navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Custom
+                        class=" navbar-animation inline-block md:block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Custom
                      Gifting</a>
                   </li>
                   <li>
                      <a href="#"
-                        class="navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">About
+                        class="navbar-animation inline-block md:block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">About
                      FIAN</a>
                   </li>
                   <li>
                      <a href="#"
-                        class="navbar-animation block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">FAQs</a>
+                        class="navbar-animation inline-block md:block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">FAQs</a>
                   </li>
                </ul>
             </div>
             <!-- Get Started Button -->
             <div class="hidden md:flex md:order-2 mr-8">
                <button class="text-white bg-[#8B6B50] text-xl rounded-3xl px-9 py-2 text-center">
-               Get a Quote
+                <a href="#form">Get a Quote</a>
                </button>
             </div>
          </div>
@@ -705,9 +806,8 @@
          <!-- Right Section (Text) -->
          <div class="md:flex md:justify-center md:items-center col-span-12 md:col-span-4">
             <div class="p-4 text-lg font-bold flex flex-col items-center md:block">
-               <h2 class="text-[#79512F] md:text-3xl text-base text-center md:w-full">
-                  Make Your Gifting<br>
-                  Moments Special with
+               <h2 class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full">
+                  Make Your Gifting Moments Special with
                </h2>
                <p class="md:w-full flex justify-center py-6">
                   <img src="./assests/image 1.png" class="md:h-[90px] h-[60px] px-2" alt="logo" />
@@ -726,7 +826,7 @@
                         overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
                         before:h-full before:w-0 before:bg-[#79512F] before:transition-all before:duration-[1000ms] 
                         hover:before:w-full hover:before:left-0 w-auto md:w-auto text-center">
-                     <span class="relative z-10">Get a Quote</span>
+                     <a href="#form" class="relative z-10">Get a Quote</a>
                      </button>
                      <button class="button4 relative px-6 md:px-[65px] py-3 md:py-4 bg-white border-2 border-[#8B6B50] text-[#79512F] 
                         hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl
@@ -776,7 +876,7 @@
          </div>
       </div>
       <!-- Section 2 -->
-      <div  class="overflow-x-hidden grid grid-cols-12 gap-4 mx-8 mt-20 mb-20">
+      <div  class="overflow-x-hidden grid grid-cols-12 gap-4 px-4 md:mx-8">
          <div data-aos="fade-right" data-aos-duration="1000"   class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
             <img src="./assests/gift-02.svg" alt="img1">
             <p class="text-2xl">
@@ -810,7 +910,7 @@
       </div>
       <!-- section 3 -->
       <div>
-         <div class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4 mt-12">
+         <div class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4">
             <div data-aos="fade-up" data-aos-duration="1000"  class="overflow-x-hidden col-span-12 md:col-span-6 md:h-[33rem]  w-full"><img src="./assests/Group 44.png" class="w-full h-full object-fit"></div>
             <div data-aos="fade-right" data-aos-duration="1000"  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 20.png" class="w-full h-full object-fit"></div>
             <div data-aos="fade-up" data-aos-duration="1000"  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 21.png" class="w-full h-full object-fit"></div>
@@ -865,7 +965,7 @@
                   </div>
                </div>
                <button class="button6  px-[96px] py-3 bg-[#865F42] text-white text-lg font-semibold">
-               <span>Get A Quote</span>
+               <a href="#form"><span>Get A Quote</span></a>
                </button>
             </div>
             <!-- Right Section - Gift Collection -->
@@ -875,7 +975,7 @@
          </div>
       </section>
       <!-- form -->
-      <div class="bg-[#F7F1EB] md:min-h-screen flex items-center justify-center px-4">
+      <div id="form" class="bg-[#F7F1EB] md:min-h-screen flex items-center justify-center px-4">
          <div class="max-w-[90rem] w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <!-- Left: Form Section -->
             <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden p-6">
@@ -911,25 +1011,25 @@
                   </div>
                   <!-- Gender Dropdown -->
                   <div class="relative z-0 w-full mb-5 group">
-                     <div class="relative">
-                        <select onfocus='this.size=6;' onblur='this.size=0;'
-                           onchange='this.size=1; this.blur();' name="gender" id="gender"
-                           class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none 
-                           dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] 
-                           peer cursor-pointer hover:bg-[#F7F1EB] focus:bg-[#F7F1EB]">
-                           <option value="" disabled selected class="text-[#79512F]">Select Gender</option>
-                           <option value="male" class="text-black hover:bg-[#8B6B50] hover:text-white">Male</option>
-                           <option value="female" class="text-black hover:bg-[#8B6B50] hover:text-white">Female</option>
-                           <option value="other" class="text-black hover:bg-[#8B6B50] hover:text-white">Other</option>
-                        </select>
-                        <!-- Custom Dropdown Arrow -->
-                        <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-                           <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                           </svg>
-                        </div>
-                     </div>
-                  </div>
+                    <div class="relative">
+                       <select onfocus='this.size=6;' onblur='this.size=0;'
+                          onchange='this.size=1; this.blur();' name="gender" id="gender"
+                          class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none
+                          dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50]
+                          peer cursor-pointer hover:bg-[#F7F1EB] focus:bg-[#F7F1EB]">
+                          <option value="" disabled selected class="text-[#79512F]">Select Gender</option>
+                          <option value="male" class="text-black hover:bg-[#8B6B50] hover:text-white">Male</option>
+                          <option value="female" class="text-black hover:bg-[#8B6B50] hover:text-white">Female</option>
+                          <option value="other" class="text-black hover:bg-[#8B6B50] hover:text-white">Other</option>
+                       </select>
+                       <!-- Custom Dropdown Arrow -->
+                       <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                          <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                          </svg>
+                       </div>
+                    </div>
+                 </div>
                   <!-- Country Dropdown -->
                   <div class="relative z-0 w-full mb-5 group">
                      <div class="relative">
@@ -1217,7 +1317,7 @@
          <!-- <button class=" button8 [#7A5630] playfair-display text-white px-12 py-3 font-semibold shadow-md px-6 py-2 text-sm md:px-12 md:py-3 md:text-base hover:bg-[#805333]"> -->
          <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center items-center">
             <button class="button5 [#7A5630] playfair-display text-white px-16 py-5 font-semibold shadow-md hover:bg-[#805333]">
-            <span>CHAT WITH US</span>
+            <a href="https://wa.me/9870759560"><span>CHAT WITH US</span></a>
             </button>
          </div>
       </section>
