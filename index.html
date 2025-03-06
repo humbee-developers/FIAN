@@ -933,14 +933,37 @@
       <!-- section 3 -->
       <div>
          <div id="Video" class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4">
-            <div data-aos="fade-up" data-aos-duration="1000"  class="overflow-x-hidden col-span-12 md:col-span-6 md:h-[33rem]  w-full"><video class="w-full h-full object-cover" autoplay loop muted playsinline><source src="./assests/neckless.mp4" type="video/mp4"></video></div>
-            <div data-aos="fade-right" data-aos-duration="1000"  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 20.png" class="w-full h-full object-fit"></div>
-            <div data-aos="fade-up" data-aos-duration="1000"  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem]  w-full"><video class="w-full h-full object-cover" autoplay loop muted playsinline><source src="./assests/neckless2.mp4" type="video/mp4"></video></div>
-            <div data-aos="fade-right" data-aos-duration="1000"  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem]  w-full"><img src="./assests/Rectangle 23.png" class="w-full h-full object-fit"></div>
-            <div data-aos="fade-up" class="overflow-x-hidden col-span-6 md:col-span-4 md:h-[33rem]  w-full"><video class="w-full h-full object-cover" autoplay loop muted playsinline><source src="./assests/neckless3.mp4" type="video/mp4"></video></div>
-            <div  data-aos="fade-left" class="overflow-x-hidden col-span-12 md:col-span-5 md:h-[33rem]  w-full"><img src="./assests/Rectangle 22.png" class="w-full h-full object-fit"></div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden col-span-12 md:col-span-6 md:h-[33rem] w-full">
+               <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="./assests/neckless.mp4" type="video/mp4">
+               </video>
+            </div>
+            <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
+               <img src="./assests/Rectangle 20.png" class="w-full h-full object-fit">
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
+               <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="./assests/neckless2.mp4" type="video/mp4">
+               </video>
+            </div>
+            <!-- Last 3rd item (Rectangle 23.png) - Will swap with neckless3.mp4 in mobile -->
+            <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full order-2 md:order-none">
+               <img src="./assests/Rectangle 23.png" class="w-full h-full object-fit">
+            </div>
+            <!-- Last 2nd item (neckless3.mp4) - Will swap with Rectangle 23.png in mobile -->
+            <div data-aos="fade-up" class="overflow-x-hidden col-span-6 md:col-span-4 md:h-[33rem] w-full order-1 md:order-none">
+               <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="./assests/neckless3.mp4" type="video/mp4">
+               </video>
+            </div>
+            <!-- Rectangle 22 image (move to last in mobile) -->
+            <div data-aos="fade-left" class="overflow-x-hidden col-span-12 md:col-span-5 md:h-[33rem] w-full order-3 md:order-none">
+               <img src="./assests/Rectangle 22.png" class="w-full h-full object-fit">
+            </div>
          </div>
       </div>
+      
+
       <section class="max-w-[90rem] mx-auto px-4 py-12">
          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Left Section - Why Choose FIAN? -->
