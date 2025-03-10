@@ -163,9 +163,20 @@
    gap: 2rem;
    padding: 0 50px;
 }
+#WhyChooseFian{
+   display: none;
+}
+
 @media(max-width: 768px){
    .sectionHide{
    display: block;
+}
+#WhyChooseFianORg{
+   display: none;
+}
+#WhyChooseFian{
+   display: block;
+   padding-top: 2rem;
 }
 #SectionHide{
    display: none;
@@ -1066,7 +1077,7 @@
                </button> -->
             </div>
             <!-- Right Section - Gift Collection -->
-            <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden relative flex justify-center items-center">
+            <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden relative flex justify-center items-center" id="WhyChooseFianORg">
                <img src="./assests/Rectangle 55.jpg" alt="Gift Collection" class="max-w-full h-auto">
             </div>
          </div>
@@ -1160,6 +1171,9 @@
                   <span>GET A QUOTE NOW</span>
                   </button>
                </form>
+               <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden relative flex justify-center items-center" id="WhyChooseFian">
+                  <img src="./assests/Rectangle 55.jpg" alt="Gift Collection" class="max-w-full h-auto">
+               </div>
             </div>
             <!-- Right: Image Section -->
             <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden flex justify-center hidden md:block pl-[85px]">
