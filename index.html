@@ -152,7 +152,49 @@
     border-radius: 5px;
     cursor: pointer;
 }
-
+.sectionHide{
+   display: none;
+}
+#SectionHide{
+   display: block;
+}
+.WhyFian{
+   display: flex;
+   gap: 2rem;
+   padding: 0 50px;
+}
+@media(max-width: 768px){
+   .sectionHide{
+   display: block;
+}
+#SectionHide{
+   display: none;
+}
+#GiftText{
+   padding: 20px 0;
+   font-size: 20px;
+}
+.WhyFian{
+   flex-direction: column-reverse;
+}
+.ImageSvg{
+   height: 40px;
+}
+.ShowButton{
+   justify-content: left;
+   width: 100%;
+   padding: 0 20px;
+}
+.buttonChat{
+   width: 100%;
+}
+}
+@media(max-width: 575px){
+   .WhyFian{
+   gap: 2rem;
+   padding: 0;
+}
+}
 
 /* <div class="nav-list">
                 
@@ -821,19 +863,29 @@
       <!-- section 1 -->
       <div class="grid grid-cols-12 gap-4">
          <!-- Left Section (Image) -->
+          
          <div class=" md:col-span-8 h-auto md:h-[730px] col-span-12">
-            <img data-aos="fade-up" data-aos-duration="1000"  src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
-               alt="img1" />
-         </div>
-         <!-- Right Section (Text) -->
-         <div class="md:flex md:justify-center md:items-center col-span-12 md:col-span-4">
-            <div class="p-4 text-lg font-bold flex flex-col items-center md:block">
-               <h2 class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full">
+            <div class="sectionHide">
+               <h2 class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full" id="GiftText">
                   Make Your Gifting Moments Special with
                </h2>
                <p class="md:w-full flex justify-center py-6">
                   <img src="./assests/image 1.png" class="md:h-[90px] h-[60px] px-2" alt="logo" />
                </p>
+            </div>
+            <img data-aos="fade-up" data-aos-duration="1000"  src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
+               alt="img1" />
+         </div>
+         <!-- Right Section (Text) -->
+         <div class="md:flex md:justify-center md:items-center col-span-12 md:col-span-4">
+            <div class="p-4 text-lg font-bold flex flex-col items-center md:block" >
+               <h2 class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full" id="SectionHide">
+                  Make Your Gifting Moments Special with
+               </h2>
+               <p class="md:w-full flex justify-center py-6" id="SectionHide">
+                  <img src="./assests/image 1.png" class="md:h-[90px] h-[60px] px-2" alt="logo" />
+               </p>
+              
                <p class="md:w-full text-center text-sm md:text-base">
                   Corporate Gifts | Return Gifts | Bridesmaid Gifts |<br class="hidden md:block">
                   Charm Jewelry | Custom Jewelry
@@ -900,7 +952,7 @@
       <!-- Section 2 -->
       <div  class="overflow-x-hidden grid grid-cols-12 gap-4 px-4 md:mx-8">
          <div data-aos="fade-right" data-aos-duration="1000"   class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
-            <img src="./assests/gift-02.svg" alt="img1">
+            <img src="./assests/gift-02.svg" alt="img1" class="ImageSvg">
             <p class="text-2xl">
                <b>Premium Packaging</b>
             </p>
@@ -910,7 +962,7 @@
             </p>
          </div>
          <div data-aos="fade-left" data-aos-duration="1000"  class="overflow-x-hidden justify-center items-center w-full flex flex-col md:col-span-4 p-4 col-span-12  md:border-l-2 md:border-r-2 border-t-2 border-b-2 md:border-t-0 md:border-b-0 py-8 border-[#E0CCB2]  py-8 md:my-8">
-            <img src="./assests/snowflake.svg" alt="img1">
+            <img src="./assests/snowflake.svg" alt="img1" class="ImageSvg">
             <p class="text-2xl">
                <b>Custom Requests</b>
             </p>
@@ -920,7 +972,7 @@
             </p>
          </div>
          <div data-aos="fade-left" data-aos-duration="1000"  class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 py-8 md:my-8">
-            <img src="./assests/truck.svg" alt="img1">
+            <img src="./assests/truck.svg" alt="img1" class="ImageSvg">
             <p class="text-2xl">
                <b>PAN India Delivery</b>
             </p>
@@ -934,7 +986,7 @@
       <div>
          <div id="Video" class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4">
             <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden col-span-12 md:col-span-6 md:h-[33rem] w-full">
-               <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+               <video class="w-full h-full object-cover" autoplay loop  playsinline controls>
                   <source src="./assests/neckless.mp4" type="video/mp4">
                </video>
             </div>
@@ -942,7 +994,7 @@
                <img src="./assests/Rectangle 20.png" class="w-full h-full object-fit">
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
-               <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+               <video class="w-full h-full object-cover" autoplay loop  playsinline controls>
                   <source src="./assests/neckless2.mp4" type="video/mp4">
                </video>
             </div>
@@ -952,7 +1004,7 @@
             </div>
             <!-- Last 2nd item (neckless3.mp4) - Will swap with Rectangle 23.png in mobile -->
             <div data-aos="fade-up" class="overflow-x-hidden col-span-6 md:col-span-4 md:h-[33rem] w-full order-1 md:order-none">
-               <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+               <video class="w-full h-full object-cover" autoplay loop  playsinline controls>
                   <source src="./assests/neckless3.mp4" type="video/mp4">
                </video>
             </div>
@@ -965,7 +1017,7 @@
       
 
       <section class="max-w-[90rem] mx-auto px-4 py-12">
-         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+         <div class="WhyFian">
             <!-- Left Section - Why Choose FIAN? -->
             <div id="whyfian" data-aos="fade-right" data-aos-duration="1000"  class="overflow-x-hidden text-[#865F42]">
                <h2 class="text-3xl font-semibold">Why Choose FIAN?</h2>
@@ -1009,9 +1061,9 @@
                      </div>
                   </div>
                </div>
-               <button class="button6  px-[96px] py-3 bg-[#865F42] text-white text-lg font-semibold">
+               <!-- <button class="button6  px-[96px] py-3 bg-[#865F42] text-white text-lg font-semibold">
                <a href="#form"><span>Get A Quote</span></a>
-               </button>
+               </button> -->
             </div>
             <!-- Right Section - Gift Collection -->
             <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden relative flex justify-center items-center">
@@ -1224,12 +1276,10 @@
       <!-- section 5 -->
       <!-- Include Alpine.js -->
       <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
-      <div id="FAQs" x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-[85rem] font-['Playfair_Display'] p-5">
+      <!-- <div id="FAQs" x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-[85rem] font-['Playfair_Display'] p-5">
          <h2 class="text-3xl font-semibold text-[#8B6B50] mb-6 px-0 sm:px-8">FAQs</h2>
-         <!-- FAQ Container -->
          <div class=" grid grid-cols-2 md:gap-2">
             <div class="md:p-8 col-span-12 md:col-span-1">
-               <!-- Accordion Item 1 -->
                <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
                   <button @click="openIndex = openIndex === 1 ? null : 1"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1249,7 +1299,6 @@
                      Once your order is confirmed, it takes 1-5 days to dispatch depending on stock availability.
                   </div>
                </div>
-               <!-- Accordion Item 2 -->
                <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
                   <button @click="openIndex = openIndex === 2 ? null : 2"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1268,7 +1317,6 @@
                      You will receive an email confirmation with your order details.
                   </div>
                </div>
-               <!-- Accordion Item 3 -->
                <div class="border border-[#9C7A5E] md:my-4 mt-2 overflow-hidden">
                   <button @click="openIndex = openIndex === 3 ? null : 3"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1289,7 +1337,6 @@
                </div>
             </div>
             <div class="md:p-8 col-span-12 md:col-span-1">
-               <!-- Accordion Item 1 -->
                <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
                   <button @click="openIndex = openIndex === 4 ? null : 4"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1309,7 +1356,6 @@
                      Once your order is confirmed, it takes 1-5 days to dispatch depending on stock availability.
                   </div>
                </div>
-               <!-- Accordion Item 2 -->
                <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
                   <button @click="openIndex = openIndex === 5 ? null : 5"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1328,7 +1374,6 @@
                      You will receive an email confirmation with your order details.
                   </div>
                </div>
-               <!-- Accordion Item 3 -->
                <div class="border border-[#9C7A5E] md:my-4 my-2  overflow-hidden">
                   <button @click="openIndex = openIndex === 6 ? null : 6"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1349,7 +1394,7 @@
                </div>
             </div>
          </div>
-      </div>
+      </div> -->
       <!-- Hero Section -->
       <section class="bg-[#DDC3A3] md:py-6 md:px-[100px] text-center md:flex md:justify-between">
          <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden px-4 text-left md:py-8 py-6">
@@ -1358,23 +1403,23 @@
                At FIAN, we transform ordinary gifting into a luxurious experience. Let our expertise in fine jewelry help you make every gifting moment truly special.
             </p>
          </div>
-         <div class="flex md:justify-center pl-4 pb-4 items-center">
+         <div class="flex md:justify-center pb-4 ">
          <!-- <button class=" button8 [#7A5630] playfair-display text-white px-12 py-3 font-semibold shadow-md px-6 py-2 text-sm md:px-12 md:py-3 md:text-base hover:bg-[#805333]"> -->
-         <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center items-center">
-            <button class="button5 [#7A5630] playfair-display text-white px-16 py-5 font-semibold shadow-md hover:bg-[#805333]">
+         <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center items-center ShowButton">
+            <button class="button5 [#7A5630] playfair-display text-white px-16 py-5 font-semibold shadow-md hover:bg-[#805333] buttonChat">
             <a href="https://wa.me/9870759560"><span>CHAT WITH US</span></a>
             </button>
          </div>
       </section>
       <!-- Footer Section -->
       <!-- WhatsApp Floating Button -->
-      <a href="https://wa.me/9870759560" target="_blank" rel="noreferrer noopener" 
+      <!-- <a href="https://wa.me/9870759560" target="_blank" rel="noreferrer noopener" 
          class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25d366] shadow-lg">
          <div class="absolute z-10 top-0 left-0 w-full h-full rounded-full bg-[#25d366] opacity-75 animate-ping"></div>
          <div class="relative z-20">
             <i class="fab fa-whatsapp text-white text-3xl"></i> 
          </div>
-      </a>
+      </a> -->
       <footer data-aos="fade-in" data-aos-duration="1000" class="bg-white py-12 overflow-hidden">
          <div class="contain mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 text-lg text-gray-700">
             <!-- Help & Information -->
