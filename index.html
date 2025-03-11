@@ -168,7 +168,7 @@
 }
 #fianLogoMobile{
    width: 200px;
-    height: 140px;
+    height: 100px;
     object-fit: cover;
     text-align: center;
     margin: 0 auto;
@@ -178,6 +178,7 @@
 @media(max-width: 768px){
    .sectionHide{
    display: block;
+   padding-top: 4rem;
 }
 #WhyChooseFianORg{
    display: none;
@@ -193,7 +194,7 @@
    display: none;
 }
 #GiftText{
-   padding: 20px 0 0;
+   padding: 40px 0 0;
    font-size: 20px;
 }
 .WhyFian{
@@ -356,6 +357,7 @@
          .button4:hover {
          color: rgb(255, 255, 255);
          }
+       
          /* Responsive Design */
          @media (max-width: 768px) { /* Tablet & Mobile */
          .button4 {
@@ -657,6 +659,9 @@
          .socialicons{
             display: none;
          }
+         .navbarRes{
+            position: static !important;
+         }
          select option:hover{background-color:#A86B42 !important; }
          @media (max-width: 640px) {
          .contain {
@@ -715,6 +720,18 @@
             display: flex;
             margin-top: auto;
          }
+         .navbarRes{
+            position: fixed !important;
+        z-index: 8;
+        width: 100%;
+        padding-top: 2.5rem;
+        background: white;
+         }
+         #shippingText{
+            position: fixed;
+            width: 100%;
+            z-index: 25;
+         }
          }
          @media (max-width:575px){
             .gift{
@@ -734,6 +751,7 @@
             justify-content: end;
             width: 100%;
             padding-right: 10px;
+            margin-top: 1rem;
          }
             .closeb{
             padding: 8px;
@@ -771,7 +789,7 @@
         //      }
         //  }
       </script>
-      <div  class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2">
+      <div  class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2" id="shippingText">
          <p id="shipping-text"
             class="text-[10px] md:text-xs lg:text-sm text-center px-2 py-2 whitespace-nowrap overflow-hidden text-ellipsis">
             Shipping Pan India | Free delivery on prepaid orders!
@@ -811,7 +829,30 @@
          // Change text immediately and then every 5 seconds
          changeText(); // Change text right away on page load
          setInterval(changeText, 5000); // Change text every 5 seconds
+
       </script>
+      <script>
+         let lastScrollTopOne = 0;
+         const shippingText = document.getElementById('shippingText');
+     
+         window.addEventListener('scroll', () => {
+             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+     
+             if (currentScroll > lastScrollTopOne) {
+                 // Scroll Down - Show Shipping Text
+                 shippingText.classList.add('hidden');
+             } else {
+                 // Scroll Up - Hide Shipping Text
+                 shippingText.classList.remove('hidden');
+             }
+     
+             lastScrollTopOne = currentScroll <= 0 ? 0 : currentScroll;
+         });
+     </script>
+     
+     
+    
+     
       <!-- navbar -->
       <nav class="bg-white playfair-display w-full z-20 border-b border-gray-200 dark:border-gray-600 ">
          <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4 navbarRes">
@@ -889,6 +930,24 @@
             </div>
          </div>
       </nav>
+      <script>
+         let lastScrollTop = 0;
+         const navbar = document.querySelector('nav');
+     
+         window.addEventListener('scroll', () => {
+             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+     
+             if (currentScroll > lastScrollTop) {
+                 // Scroll Down - Hide Navbar
+                 navbar.classList.add('hidden');
+             } else {
+                 // Scroll Up - Show Navbar
+                 navbar.classList.remove('hidden');
+             }
+     
+             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+         });
+     </script>
       <!-- section 1 -->
       <div class="grid grid-cols-12 gap-4">
          <!-- Left Section (Image) -->
@@ -919,7 +978,7 @@
                   Corporate Gifts | Return Gifts | Bridesmaid Gifts |<br class="hidden md:block">
                   Charm Jewelry | Custom Jewelry
                </p>
-               <p class="md:w-full text-center text-[#79512F] text-xl md:text-3xl py-8 md:py-4">
+               <p class="md:w-full text-center text-[#79512F] text-xl md:text-3xl py-5 md:py-4">
                   In 925 Silver
                </p>
                <div class="md:mt-2 md:mt-12 flex md:flex-col items-center">
