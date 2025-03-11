@@ -166,6 +166,13 @@
 #WhyChooseFian{
    display: none;
 }
+#fianLogoMobile{
+   width: 200px;
+    height: 140px;
+    object-fit: cover;
+    text-align: center;
+    margin: 0 auto;
+}
 
 @media(max-width: 768px){
    .sectionHide{
@@ -182,7 +189,7 @@
    display: none;
 }
 #GiftText{
-   padding: 20px 0;
+   padding: 20px 0 0;
    font-size: 20px;
 }
 .WhyFian{
@@ -676,6 +683,7 @@
          width: 100%; /* Make the button take up full width on mobile */
          padding-left: 1rem; /* Optional: Adjust padding for mobile */
          padding-right: 1rem; /* Optional: Adjust padding for mobile */
+         display: none;
          }
          }
          .navbarRes{
@@ -807,10 +815,10 @@
             <img src="./assests/image 1.png" class="h-8" alt="Flowbite Logo">
             </a>
             <!-- Mobile Menu Button -->
-            <div class="flex md:hidden">
+            <div class="flex items-center md:hidden">
                <div class=" md:flex md:order-2 mr-2">
-                  <button class="text-white bg-[#8B6B50] text-xl rounded-3xl px-2 py-1 text-center">
-                   <a href="#form" class="text-md">Get a Quote</a>
+                  <button class="text-white bg-[#8B6B50] text-md rounded-3xl px-2 py-1 text-center">
+                   <a href="#form">Get a Quote</a>
                   </button>
                </div>
                <!-- button -->
@@ -886,8 +894,8 @@
                <h2 class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full" id="GiftText">
                   Make Your Gifting Moments Special with
                </h2>
-               <p class="md:w-full flex justify-center py-6">
-                  <img src="./assests/image 1.png" class="md:h-[90px] h-[60px] px-2" alt="logo" />
+               <p>
+                  <img src="./assests/FIAN logo black.png" class="md:h-[200px] px-2" alt="logo" id="fianLogoMobile"/>
                </p>
             </div>
             <img data-aos="fade-up" data-aos-duration="1000"  src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
@@ -899,8 +907,8 @@
                <h2 class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full" id="SectionHide">
                   Make Your Gifting Moments Special with
                </h2>
-               <p class="md:w-full flex justify-center py-6" id="SectionHide">
-                  <img src="./assests/image 1.png" class="md:h-[90px] h-[60px] px-2" alt="logo" />
+               <p id="SectionHide">
+                  <img src="./assests/FIAN logo black.png" class="md:h-[90px] h-[60px] px-2" alt="logo" id="fianLogoMobile" />
                </p>
               
                <p class="md:w-full text-center text-sm md:text-base">
@@ -1003,7 +1011,7 @@
       <div>
          <div id="Video" class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4">
             <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden col-span-12 md:col-span-6 md:h-[33rem] w-full">
-               <video class="w-full h-full object-cover" autoplay loop  playsinline controls>
+               <video class="w-full h-full object-cover"  loop  playsinline controls>
                   <source src="./assests/neckless.mp4" type="video/mp4">
                </video>
             </div>
@@ -1011,7 +1019,7 @@
                <img src="./assests/Rectangle 20.png" class="w-full h-full object-fit">
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
-               <video class="w-full h-full object-cover" autoplay loop  playsinline controls>
+               <video class="w-full h-full object-cover"  loop  playsinline controls>
                   <source src="./assests/neckless2.mp4" type="video/mp4">
                </video>
             </div>
@@ -1021,7 +1029,7 @@
             </div>
             <!-- Last 2nd item (neckless3.mp4) - Will swap with Rectangle 23.png in mobile -->
             <div data-aos="fade-up" class="overflow-x-hidden col-span-6 md:col-span-4 md:h-[33rem] w-full order-1 md:order-none">
-               <video class="w-full h-full object-cover" autoplay loop  playsinline controls>
+               <video class="w-full h-full object-cover"  loop  playsinline controls>
                   <source src="./assests/neckless3.mp4" type="video/mp4">
                </video>
             </div>
@@ -1078,9 +1086,9 @@
                      </div>
                   </div>
                </div>
-               <!-- <button class="button6  px-[96px] py-3 bg-[#865F42] text-white text-lg font-semibold">
+               <button class="button6  px-[96px] py-3 bg-[#865F42] text-white text-lg font-semibold">
                <a href="#form"><span>Get A Quote</span></a>
-               </button> -->
+               </button>
             </div>
             <!-- Right Section - Gift Collection -->
             <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden relative flex justify-center items-center" id="WhyChooseFianORg">
