@@ -166,6 +166,9 @@
 #WhyChooseFian{
    display: none;
 }
+#HideFianLogo{
+   display: flex;
+}
 #fianLogoMobile{
    width: 200px;
     height: 100px;
@@ -173,12 +176,31 @@
     text-align: center;
     margin: 0 auto;
 }
-
+.FianText{
+   font-size: 50px;
+   padding: 10px 0;
+   letter-spacing: 2px;
+}
+#HideFianLogoOne{
+   display: flex;
+}
+#HideFianLogoOneO{
+   display: none;
+}
 
 @media(max-width: 768px){
    .sectionHide{
    display: block;
    padding-top: 4rem;
+}
+#HideFianLogoOne{
+   display: none;
+}
+#HideFianLogoOneO{
+   display: flex;
+}
+#HideFianLogo{
+   display: none;
 }
 #WhyChooseFianORg{
    display: none;
@@ -879,7 +901,7 @@
             <!-- Mobile Menu Button -->
             <div class="flex items-center md:hidden">
                <div class=" md:flex md:order-2 mr-2">
-                  <button class="text-white bg-[#8B6B50] text-md rounded-3xl px-2 py-1 text-center">
+                  <button class="text-white bg-[#8B6B50] text-md px-2 py-1 text-center">
                    <a href="#form">Get a Quote</a>
                   </button>
                </div>
@@ -971,12 +993,12 @@
           
          <div class=" md:col-span-8 h-auto md:h-[730px] col-span-12">
             <div class="sectionHide">
-               <h2 class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full" id="GiftText">
+               <!-- <h2 class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full" id="GiftText">
                   Make Your Gifting Moments Special with
                </h2>
                <p>
                   <img src="./assests/FIAN logo black.png" class="md:h-[200px] px-2" alt="logo" id="fianLogoMobile"/>
-               </p>
+               </p> -->
             </div>
             <img data-aos="fade-up" data-aos-duration="1000"  src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
                alt="img1" />
@@ -984,10 +1006,13 @@
          <!-- Right Section (Text) -->
          <div class="md:flex md:justify-center md:items-center col-span-12 md:col-span-4">
             <div class="p-4 text-lg font-bold flex flex-col items-center md:block" >
-               <h2 class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full" id="SectionHide">
+               <h2  id="HideFianLogoOne" class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full mb-3" >
                   Make Your Gifting Moments Special with
                </h2>
-               <p id="SectionHide">
+               <h2 id="HideFianLogoOneO"  class="heading text-[#79512F] md:text-3xl text-base text-center md:w-full mb-3" >
+                  Make Your Gifting Moments Special with FIAN
+               </h2>
+               <p class="FianText" id="HideFianLogo">
                   <img src="./assests/FIAN logo black.png" class="md:h-[90px] h-[60px] px-2" alt="logo" id="fianLogoMobile" />
                </p>
               
@@ -999,20 +1024,22 @@
                   In 925 Silver
                </p>
                <div class="md:mt-2 md:mt-12 flex md:flex-col items-center">
-                  <div class="flex flex-wrap justify-center items-center md:flex-col md:gap-6 gap-3">
+                  <div class="flex flex-wrap justify-center items-center md:flex-col md:gap-3 gap-3">
+                     <a href="#form" class="relative z-5">
                      <button class="button5 px-6 md:px-[70px] py-3 md:py-4 bg-[#8B6B50] border-2 border-[#8B6B50] text-white 
                         hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl 
                         overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
                         before:h-full before:w-0 before:bg-[#79512F] before:transition-all before:duration-[1000ms] 
                         hover:before:w-full hover:before:left-0 w-auto md:w-auto text-center">
-                     <a href="#form" class="relative z-5">Get a Quote</a>
+                     Get a Quote</a>
                      </button>
+                     <a href="https://wa.me/9870759560" target="_blank">
                      <button class="button4 relative px-6 md:px-[65px] py-3 md:py-4 bg-white border-2 border-[#8B6B50] text-[#79512F] 
                         hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl
                         overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
                         before:h-full before:w-0 before:bg-[#79512F] before:transition-all before:duration-[1000ms] 
                         hover:before:w-full hover:before:left-0 w-auto md:w-auto text-center mt-3 md:mt-0 md:ml-3">
-                    <a href="https://wa.me/9870759560" target="_blank">
+                   
                      <span class="relative z-10">Chat with Us</span>
                     </a>
                      </button>
@@ -1060,7 +1087,7 @@
       <div  class="overflow-x-hidden grid grid-cols-12 gap-4 px-4 md:mx-8">
          <div data-aos="fade-right" data-aos-duration="1000"   class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
             <img src="./assests/gift-02.svg" alt="img1" class="ImageSvg">
-            <p class="text-2xl">
+            <p class="text-2xl md: text-xl">
                <b>Premium Packaging</b>
             </p>
             <p class="text-center">
@@ -1168,8 +1195,9 @@
                      </div>
                   </div>
                </div>
+               <a href="#form">
                <button class="button6  px-[96px] py-3 bg-[#865F42] text-white text-lg font-semibold">
-               <a href="#form"><span>Get A Quote</span></a>
+               <span>Get A Quote</span></a>
                </button>
             </div>
             <!-- Right Section - Gift Collection -->
