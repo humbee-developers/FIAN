@@ -877,7 +877,7 @@
          setInterval(changeText, 5000); // Change text every 5 seconds
 
       </script>
-      <script>
+      <!-- <script>
          let lastScrollTopOne = 0;
          const shippingText = document.getElementById('shippingText');
      
@@ -889,12 +889,42 @@
                  shippingText.classList.add('hidden');
              } else {
                  // Scroll Up - Hide Shipping Text
-                 shippingText.classList.remove('hidden');
+                 shippingText.classList.remove('block');
              }
      
              lastScrollTopOne = currentScroll <= 0 ? 0 : currentScroll;
          });
-     </script>
+     </script> -->
+     <script>
+      let lastScrollTopOne = 0;
+      const shippingText = document.getElementById('shippingText');
+      let timeout = null;  // For debouncing scroll
+  
+      window.addEventListener('scroll', () => {
+          // Clear the timeout if there's any pending one
+          if (timeout) {
+              clearTimeout(timeout);
+          }
+  
+          timeout = setTimeout(() => {
+              const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+              // Scroll Down - Hide Shipping Text
+              if (currentScroll > lastScrollTopOne) {
+                  shippingText.classList.add('hidden');
+                  shippingText.classList.remove('block');
+              } else {
+                  // Scroll Up - Show Shipping Text
+                  shippingText.classList.remove('hidden');
+                  shippingText.classList.add('block');
+              }
+  
+              // Update the last scroll position
+              lastScrollTopOne = currentScroll <= 0 ? 0 : currentScroll;
+          }, 10); // Adjust the debounce delay as needed
+      });
+  </script>
+  
      
      
     
@@ -970,13 +1000,13 @@
             </div>
             <!-- Get Started Button -->
             <div class="hidden md:flex md:order-2 mr-8">
-               <button class="text-white bg-[#8B6B50] text-xl rounded-3xl px-9 py-2 text-center">
+               <button class="text-white bg-[#8B6B50] text-xl  px-9 py-2 text-center">
                 <a href="#form">Get a Quote</a>
                </button>
             </div>
          </div>
       </nav>
-      <script>
+      <!-- <script>
          let lastScrollTop = 0;
          const navbar = document.querySelector('nav');
      
@@ -993,7 +1023,35 @@
      
              lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
          });
-     </script>
+     </script> -->
+     <script>
+      let lastScrollTop = 0;
+      const navbar = document.querySelector('nav');
+      let timeout1 = null;  // For debouncing scroll
+  
+      window.addEventListener('scroll', () => {
+          // Clear the timeout if there's any pending one
+          if (timeout1) {
+              clearTimeout(timeout1);
+          }
+  
+          timeout1 = setTimeout(() => {
+              const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+              // Scroll Down - Hide Navbar
+              if (currentScroll > lastScrollTop) {
+                  navbar.classList.add('hidden');
+              } else {
+                  // Scroll Up - Show Navbar
+                  navbar.classList.remove('hidden');
+              }
+  
+              // Update the last scroll position
+              lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+          }, 10); // Adjust debounce delay as needed
+      });
+  </script>
+  
       <!-- section 1 -->
       <div class="grid grid-cols-12 gap-4">
          <!-- Left Section (Image) -->
@@ -1007,7 +1065,7 @@
                   <img src="./assests/FIAN logo black.png" class="md:h-[200px] px-2" alt="logo" id="fianLogoMobile"/>
                </p> -->
             </div>
-            <img data-aos="fade-up" data-aos-duration="1000"  src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
+            <img  src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
                alt="img1" />
          </div>
          <!-- Right Section (Text) -->
@@ -1092,7 +1150,7 @@
       </div>
       <!-- Section 2 -->
       <div  class="overflow-x-hidden grid grid-cols-12 gap-4 px-4 md:mx-8">
-         <div data-aos="fade-right" data-aos-duration="1000"   class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
+         <div   class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
             <img src="./assests/gift-02.svg" alt="img1" class="ImageSvg">
             <p class="text-2xl md: text-xl" id="Textsmall">
                <b>Premium Packaging</b>
@@ -1102,7 +1160,7 @@
                a Luxe Experience
             </p>
          </div>
-         <div data-aos="fade-left" data-aos-duration="1000"  class="overflow-x-hidden justify-center items-center w-full flex flex-col md:col-span-4 p-4 col-span-12  md:border-l-2 md:border-r-2 border-t-2 border-b-2 md:border-t-0 md:border-b-0 py-8 border-[#E0CCB2]  py-8 md:my-8">
+         <div   class="overflow-x-hidden justify-center items-center w-full flex flex-col md:col-span-4 p-4 col-span-12  md:border-l-2 md:border-r-2 border-t-2 border-b-2 md:border-t-0 md:border-b-0 py-8 border-[#E0CCB2]  py-8 md:my-8">
             <img src="./assests/snowflake.svg" alt="img1" class="ImageSvg">
             <p class="text-2xl" id="Textsmall">
                <b>Custom Requests</b>
@@ -1112,7 +1170,7 @@
                Special Requests Accommodated
             </p>
          </div>
-         <div data-aos="fade-left" data-aos-duration="1000"  class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 py-8 md:my-8">
+         <div  class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 py-8 md:my-8">
             <img src="./assests/truck.svg" alt="img1" class="ImageSvg">
             <p class="text-2xl" id="Textsmall">
                <b>PAN India Delivery</b>
@@ -1126,31 +1184,31 @@
       <!-- section 3 -->
       <div>
          <div id="Video" class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4">
-            <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden col-span-12 md:col-span-6 md:h-[33rem] w-full">
+            <div class="overflow-x-hidden col-span-12 md:col-span-6 md:h-[33rem] w-full">
                <video class="w-full h-full object-cover"  loop  playsinline controls>
                   <source src="./assests/neckless.mp4" type="video/mp4">
                </video>
             </div>
-            <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
+            <div class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
                <img src="./assests/Rectangle 20.png" class="w-full h-full object-fit">
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
+            <div  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
                <video class="w-full h-full object-cover"  loop  playsinline controls>
                   <source src="./assests/neckless2.mp4" type="video/mp4">
                </video>
             </div>
             <!-- Last 3rd item (Rectangle 23.png) - Will swap with neckless3.mp4 in mobile -->
-            <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full order-2 md:order-none">
+            <div  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full order-2 md:order-none">
                <img src="./assests/Rectangle 23.png" class="w-full h-full object-fit">
             </div>
             <!-- Last 2nd item (neckless3.mp4) - Will swap with Rectangle 23.png in mobile -->
-            <div data-aos="fade-up" class="overflow-x-hidden col-span-6 md:col-span-4 md:h-[33rem] w-full order-1 md:order-none">
+            <div  class="overflow-x-hidden col-span-6 md:col-span-4 md:h-[33rem] w-full order-1 md:order-none">
                <video class="w-full h-full object-cover"  loop  playsinline controls>
                   <source src="./assests/neckless3.mp4" type="video/mp4">
                </video>
             </div>
             <!-- Rectangle 22 image (move to last in mobile) -->
-            <div data-aos="fade-left" class="overflow-x-hidden col-span-12 md:col-span-5 md:h-[33rem] w-full order-3 md:order-none">
+            <div  class="overflow-x-hidden col-span-12 md:col-span-5 md:h-[33rem] w-full order-3 md:order-none">
                <img src="./assests/Rectangle 22.png" class="w-full h-full object-fit">
             </div>
          </div>
@@ -1160,7 +1218,7 @@
       <section class="max-w-[90rem] mx-auto px-4 py-12">
          <div class="WhyFian">
             <!-- Left Section - Why Choose FIAN? -->
-            <div id="whyfian" data-aos="fade-right" data-aos-duration="1000"  class="overflow-x-hidden text-[#865F42]">
+            <div id="whyfian"   class="overflow-x-hidden text-[#865F42]">
                <h2 class="text-3xl font-semibold">Why Choose FIAN?</h2>
                <p class="mt-4">
                   Experience the luxury and personalization that set us apart. Whether you’re planning corporate gifting, return gifts, or personal tokens like bridesmaid gifts, our collection is designed to impress and leave a lasting impression.
@@ -1208,7 +1266,7 @@
                </button>
             </div>
             <!-- Right Section - Gift Collection -->
-            <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden relative flex justify-center items-center" id="WhyChooseFianORg">
+            <div  class="overflow-x-hidden relative flex justify-center items-center" id="WhyChooseFianORg">
                <img src="./assests/Rectangle 55.jpg" alt="Gift Collection" class="max-w-full h-auto">
             </div>
          </div>
@@ -1217,7 +1275,7 @@
       <div id="form" class="bg-[#F7F1EB] md:min-h-screen flex items-center justify-center px-4">
          <div class="max-w-[90rem] w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <!-- Left: Form Section -->
-            <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden p-6">
+            <div  class="overflow-x-hidden p-6">
                <h2 class="text-3xl font-bold text-[#805333]">TELL US WHAT YOU NEED</h2>
                <p class="text-[#805333] mb-6 text-2xl mt-2">Get A Custom Quote</p>
                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-7"
@@ -1277,11 +1335,11 @@
                   </button>
                </form>
             </div>
-            <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden relative flex justify-center items-center aos-init aos-animate" id="WhyChooseFian">
+            <div class="overflow-x-hidden relative flex justify-center items-center aos-init aos-animate" id="WhyChooseFian">
                <img src="./assests/Rectangle 55.jpg" alt="Gift Collection" class="max-w-full h-auto FormImage">
             </div>
             <!-- Right: Image Section -->
-            <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden flex justify-center hidden md:block">
+            <div class="overflow-x-hidden flex justify-center hidden md:block">
                <img src="./assests/Rectangle 45.jpg" alt="Jewelry" class="w-full max-w-[36rem] shadow-lg">
             </div>
          </div>
@@ -1329,18 +1387,18 @@
       <section  id="Explore" class="max-w-[85rem] mx-auto px-2 py-10">
          <!-- Heading -->
          <div class="md:flex md:justify-between">
-            <h2   data-aos="fade-right" data-aos-duration="1000"  class="text-2xl md:text-3xl font-semibold text-left text-[#805333] px-4">
+            <h2  class="text-2xl md:text-3xl font-semibold text-left text-[#805333] px-4">
                Explore Our Gift Collection<br>
                Perfect for Gifting
             </h2>
             <!-- Description -->
             <div>
-               <p data-aos="fade-left" data-aos-duration="1000"  class="flex justify-start md:justify-end text-sm md:text-lg text-[#79512F] md:text-right text-left px-4 mt-4">
+               <p class="flex justify-start md:justify-end text-sm md:text-lg text-[#79512F] md:text-right text-left px-4 mt-4">
                   Every piece is thoughtfully designed to make your bulk gifting<br class="hidden md:block">
                   experience as memorable as the gift itself.
                </p>
                <!-- Features -->
-               <div data-aos="fade-left" data-aos-duration="1000"  class="flex justify-start md:justify-end space-x-4 mt-4 md:mt-2 text-[#5A3A2E] text-sm md:text-lg font-medium px-4">
+               <div class="flex justify-start md:justify-end space-x-4 mt-4 md:mt-2 text-[#5A3A2E] text-sm md:text-lg font-medium px-4">
                   <span class="flex items-center space-x-1">
                   </span>
                   ◆ PURE 925 SILVER
@@ -1355,7 +1413,7 @@
          <!-- Product Grid -->
          <!-- SwiperJS CSS -->
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-         <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden max-w-[92rem] mx-auto px-4 mt-10">
+         <div class="overflow-x-hidden max-w-[92rem] mx-auto px-4 mt-10">
             <!-- Swiper (Mobile View) -->
             <div class="block md:hidden">
                <div class="swiper mySwiper">
@@ -1567,7 +1625,7 @@
       </div> -->
       <!-- Hero Section -->
       <section class="bg-[#DDC3A3] md:py-6 md:px-[100px] text-center md:flex md:justify-between">
-         <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden px-4 text-left md:py-8 py-6">
+         <div  class="overflow-x-hidden px-4 text-left md:py-8 py-6">
             <h2 class="text-3xl font-bold gift ">Make Every Gift Unforgettable</h2>
             <p class="text-gray-800 md:mt-4 mt-4 giftb">
                At FIAN, we transform ordinary gifting into a luxurious experience. Let our expertise in fine jewelry help you make every gifting moment truly special.
@@ -1575,7 +1633,7 @@
          </div>
          <div class="flex md:justify-center pb-4 ">
          <!-- <button class=" button8 [#7A5630] playfair-display text-white px-12 py-3 font-semibold shadow-md px-6 py-2 text-sm md:px-12 md:py-3 md:text-base hover:bg-[#805333]"> -->
-         <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center items-center ShowButton">
+         <div  class="flex justify-center items-center ShowButton">
             <button class="button5 [#7A5630] playfair-display text-white px-16 py-5 font-semibold shadow-md hover:bg-[#805333] buttonChat">
             <a href="https://wa.me/9870759560"><span>CHAT WITH US</span></a>
             </button>
@@ -1590,7 +1648,7 @@
             <i class="fab fa-whatsapp text-white text-3xl"></i> 
          </div>
       </a>
-      <footer data-aos="fade-in" data-aos-duration="1000" class="bg-white py-12 overflow-hidden px-7">
+      <footer class="bg-white py-12 overflow-hidden px-7">
          <div class="contain mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 text-lg text-gray-700">
             <!-- Help & Information -->
             <div class="footer-item">
