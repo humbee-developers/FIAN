@@ -678,9 +678,14 @@
          align-items: left;
          text-align: left;
          }
+         #ContactDetails{
+            justify-content: center;
+            
+         }
          .footer-item {
          margin-bottom: 1rem;
          width: 100%;
+         text-align: center;
          }
          .footer-item ul {
          display: flex;
@@ -915,10 +920,10 @@
                         class="navbar-animation inline-block md:block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Why
                      FIAN</a>
                   </li>
-                  <li>
+                  <!-- <li>
                      <a href="#FAQs"onclick="toggleMenu()"
                         class="navbar-animation inline-block md:block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">FAQs</a>
-                  </li>
+                  </li> -->
                   
                </ul>
                <div class="flex space-x-4 mt-2 socialicons">
@@ -1577,17 +1582,17 @@
             <!-- Contact Us -->
             <div class="footer-item">
                <h3 class=" helpinfo2 font-bold mb-2">Contact Us</h3>
-               <p class="flex items-center space-x-2">
+               <p class="flex items-center space-x-2" id="ContactDetails">
                   <a href="tel:9870759560">
-                     <i class="fas fa-phone text-accent"></i><span>9870759560</span>
+                     <i class="fas fa-phone text-accent mr-2"></i><span>9870759560</span>
                   </a>
                </p>
-               <p class="flex items-center space-x-2">
+               <p class="flex items-center space-x-2" id="ContactDetails">
                  <a href="mailto:worldoffian@gmail.com">
-                  <i class="fas fa-envelope text-accent"></i><span>worldoffian@gmail.com</span>
+                  <i class="fas fa-envelope text-accent mr-2"></i><span>worldoffian@gmail.com</span>
                  </a>
                </p>
-               <div class="flex space-x-4 mt-2">
+               <div class="flex space-x-4 mt-2" id="ContactDetails">
                   <a href="https://www.facebook.com/worldoffian?mibextid=ZbWKwL" target="_blank" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
                      <i class="fab fa-facebook-f text-lg"></i> <!-- Updated icon -->
                   </a>
