@@ -238,6 +238,24 @@
 .buttonChat{
    width: 100%;
 }
+.navbarRes{
+   position: static !important;
+   width: 100%;
+   background: white;
+}
+#shippingText{
+   position: fixed;
+   width: 100%;
+   z-index: 25;
+}
+nav {
+   position: fixed;
+   top: 32px;
+   left: 0;
+   right: 0;
+   background: white;
+   z-index: 20;
+}
 }
 @media(max-width: 575px){
    .WhyFian{
@@ -738,6 +756,7 @@
          }
          }
          .navbarRes{
+            margin-top: 2rem;
             padding-left: 4rem;
          }
          @media (max-width:575px) {
@@ -767,10 +786,11 @@
         margin-left: 13px;
          }
          .navbarRes{
-            position: fixed !important;
+            /* position: fixed !important; */
         z-index: 8;
         width: 100%;
-        padding-top: 2.5rem;
+        margin-top: 0;
+        padding-top: 1rem;
         background: white;
          }
          #shippingText{
@@ -835,9 +855,9 @@
         //      }
         //  }
       </script>
-      <div  class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2" id="shippingText">
+      <div class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2 fixed top-0 left-0 right-0 z-[100] transition-transform duration-300" id="shippingText">
          <p id="shipping-text"
-            class="text-[10px] md:text-xs lg:text-sm text-center px-2 py-2 whitespace-nowrap overflow-hidden text-ellipsis">
+            class="text-[10px] md:text-xs lg:text-sm text-center px-2 py-2 overflow-hidden text-ellipsis whitespace-nowrap">
             Shipping Pan India | Free delivery on prepaid orders!
          </p>
       </div>
@@ -898,30 +918,29 @@
      <script>
       let lastScrollTopOne = 0;
       const shippingText = document.getElementById('shippingText');
-      let timeout = null;  // For debouncing scroll
+      let timeout = null;
+      let isScrolling = false;
   
       window.addEventListener('scroll', () => {
-          // Clear the timeout if there's any pending one
           if (timeout) {
               clearTimeout(timeout);
           }
   
           timeout = setTimeout(() => {
               const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+              const scrollThreshold = 50;
   
-              // Scroll Down - Hide Shipping Text
-              if (currentScroll > lastScrollTopOne) {
-                  shippingText.classList.add('hidden');
-                  shippingText.classList.remove('block');
-              } else {
-                  // Scroll Up - Show Shipping Text
-                  shippingText.classList.remove('hidden');
-                  shippingText.classList.add('block');
+              if (Math.abs(currentScroll - lastScrollTopOne) > scrollThreshold) {
+                  if (currentScroll > lastScrollTopOne) {
+                      // Scroll Down - Hide Shipping Text
+                      shippingText.style.transform = 'translateY(-100%)';
+                  } else {
+                      // Scroll Up - Show Shipping Text
+                      shippingText.style.transform = 'translateY(0)';
+                  }
+                  lastScrollTopOne = currentScroll;
               }
-  
-              // Update the last scroll position
-              lastScrollTopOne = currentScroll <= 0 ? 0 : currentScroll;
-          }, 10); // Adjust the debounce delay as needed
+          }, 150); // Increased debounce delay for smoother behavior
       });
   </script>
   
@@ -930,7 +949,7 @@
     
      
       <!-- navbar -->
-      <nav class="bg-white playfair-display w-full z-20 border-b border-gray-200 dark:border-gray-600 ">
+      <nav class="bg-white playfair-display w-full z-20 border-b border-gray-200 dark:border-gray-600 transition-transform duration-300">
          <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4 navbarRes">
             <a href="#" class="flex items-center space-x-3">
             <img src="./assests/image 1.png" class="h-8" alt="Flowbite Logo">
@@ -1027,28 +1046,28 @@
      <script>
       let lastScrollTop = 0;
       const navbar = document.querySelector('nav');
-      let timeout1 = null;  // For debouncing scroll
+      let timeout1 = null;
   
       window.addEventListener('scroll', () => {
-          // Clear the timeout if there's any pending one
           if (timeout1) {
               clearTimeout(timeout1);
           }
   
           timeout1 = setTimeout(() => {
               const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+              const scrollThreshold = 50;
   
-              // Scroll Down - Hide Navbar
-              if (currentScroll > lastScrollTop) {
-                  navbar.classList.add('hidden');
-              } else {
-                  // Scroll Up - Show Navbar
-                  navbar.classList.remove('hidden');
+              if (Math.abs(currentScroll - lastScrollTop) > scrollThreshold) {
+                  if (currentScroll > lastScrollTop) {
+                      // Scroll Down - Hide Navbar
+                      navbar.style.transform = 'translateY(-100%)';
+                  } else {
+                      // Scroll Up - Show Navbar
+                      navbar.style.transform = 'translateY(0)';
+                  }
+                  lastScrollTop = currentScroll;
               }
-  
-              // Update the last scroll position
-              lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-          }, 10); // Adjust debounce delay as needed
+          }, 150);
       });
   </script>
   
@@ -1221,7 +1240,7 @@
             <div id="whyfian"   class="overflow-x-hidden text-[#865F42]">
                <h2 class="text-3xl font-semibold">Why Choose FIAN?</h2>
                <p class="mt-4">
-                  Experience the luxury and personalization that set us apart. Whether you’re planning corporate gifting, return gifts, or personal tokens like bridesmaid gifts, our collection is designed to impress and leave a lasting impression.
+                  Experience the luxury and personalization that set us apart. Whether you're planning corporate gifting, return gifts, or personal tokens like bridesmaid gifts, our collection is designed to impress and leave a lasting impression.
                </p>
                <div class="mt-6 space-y-4">
                   <div class="flex items-start">
@@ -1702,7 +1721,7 @@
                   <a href="https://www.facebook.com/worldoffian?mibextid=ZbWKwL" target="_blank" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
                      <i class="fab fa-facebook-f text-lg"></i> <!-- Updated icon -->
                   </a>
-                  <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                  <a href="https://www.instagram.com/worldoffian/" target="_blank" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
                   <i class="fab fa-instagram text-lg"></i>
                   </a>
                </div>
