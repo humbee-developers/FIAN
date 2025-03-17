@@ -152,7 +152,105 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.sectionHide{
+   display: none;
+}
+#SectionHide{
+   display: flex;
+}
+.WhyFian{
+   display: flex;
+   gap: 2rem;
+   padding: 0 50px;
+}
+#WhyChooseFian{
+   display: none;
+}
+#HideFianLogo{
+   display: flex;
+}
+#fianLogoMobile{
+   width: 200px;
+    height: 100px;
+    object-fit: cover;
+    text-align: center;
+    margin: 0 auto;
+}
+.FianText{
+   font-size: 50px;
+   padding: 10px 0;
+   letter-spacing: 2px;
+}
+#HideFianLogoOne{
+   display: flex;
+}
+#HideFianLogoOneO{
+   display: none;
+}
 
+
+@media(max-width: 768px){
+   .sectionHide{
+   display: block;
+   padding-top: 4rem;
+}
+#HideFianLogoOne{
+   display: none;
+}
+#HideFianLogoOneO{
+   display: flex;
+}
+#HideFianLogo{
+   display: none;
+}
+#WhyChooseFianORg{
+   display: none;
+}
+.FormImage
+{
+   padding: 0 23px;
+}
+#marqueeSec{
+   margin-top: 1rem;
+}
+#WhyChooseFian{
+   display: block;
+   padding-bottom: 2rem;
+}
+#SectionHide{
+   display: none;
+}
+#GiftText{
+   padding: 40px 0 0;
+   font-size: 20px;
+}
+.WhyFian{
+   flex-direction: column-reverse;
+}
+.ImageSvg{
+   height: 40px;
+}
+.ShowButton{
+   justify-content: left;
+   width: 100%;
+   padding: 0 20px;
+}
+.buttonChat{
+   width: 100%;
+}
+}
+@media(max-width: 575px){
+   .WhyFian{
+   gap: 2rem;
+   padding: 0;
+}
+#Textsmall{
+   font-size: 18px;
+}
+#TextSmallOne{
+   font-size: 15px;
+}
+}
 
 /* <div class="nav-list">
                 
@@ -292,6 +390,7 @@
          .button4:hover {
          color: rgb(255, 255, 255);
          }
+       
          /* Responsive Design */
          @media (max-width: 768px) { /* Tablet & Mobile */
          .button4 {
@@ -593,6 +692,13 @@
          .socialicons{
             display: none;
          }
+         .navbarRes{
+            position: static !important;
+         }
+         .CopyRight{
+            text-align: center;
+            margin: 0 auto;
+         }
          select option:hover{background-color:#A86B42 !important; }
          @media (max-width: 640px) {
          .contain {
@@ -601,9 +707,14 @@
          align-items: left;
          text-align: left;
          }
+         #ContactDetails{
+            justify-content: center;
+            
+         }
          .footer-item {
          margin-bottom: 1rem;
          width: 100%;
+         text-align: center;
          }
          .footer-item ul {
          display: flex;
@@ -623,6 +734,7 @@
          width: 100%; /* Make the button take up full width on mobile */
          padding-left: 1rem; /* Optional: Adjust padding for mobile */
          padding-right: 1rem; /* Optional: Adjust padding for mobile */
+         display: none;
          }
          }
          .navbarRes{
@@ -647,8 +759,24 @@
                 width: 100%;
             }
             .socialicons{
-            display: flex;
-            margin-top: auto;
+               display: flex;
+        margin-top: auto;
+        margin-bottom: 6rem;
+        /* margin: 0 20px; */
+        align-items: center;
+        margin-left: 13px;
+         }
+         .navbarRes{
+            position: fixed !important;
+        z-index: 8;
+        width: 100%;
+        padding-top: 2.5rem;
+        background: white;
+         }
+         #shippingText{
+            position: fixed;
+            width: 100%;
+            z-index: 25;
          }
          }
          @media (max-width:575px){
@@ -669,6 +797,7 @@
             justify-content: end;
             width: 100%;
             padding-right: 10px;
+            margin-top: 1rem;
          }
             .closeb{
             padding: 8px;
@@ -706,7 +835,7 @@
         //      }
         //  }
       </script>
-      <div  class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2">
+      <div  class="playfair-display bg-[#E0CCB2] text-black flex items-center justify-center px-2" id="shippingText">
          <p id="shipping-text"
             class="text-[10px] md:text-xs lg:text-sm text-center px-2 py-2 whitespace-nowrap overflow-hidden text-ellipsis">
             Shipping Pan India | Free delivery on prepaid orders!
@@ -746,7 +875,60 @@
          // Change text immediately and then every 5 seconds
          changeText(); // Change text right away on page load
          setInterval(changeText, 5000); // Change text every 5 seconds
+
       </script>
+      <!-- <script>
+         let lastScrollTopOne = 0;
+         const shippingText = document.getElementById('shippingText');
+     
+         window.addEventListener('scroll', () => {
+             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+     
+             if (currentScroll > lastScrollTopOne) {
+                 // Scroll Down - Show Shipping Text
+                 shippingText.classList.add('hidden');
+             } else {
+                 // Scroll Up - Hide Shipping Text
+                 shippingText.classList.remove('block');
+             }
+     
+             lastScrollTopOne = currentScroll <= 0 ? 0 : currentScroll;
+         });
+     </script> -->
+     <script>
+      let lastScrollTopOne = 0;
+      const shippingText = document.getElementById('shippingText');
+      let timeout = null;  // For debouncing scroll
+  
+      window.addEventListener('scroll', () => {
+          // Clear the timeout if there's any pending one
+          if (timeout) {
+              clearTimeout(timeout);
+          }
+  
+          timeout = setTimeout(() => {
+              const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+              // Scroll Down - Hide Shipping Text
+              if (currentScroll > lastScrollTopOne) {
+                  shippingText.classList.add('hidden');
+                  shippingText.classList.remove('block');
+              } else {
+                  // Scroll Up - Show Shipping Text
+                  shippingText.classList.remove('hidden');
+                  shippingText.classList.add('block');
+              }
+  
+              // Update the last scroll position
+              lastScrollTopOne = currentScroll <= 0 ? 0 : currentScroll;
+          }, 10); // Adjust the debounce delay as needed
+      });
+  </script>
+  
+     
+     
+    
+     
       <!-- navbar -->
       <nav class="bg-white playfair-display w-full z-20 border-b border-gray-200 dark:border-gray-600 ">
          <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4 navbarRes">
@@ -754,7 +936,13 @@
             <img src="./assests/image 1.png" class="h-8" alt="Flowbite Logo">
             </a>
             <!-- Mobile Menu Button -->
-            <div class="flex md:hidden">
+            <div class="flex items-center md:hidden">
+               <div class=" md:flex md:order-2 mr-2">
+                  <button class="text-white bg-[#8B6B50] text-md px-2 py-1 text-center">
+                   <a href="#form">Get a Quote</a>
+                  </button>
+               </div>
+               <!-- button -->
                <button onclick="toggleMenu()"
                   class="p-2 w-10 h-10 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
                   <span class="sr-only">Open main menu</span>
@@ -783,7 +971,7 @@
                   </li>
                   <li>
                      <a href="#Video"onclick="toggleMenu()"
-                        class=" navbar-animation inline-block md:block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Custom
+                        class="navbar-animation inline-block md:block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Custom
                      Gifting</a>
                   </li>
                   <li>
@@ -791,20 +979,20 @@
                         class="navbar-animation inline-block md:block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">Why
                      FIAN</a>
                   </li>
-                  <li>
+                  <!-- <li>
                      <a href="#FAQs"onclick="toggleMenu()"
                         class="navbar-animation inline-block md:block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#8B6B50]">FAQs</a>
-                  </li>
+                  </li> -->
                   
                </ul>
                <div class="flex space-x-4 mt-2 socialicons">
-                  <a href="#" class="flex items-center space-x-3" style="margin-right: 100px; padding-left: 20px;">
+                  <a href="/index.html" class="flex items-center space-x-3" style="margin-right: 60px;">
                      <img src="./assests/image 1.png" class="h-8" alt="Flowbite Logo">
                      </a>
-                  <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                  <a href="https://www.facebook.com/worldoffian?mibextid=ZbWKwL" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
                      <i class="fab fa-facebook-f text-lg"></i> <!-- Updated icon -->
                   </a>
-                  <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+                  <a href="https://www.instagram.com/worldoffian/" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
                   <i class="fab fa-instagram text-lg"></i>
                   </a>
                </div>
@@ -812,50 +1000,113 @@
             </div>
             <!-- Get Started Button -->
             <div class="hidden md:flex md:order-2 mr-8">
-               <button class="text-white bg-[#8B6B50] text-xl rounded-3xl px-9 py-2 text-center">
+               <button class="text-white bg-[#8B6B50] text-xl  px-9 py-2 text-center">
                 <a href="#form">Get a Quote</a>
                </button>
             </div>
          </div>
       </nav>
+      <!-- <script>
+         let lastScrollTop = 0;
+         const navbar = document.querySelector('nav');
+     
+         window.addEventListener('scroll', () => {
+             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+     
+             if (currentScroll > lastScrollTop) {
+                 // Scroll Down - Hide Navbar
+                 navbar.classList.add('hidden');
+             } else {
+                 // Scroll Up - Show Navbar
+                 navbar.classList.remove('hidden');
+             }
+     
+             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+         });
+     </script> -->
+     <script>
+      let lastScrollTop = 0;
+      const navbar = document.querySelector('nav');
+      let timeout1 = null;  // For debouncing scroll
+  
+      window.addEventListener('scroll', () => {
+          // Clear the timeout if there's any pending one
+          if (timeout1) {
+              clearTimeout(timeout1);
+          }
+  
+          timeout1 = setTimeout(() => {
+              const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+              // Scroll Down - Hide Navbar
+              if (currentScroll > lastScrollTop) {
+                  navbar.classList.add('hidden');
+              } else {
+                  // Scroll Up - Show Navbar
+                  navbar.classList.remove('hidden');
+              }
+  
+              // Update the last scroll position
+              lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+          }, 10); // Adjust debounce delay as needed
+      });
+  </script>
+  
       <!-- section 1 -->
       <div class="grid grid-cols-12 gap-4">
          <!-- Left Section (Image) -->
+          
          <div class=" md:col-span-8 h-auto md:h-[730px] col-span-12">
-            <img data-aos="fade-up" data-aos-duration="1000"  src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
+            <div class="sectionHide">
+               <!-- <h2 class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full" id="GiftText">
+                  Make Your Gifting Moments Special with
+               </h2>
+               <p>
+                  <img src="./assests/FIAN logo black.png" class="md:h-[200px] px-2" alt="logo" id="fianLogoMobile"/>
+               </p> -->
+            </div>
+            <img  src="./assests/Fian website banner 1.png" class="w-full md:h-[109%] object-cover"
                alt="img1" />
          </div>
          <!-- Right Section (Text) -->
          <div class="md:flex md:justify-center md:items-center col-span-12 md:col-span-4">
-            <div class="p-4 text-lg font-bold flex flex-col items-center md:block">
-               <h2 class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full">
+            <div class="p-4 text-lg font-bold flex flex-col items-center md:block" >
+               <h2  id="HideFianLogoOne" class=" heading text-[#79512F] md:text-3xl text-base text-center md:w-full mb-3" >
                   Make Your Gifting Moments Special with
                </h2>
-               <p class="md:w-full flex justify-center py-6">
-                  <img src="./assests/image 1.png" class="md:h-[90px] h-[60px] px-2" alt="logo" />
+               <h2 id="HideFianLogoOneO"  class="heading text-[#79512F] md:text-3xl text-base text-center md:w-full mb-3" >
+                  Make Your Gifting Moments Special with FIAN
+               </h2>
+               <p class="FianText" id="HideFianLogo">
+                  <img src="./assests/FIAN logo black.png" class="md:h-[90px] h-[60px] px-2" alt="logo" id="fianLogoMobile" />
                </p>
+              
                <p class="md:w-full text-center text-sm md:text-base">
                   Corporate Gifts | Return Gifts | Bridesmaid Gifts |<br class="hidden md:block">
                   Charm Jewelry | Custom Jewelry
                </p>
-               <p class="md:w-full text-center text-[#79512F] text-xl md:text-3xl py-8 md:py-4">
+               <p class="md:w-full text-center text-[#79512F] text-xl md:text-3xl py-5 md:py-4">
                   In 925 Silver
                </p>
                <div class="md:mt-2 md:mt-12 flex md:flex-col items-center">
-                  <div class="flex flex-wrap justify-center items-center md:flex-col md:gap-6 gap-3">
+                  <div class="flex flex-wrap justify-center items-center md:flex-col md:gap-3 gap-3">
+                     <a href="#form" class="relative z-5">
                      <button class="button5 px-6 md:px-[70px] py-3 md:py-4 bg-[#8B6B50] border-2 border-[#8B6B50] text-white 
                         hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl 
                         overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
                         before:h-full before:w-0 before:bg-[#79512F] before:transition-all before:duration-[1000ms] 
                         hover:before:w-full hover:before:left-0 w-auto md:w-auto text-center">
-                     <a href="#form" class="relative z-10">Get a Quote</a>
+                     Get a Quote</a>
                      </button>
+                     <a href="https://wa.me/9870759560" target="_blank">
                      <button class="button4 relative px-6 md:px-[65px] py-3 md:py-4 bg-white border-2 border-[#8B6B50] text-[#79512F] 
                         hover:bg-[#79512F] hover:text-white transition-all duration-[1000ms] ease-in-out text-xs md:text-2xl
                         overflow-hidden relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
                         before:h-full before:w-0 before:bg-[#79512F] before:transition-all before:duration-[1000ms] 
                         hover:before:w-full hover:before:left-0 w-auto md:w-auto text-center mt-3 md:mt-0 md:ml-3">
+                   
                      <span class="relative z-10">Chat with Us</span>
+                    </a>
                      </button>
                   </div>
                </div>
@@ -863,7 +1114,7 @@
          </div>
       </div>
       <!-- Marquee -->
-      <div class="overflow-x-hidden flex relative bg-[#8B6B50] text-white mt-[4rem]">
+      <div class="overflow-x-hidden flex relative bg-[#8B6B50] text-white mt-[4rem]" id="marqueeSec">
          <!-- First Marquee -->
          <div class="marquee py-4">
             <span class="text-2xl mx-2"><i class="ri-gift-line"></i></span>
@@ -899,32 +1150,32 @@
       </div>
       <!-- Section 2 -->
       <div  class="overflow-x-hidden grid grid-cols-12 gap-4 px-4 md:mx-8">
-         <div data-aos="fade-right" data-aos-duration="1000"   class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
-            <img src="./assests/gift-02.svg" alt="img1">
-            <p class="text-2xl">
+         <div   class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 md:my-8">
+            <img src="./assests/gift-02.svg" alt="img1" class="ImageSvg">
+            <p class="text-2xl md: text-xl" id="Textsmall">
                <b>Premium Packaging</b>
             </p>
-            <p class="text-center">
+            <p class="text-center" id="TextSmallOne">
                Premium Packaging for <br>
                a Luxe Experience
             </p>
          </div>
-         <div data-aos="fade-left" data-aos-duration="1000"  class="overflow-x-hidden justify-center items-center w-full flex flex-col md:col-span-4 p-4 col-span-12  md:border-l-2 md:border-r-2 border-t-2 border-b-2 md:border-t-0 md:border-b-0 py-8 border-[#E0CCB2]  py-8 md:my-8">
-            <img src="./assests/snowflake.svg" alt="img1">
-            <p class="text-2xl">
+         <div   class="overflow-x-hidden justify-center items-center w-full flex flex-col md:col-span-4 p-4 col-span-12  md:border-l-2 md:border-r-2 border-t-2 border-b-2 md:border-t-0 md:border-b-0 py-8 border-[#E0CCB2]  py-8 md:my-8">
+            <img src="./assests/snowflake.svg" alt="img1" class="ImageSvg">
+            <p class="text-2xl" id="Textsmall">
                <b>Custom Requests</b>
             </p>
-            <p class="text-center">
+            <p class="text-center" id="TextSmallOne">
                Corporate Gifting, Bulk Discounts, &<br>
                Special Requests Accommodated
             </p>
          </div>
-         <div data-aos="fade-left" data-aos-duration="1000"  class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 py-8 md:my-8">
-            <img src="./assests/truck.svg" alt="img1">
-            <p class="text-2xl">
+         <div  class="justify-center items-center w-full flex flex-col p-4 md:col-span-4 col-span-12 py-8 md:my-8">
+            <img src="./assests/truck.svg" alt="img1" class="ImageSvg">
+            <p class="text-2xl" id="Textsmall">
                <b>PAN India Delivery</b>
             </p>
-            <p class="text-center">
+            <p class="text-center" id="TextSmallOne">
                Pan-India Shipping & <br>
                a Luxe Experience
             </p>
@@ -933,31 +1184,31 @@
       <!-- section 3 -->
       <div>
          <div id="Video" class="grid grid-cols-12 md:gap-6 md:h-[70rem] gap-2 mx-8 md:h-10 md:px-4">
-            <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden col-span-12 md:col-span-6 md:h-[33rem] w-full">
-               <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+            <div class="overflow-x-hidden col-span-12 md:col-span-6 md:h-[33rem] w-full">
+               <video class="w-full h-full object-cover"  loop  playsinline controls poster="./assests/thubmail1.png">
                   <source src="./assests/neckless.mp4" type="video/mp4">
                </video>
             </div>
-            <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
+            <div class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
                <img src="./assests/Rectangle 20.png" class="w-full h-full object-fit">
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
-               <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+            <div  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full">
+               <video class="w-full h-full object-cover"  loop  playsinline controls poster="./assests/thubmail2.png">
                   <source src="./assests/neckless2.mp4" type="video/mp4">
                </video>
             </div>
             <!-- Last 3rd item (Rectangle 23.png) - Will swap with neckless3.mp4 in mobile -->
-            <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full order-2 md:order-none">
+            <div  class="overflow-x-hidden col-span-6 md:col-span-3 md:h-[33rem] w-full order-2 md:order-none">
                <img src="./assests/Rectangle 23.png" class="w-full h-full object-fit">
             </div>
             <!-- Last 2nd item (neckless3.mp4) - Will swap with Rectangle 23.png in mobile -->
-            <div data-aos="fade-up" class="overflow-x-hidden col-span-6 md:col-span-4 md:h-[33rem] w-full order-1 md:order-none">
-               <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+            <div  class="overflow-x-hidden col-span-6 md:col-span-4 md:h-[33rem] w-full order-1 md:order-none">
+               <video class="w-full h-full object-cover"  loop  playsinline controls poster="./assests/thubmail3.png">
                   <source src="./assests/neckless3.mp4" type="video/mp4">
                </video>
             </div>
             <!-- Rectangle 22 image (move to last in mobile) -->
-            <div data-aos="fade-left" class="overflow-x-hidden col-span-12 md:col-span-5 md:h-[33rem] w-full order-3 md:order-none">
+            <div  class="overflow-x-hidden col-span-12 md:col-span-5 md:h-[33rem] w-full order-3 md:order-none">
                <img src="./assests/Rectangle 22.png" class="w-full h-full object-fit">
             </div>
          </div>
@@ -965,9 +1216,9 @@
       
 
       <section class="max-w-[90rem] mx-auto px-4 py-12">
-         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+         <div class="WhyFian">
             <!-- Left Section - Why Choose FIAN? -->
-            <div id="whyfian" data-aos="fade-right" data-aos-duration="1000"  class="overflow-x-hidden text-[#865F42]">
+            <div id="whyfian"   class="overflow-x-hidden text-[#865F42]">
                <h2 class="text-3xl font-semibold">Why Choose FIAN?</h2>
                <p class="mt-4">
                   Experience the luxury and personalization that set us apart. Whether you’re planning corporate gifting, return gifts, or personal tokens like bridesmaid gifts, our collection is designed to impress and leave a lasting impression.
@@ -1009,12 +1260,13 @@
                      </div>
                   </div>
                </div>
+               <a href="#form">
                <button class="button6  px-[96px] py-3 bg-[#865F42] text-white text-lg font-semibold">
-               <a href="#form"><span>Get A Quote</span></a>
+               <span>Get A Quote</span></a>
                </button>
             </div>
             <!-- Right Section - Gift Collection -->
-            <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden relative flex justify-center items-center">
+            <div  class="overflow-x-hidden relative flex justify-center items-center" id="WhyChooseFianORg">
                <img src="./assests/Rectangle 55.jpg" alt="Gift Collection" class="max-w-full h-auto">
             </div>
          </div>
@@ -1023,114 +1275,130 @@
       <div id="form" class="bg-[#F7F1EB] md:min-h-screen flex items-center justify-center px-4">
          <div class="max-w-[90rem] w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <!-- Left: Form Section -->
-            <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden p-6">
+            <div  class="overflow-x-hidden p-6">
                <h2 class="text-3xl font-bold text-[#805333]">TELL US WHAT YOU NEED</h2>
                <p class="text-[#805333] mb-6 text-2xl mt-2">Get A Custom Quote</p>
-               <form class="space-y-7">
+               <form action="https://api.web3forms.com/submit" method="POST" class="space-y-7"
+>
+                     <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="176affe7-275c-46d7-b831-267381c12888">
+    <!-- ✅ Correct. Full URL with https:// -->
+<input type="hidden" name="redirect" value="https://bulkorder.worldoffian.com/thanks.html">
                   <div class="relative z-0 w-full mb-5 group">
-                     <input type="text" name="floating_first_name" id="floating_first_name"
-                        class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
-                        placeholder=" " required />
-                     <label for="floating_first_name"
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                     <input type="text" name="first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer" placeholder=" " required />
+                     <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                      First name
                      </label>
                   </div>
+      
                   <div class="relative z-0 w-full mb-5 group">
-                     <input type="email" name="floating_email" id="floating_email"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
-                        placeholder=" " required />
-                     <label for="floating_email"
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                     <input type="email" name="email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer" placeholder=" " required />
+                     <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                      Email address
                      </label>
                   </div>
+      
                   <div class="relative z-0 w-full mb-5 group">
-                     <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer"
-                        placeholder=" " required />
-                     <label for="floating_phone"
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                     <input type="tel"  name="phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer" placeholder=" " required />
+                     <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                      Phone number (123-456-7890)
                      </label>
                   </div>
-                  <!-- Gender Dropdown -->
+      
                   <div class="relative z-0 w-full mb-5 group">
-                    <div class="relative">
-                       <select onfocus='this.size=6;' onblur='this.size=0;'
-                          onchange='this.size=1; this.blur();' name="gender" id="gender"
-                          class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none
-                          dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50]
-                          peer cursor-pointer hover:bg-[#F7F1EB] focus:bg-[#F7F1EB]">
-                          <option value="" disabled selected class="text-[#79512F]">Select Gender</option>
-                          <option value="male" class="text-black hover:bg-[#8B6B50] hover:text-white">Male</option>
-                          <option value="female" class="text-black hover:bg-[#8B6B50] hover:text-white">Female</option>
-                          <option value="other" class="text-black hover:bg-[#8B6B50] hover:text-white">Other</option>
-                       </select>
-                       <!-- Custom Dropdown Arrow -->
-                       <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-                          <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                          </svg>
-                       </div>
-                    </div>
-                 </div>
-                  <!-- Country Dropdown -->
-                  <div class="relative z-0 w-full mb-5 group">
-                     <div class="relative">
-                        <select onfocus='this.size=4;' onblur='this.size=0;'
-                           onchange='this.size=1; this.blur();' name="country" id="country"
-                           class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer">
-                           <option value="" disabled selected class="text-[#79512F] focus:bg-[#F7F1EB]">Select Country</option>
-                           <option value="usa" class="text-black bg-[#F7F1EB] ">USA</option>
-                           <option value="canada" class="text-black bg-[#F7F1EB]">Canada</option>
-                           <option value="uk" class="text-black bg-[#F7F1EB]">UK</option>
-                        </select>
-                        <!-- Custom Dropdown Arrow -->
-                        <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-                           <svg class="w-4 h-4 text-[#79512F]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                           </svg>
-                        </div>
-                     </div>
+                     <select name="gender" id="gender" class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer cursor-pointer">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                     </select>
                   </div>
+      
+                  <!-- <div class="relative z-0 w-full mb-5 group">
+                     <select name="country" id="country" class="block py-2.5 px-0 w-full text-sm text-[#79512F] bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer">
+                        <option value="" disabled selected>Select Country</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">UK</option>
+                     </select>
+                  </div> -->
+      
                   <div class="relative z-0 w-full mb-5 group">
-                     <textarea name="floating_message" id="floating_message"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer transition-all duration-300 ease-in-out resize-none h-12 focus:h-32"
-                        placeholder=" " required></textarea>
-                     <label for="floating_message"
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                     <textarea name="message" id="floating_message" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#79512F] dark:border-gray-600 dark:focus:border-[#8B6B50] focus:outline-none focus:ring-0 focus:border-[#8B6B50] peer resize-none h-32" placeholder=" " required></textarea>
+                     <label for="floating_message" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#8B6B50] peer-focus:dark:text-[#8B6B50] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                      Your Message
                      </label>
                   </div>
-                  <button type="submit"
-                     class="button5 playfair-display bg-[#8B6B50] hover:bg-[#7A5F45] focus:ring-4 focus:outline-none focus:ring-[#8B6B50] font-medium text-md w-full mx-auto sm:w-auto px-5 py-2.5 text-center dark:bg-[#8B6B50] dark:hover:bg-[#7A5F45] dark:focus:ring-[#8B6B50]">
-                  <span>GET A QUOTE NOW</span>
+      
+                  <button type="submit" class="bg-[#79512F] hover:bg-[#79512F] text-white font-medium text-md w-full sm:w-auto px-5 py-2.5 text-center focus:outline-none">
+                     GET A QUOTE NOW
                   </button>
                </form>
             </div>
+            <div class="overflow-x-hidden relative flex justify-center items-center aos-init aos-animate" id="WhyChooseFian">
+               <img src="./assests/Rectangle 55.jpg" alt="Gift Collection" class="max-w-full h-auto FormImage">
+            </div>
             <!-- Right: Image Section -->
-            <div data-aos="fade-left" data-aos-duration="1000" class="overflow-x-hidden flex justify-center hidden md:block pl-[85px]">
+            <div class="overflow-x-hidden flex justify-center hidden md:block">
                <img src="./assests/Rectangle 45.jpg" alt="Jewelry" class="w-full max-w-[36rem] shadow-lg">
             </div>
          </div>
       </div>
+      <script>
+       document.getElementById("quoteForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent the default form submission
+
+  // Collect form data
+  const formData = {
+    first_name: document.getElementById("floating_first_name").value,
+    email: document.getElementById("floating_email").value,
+    phone: document.getElementById("floating_phone").value,
+    gender: document.getElementById("gender").value,
+    country: document.getElementById("country").value,
+    message: document.getElementById("floating_message").value,
+  };
+
+  // Send the form data to Google Apps Script (POST request)
+  fetch('https://script.google.com/macros/s/AKfycbwE3kjgIkoK9XdF0E-HsPQcTLlZu53JAy6EU9ZkWFnWZu5n46LMRSXK-4Zz9vOhG_dUZg/exec', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  })
+  .then(response => response.json())
+  .then(data => {
+    if(data.result === "success") {
+      alert('Form submitted successfully!');
+      document.getElementById("quoteForm").reset();
+    } else {
+      alert('Error submitting form: ' + data.message);
+    }
+  })
+  .catch(error => {
+    alert('Error submitting form: ' + error.message);
+  });
+});
+
+         </script>
+         
+      
       <!-- section 4 -->
       <section  id="Explore" class="max-w-[85rem] mx-auto px-2 py-10">
          <!-- Heading -->
          <div class="md:flex md:justify-between">
-            <h2   data-aos="fade-right" data-aos-duration="1000"  class="text-2xl md:text-3xl font-semibold text-left text-[#805333] px-4">
+            <h2  class="text-2xl md:text-3xl font-semibold text-left text-[#805333] px-4">
                Explore Our Gift Collection<br>
                Perfect for Gifting
             </h2>
             <!-- Description -->
             <div>
-               <p data-aos="fade-left" data-aos-duration="1000"  class="flex justify-start md:justify-end text-sm md:text-lg text-[#79512F] md:text-right text-left px-4 mt-4">
+               <p class="flex justify-start md:justify-end text-sm md:text-lg text-[#79512F] md:text-right text-left px-4 mt-4">
                   Every piece is thoughtfully designed to make your bulk gifting<br class="hidden md:block">
                   experience as memorable as the gift itself.
                </p>
                <!-- Features -->
-               <div data-aos="fade-left" data-aos-duration="1000"  class="flex justify-start md:justify-end space-x-4 mt-4 md:mt-2 text-[#5A3A2E] text-sm md:text-lg font-medium px-4">
+               <div class="flex justify-start md:justify-end space-x-4 mt-4 md:mt-2 text-[#5A3A2E] text-sm md:text-lg font-medium px-4">
                   <span class="flex items-center space-x-1">
                   </span>
                   ◆ PURE 925 SILVER
@@ -1145,34 +1413,40 @@
          <!-- Product Grid -->
          <!-- SwiperJS CSS -->
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-         <div data-aos="fade-up" data-aos-duration="1000" class="overflow-x-hidden max-w-[92rem] mx-auto px-4 mt-10">
+         <div class="overflow-x-hidden max-w-[92rem] mx-auto px-4 mt-10">
             <!-- Swiper (Mobile View) -->
             <div class="block md:hidden">
                <div class="swiper mySwiper">
                   <div class="swiper-wrapper">
                      <!-- Card 1 -->
                      <div class="swiper-slide flex flex-col items-center">
+                       <a href="https://worldoffian.com/products/charms-necklace" target="_blank">
                         <img src="./assests/Rectangle 26.png" alt="Charm Jewelry" 
-                           class="w-full h-100 object-cover rounded-md shadow-lg">
-                        <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium w-full text-center">
-                           Personalized Charm Jewelry
-                        </p>
+                        class="w-full h-100 object-cover shadow-lg">
+                     <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium w-full text-center">
+                        Personalized Charm Jewelry
+                     </p>
+                       </a>
                      </div>
                      <!-- Card 2 -->
                      <div class="swiper-slide flex flex-col items-center">
-                        <img src="./assests/Rectangle 50.png" alt="Adjustable Rings" 
-                           class="w-full h-100 object-cover rounded-md shadow-lg">
+                        <a href="https://worldoffian.com/collections/adjustable-rings" target="_blank">
+                           <img src="./assests/Rectangle 50.png" alt="Adjustable Rings" 
+                           class="w-full h-100 object-cover  shadow-lg">
                         <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-lg font-medium w-full text-center">
                            Adjustable Rings - One Size Fits All
                         </p>
+                        </a>
                      </div>
                      <!-- Card 3 -->
                      <div class="swiper-slide flex flex-col items-center">
-                        <img src="./assests/Rectangle 51.png" alt="Earrings & Pendants" 
-                           class="w-full h-100 object-cover rounded-md shadow-lg">
+                        <a href="https://worldoffian.com/collections/earrings" target="_blank">
+                           <img src="./assests/Rectangle 51.png" alt="Earrings & Pendants" 
+                           class="w-full h-100 object-cover  shadow-lg">
                         <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium w-full text-center">
                            Timeless Earrings & Pendants
                         </p>
+                        </a>
                      </div>
                   </div>
                   <!-- Pagination Dots -->
@@ -1183,27 +1457,33 @@
             <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-10">
                <!-- Card 1 -->
                <div class="text-center">
-                  <img src="./assests/Rectangle 26.png" alt="Charm Jewelry" 
+                  <a href="https://worldoffian.com/products/charms-necklace" target="_blank">
+                     <img src="./assests/Rectangle 26.png" alt="Charm Jewelry" 
                      class="w-full h-100 object-cover shadow-lg">
                   <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium">
                      Personalized Charm Jewelry
                   </p>
+                  </a>
                </div>
                <!-- Card 2 -->
                <div class="text-center">
+                 <a href="https://worldoffian.com/collections/adjustable-rings" target="_blank">
                   <img src="./assests/Rectangle 50.png" alt="Adjustable Rings" 
-                     class="w-full h-100 object-cover shadow-lg">
-                  <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium">
-                     Adjustable Rings - One Size Fits All
-                  </p>
+                  class="w-full h-100 object-cover shadow-lg">
+               <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+                  Adjustable Rings - One Size Fits All
+               </p>
+                 </a>
                </div>
                <!-- Card 3 -->
                <div class="text-center">
-                  <img src="./assests/Rectangle 51.png" alt="Earrings & Pendants" 
+                  <a href="https://worldoffian.com/collections/earrings" target="_blank">
+                     <img src="./assests/Rectangle 51.png" alt="Earrings & Pendants" 
                      class="w-full h-100 object-cover shadow-lg">
                   <p class="bg-[#79512F] text-white py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium">
                      Timeless Earrings & Pendants
                   </p>
+                  </a>
                </div>
             </div>
          </div>
@@ -1224,12 +1504,10 @@
       <!-- section 5 -->
       <!-- Include Alpine.js -->
       <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
-      <div id="FAQs" x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-[85rem] font-['Playfair_Display'] p-5">
+      <!-- <div id="FAQs" x-data="{ openIndex: null }" class="w-full mx-auto my-10 max-w-[85rem] font-['Playfair_Display'] p-5">
          <h2 class="text-3xl font-semibold text-[#8B6B50] mb-6 px-0 sm:px-8">FAQs</h2>
-         <!-- FAQ Container -->
          <div class=" grid grid-cols-2 md:gap-2">
             <div class="md:p-8 col-span-12 md:col-span-1">
-               <!-- Accordion Item 1 -->
                <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
                   <button @click="openIndex = openIndex === 1 ? null : 1"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1249,7 +1527,6 @@
                      Once your order is confirmed, it takes 1-5 days to dispatch depending on stock availability.
                   </div>
                </div>
-               <!-- Accordion Item 2 -->
                <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
                   <button @click="openIndex = openIndex === 2 ? null : 2"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1268,7 +1545,6 @@
                      You will receive an email confirmation with your order details.
                   </div>
                </div>
-               <!-- Accordion Item 3 -->
                <div class="border border-[#9C7A5E] md:my-4 mt-2 overflow-hidden">
                   <button @click="openIndex = openIndex === 3 ? null : 3"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1289,7 +1565,6 @@
                </div>
             </div>
             <div class="md:p-8 col-span-12 md:col-span-1">
-               <!-- Accordion Item 1 -->
                <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
                   <button @click="openIndex = openIndex === 4 ? null : 4"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1309,7 +1584,6 @@
                      Once your order is confirmed, it takes 1-5 days to dispatch depending on stock availability.
                   </div>
                </div>
-               <!-- Accordion Item 2 -->
                <div class="border border-[#9C7A5E] md:my-4 my-2 overflow-hidden">
                   <button @click="openIndex = openIndex === 5 ? null : 5"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1328,7 +1602,6 @@
                      You will receive an email confirmation with your order details.
                   </div>
                </div>
-               <!-- Accordion Item 3 -->
                <div class="border border-[#9C7A5E] md:my-4 my-2  overflow-hidden">
                   <button @click="openIndex = openIndex === 6 ? null : 6"
                      class="w-full flex justify-between items-center px-5 py-4 font-semibold transition-colors duration-300"
@@ -1349,19 +1622,19 @@
                </div>
             </div>
          </div>
-      </div>
+      </div> -->
       <!-- Hero Section -->
       <section class="bg-[#DDC3A3] md:py-6 md:px-[100px] text-center md:flex md:justify-between">
-         <div data-aos="fade-right" data-aos-duration="1000" class="overflow-x-hidden px-4 text-left md:py-8 py-6">
+         <div  class="overflow-x-hidden px-4 text-left md:py-8 py-6">
             <h2 class="text-3xl font-bold gift ">Make Every Gift Unforgettable</h2>
             <p class="text-gray-800 md:mt-4 mt-4 giftb">
                At FIAN, we transform ordinary gifting into a luxurious experience. Let our expertise in fine jewelry help you make every gifting moment truly special.
             </p>
          </div>
-         <div class="flex md:justify-center pl-4 pb-4 items-center">
+         <div class="flex md:justify-center pb-4 ">
          <!-- <button class=" button8 [#7A5630] playfair-display text-white px-12 py-3 font-semibold shadow-md px-6 py-2 text-sm md:px-12 md:py-3 md:text-base hover:bg-[#805333]"> -->
-         <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center items-center">
-            <button class="button5 [#7A5630] playfair-display text-white px-16 py-5 font-semibold shadow-md hover:bg-[#805333]">
+         <div  class="flex justify-center items-center ShowButton">
+            <button class="button5 [#7A5630] playfair-display text-white px-16 py-5 font-semibold shadow-md hover:bg-[#805333] buttonChat">
             <a href="https://wa.me/9870759560"><span>CHAT WITH US</span></a>
             </button>
          </div>
@@ -1375,8 +1648,8 @@
             <i class="fab fa-whatsapp text-white text-3xl"></i> 
          </div>
       </a>
-      <footer data-aos="fade-in" data-aos-duration="1000" class="bg-white py-12 overflow-hidden">
-         <div class="contain mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 text-lg text-gray-700">
+      <footer class="bg-white py-12 overflow-hidden px-7">
+         <div class="contain mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 text-lg text-gray-700">
             <!-- Help & Information -->
             <div class="footer-item">
                <h3 class=" helpinfo font-bold mb-2">Help & Information</h3>
@@ -1415,35 +1688,41 @@
             <!-- Contact Us -->
             <div class="footer-item">
                <h3 class=" helpinfo2 font-bold mb-2">Contact Us</h3>
-               <p class="flex items-center space-x-2">
-                  <i class="fas fa-phone text-accent"></i><span>9870759560</span>
+               <p class="flex items-center space-x-2" id="ContactDetails">
+                  <a href="tel:9870759560">
+                     <i class="fas fa-phone text-accent mr-2"></i><span>9870759560</span>
+                  </a>
                </p>
-               <p class="flex items-center space-x-2">
-                  <i class="fas fa-envelope text-accent"></i><span>worldoffian@gmail.com</span>
+               <p class="flex items-center space-x-2" id="ContactDetails">
+                 <a href="mailto:worldoffian@gmail.com">
+                  <i class="fas fa-envelope text-accent mr-2"></i><span>worldoffian@gmail.com</span>
+                 </a>
                </p>
-               <div class="flex space-x-4 mt-2">
-                  <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
+               <div class="flex space-x-4 mt-2" id="ContactDetails">
+                  <a href="https://www.facebook.com/worldoffian?mibextid=ZbWKwL" target="_blank" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
                      <i class="fab fa-facebook-f text-lg"></i> <!-- Updated icon -->
-                  </a>  
+                  </a>
                   <a href="#" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition duration-300">
                   <i class="fab fa-instagram text-lg"></i>
                   </a>
                </div>
             </div>
             <!-- Newsletter -->
-            <div class="footer-item col-span-2 sm:col-span-1">
+            <!-- <div class="footer-item col-span-2 sm:col-span-1">
                <h3 class=" helpinfo2 font-bold mb-2">Newsletters</h3>
                <p>Stay up to date with offers and our latest products.</p>
                <div class="mt-2 flex flex-wrap">
                   <input type="email" placeholder="Enter your email..." class="border p-2 flex-1 mb-2 text-center sm:w-auto">
                   <button type="submit" class="button7 bg-[#79512F] text-white px-4"><span>Subscribe</span></button>
                </div>
-            </div>
+            </div> -->
          </div>
          <!-- Footer Bottom -->
          <div class="mt-8 text-gray-500 text-sm px-4 flex flex-col lg:flex-row lg:items-center lg:justify-between">
-            <img class="w-auto max-w-[200px] mx-auto lg:mx-0" src="assests/image 1.png" alt="">
-            <p class="mt-2 lg:mt-0 text-center lg:text-right lg:pr-[23rem]">© Copyright 2025 <span class="font-semibold">World Of Fian</span></p>
+          <a href="/index.html">
+            <img class="w-auto max-w-[200px] mx-auto lg:mx-0" src="assests/image 1.png" alt="none">
+          </a>
+            <p class="mt-2 lg:mt-0 text-center lg:text-right  CopyRight">© Copyright 2025 <a href="https://worldoffian.com/" target="_blank"><span class="font-semibold">World Of Fian</span></a></p>
          </div>
       </footer>
       <script>
